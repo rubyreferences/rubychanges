@@ -33,7 +33,7 @@ end
 # It is Kramdown::Base#basic_generate_id
 def id(str)
   gen_id = str.gsub(/^[^a-zA-Z]+/, '')
-  gen_id.tr!('^a-zA-Z0-9 -', '')
+  gen_id.tr!('^_a-zA-Z0-9 -', '')
   gen_id.tr!(' ', '-')
   gen_id.downcase!
   gen_id
@@ -65,6 +65,9 @@ class Hash
     end
   end
 end
+
+# h = headers.detect { |h| h.html.include?('with a block') }
+# p h, id(h.text)
 
 nesting = nest_headers(headers)
 

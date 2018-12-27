@@ -21,13 +21,16 @@ chapters:
   - title: Core classes and modules
     path: "/2.6.html#core-classes-and-modules"
     children:
-    - title: "<code>Kernel#then</code> as an alias for <code>#yield_self</code>"
-      path: "/2.6.html#kernelthen-as-an-alias-for-yieldself"
-    - title: "<code>Kernel#&lt;Numeric&gt;()</code> methods have <code>exception:</code>
-        argument"
-      path: "/2.6.html#kernelnumeric-methods-have-exception-argument"
+    - title: "<code>Kernel</code>"
+      path: "/2.6.html#kernel"
+      children:
+      - title: "<code>#then</code> as an alias for <code>#yield_self</code>"
+        path: "/2.6.html#then-as-an-alias-for-yield_self"
+      - title: "<code>&lt;Numeric&gt;()</code> methods have <code>exception:</code>
+          argument"
+        path: "/2.6.html#numeric-methods-have-exception-argument"
     - title: Additional argument to <code>Module#method_defined?</code> and similar
-      path: "/2.6.html#additional-argument-to-modulemethoddefined-and-similar"
+      path: "/2.6.html#additional-argument-to-modulemethod_defined-and-similar"
     - title: "<code>String#split</code> with block"
       path: "/2.6.html#stringsplit-with-block"
     - title: "<code>Time</code>: support for timezones"
@@ -44,7 +47,7 @@ chapters:
       - title: "<code>#select</code>/<code>#select!</code>"
         path: "/2.6.html#selectselect"
       - title: "<code>#to_h</code> with a block"
-        path: "/2.6.html#toh-with-a-block"
+        path: "/2.6.html#to_h-with-a-block"
       - title: "<code>Enumerable::ArithmeticSequence</code>"
         path: "/2.6.html#enumerablearithmeticsequence"
       - title: "<code>Enumerator</code> chaining"
@@ -64,7 +67,7 @@ chapters:
       - title: 'New arguments: <code>receiver:</code> and <code>key:</code>'
         path: "/2.6.html#new-arguments-receiver-and-key"
       - title: "<code>Exception#full_message</code> options"
-        path: "/2.6.html#exceptionfullmessage-options"
+        path: "/2.6.html#exceptionfull_message-options"
       - title: Exception output tweaking
         path: "/2.6.html#exception-output-tweaking"
     - title: Filesystem and IO
@@ -75,9 +78,9 @@ chapters:
       path: "/2.6.html#introspection"
       children:
       - title: "<code>Binding#source_location</code>"
-        path: "/2.6.html#bindingsourcelocation"
+        path: "/2.6.html#bindingsource_location"
       - title: "<code>RubyVM.resolve_feature_path</code>"
-        path: "/2.6.html#rubyvmresolvefeaturepath"
+        path: "/2.6.html#rubyvmresolve_feature_path"
       - title: "<code>TracePoint</code> changes"
         path: "/2.6.html#tracepoint-changes"
       - title: RubyVM::AbstractSyntaxTree
