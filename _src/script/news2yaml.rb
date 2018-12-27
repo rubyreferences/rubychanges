@@ -59,4 +59,4 @@ $res.map { |item:, section:|
 }
 .group_by { |ticket:, **| ticket }.values.flatten # FIXME #chunk or what
 .map { |r| r.transform_keys(&:to_s) }
-.tap { |res| File.write('2.6/news.yml', res.to_yaml(line_width: 200)) }
+# .tap { |res| File.write('2.6/news.yml', res.to_yaml(line_width: 200)) }
