@@ -1,0 +1,32 @@
+.subsection {
+  padding-left: 20px;
+}
+
+a.remote:not(.ruby-doc):after {
+  content: "\f08e";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  text-decoration: none;
+  padding-left: 3px;
+  opacity: 0.4;
+  font-size: 0.8em;
+}
+
+a.remote.ruby-doc:before {
+  content: "";
+  background-image: url(../images/rubydoc.png);
+  width: 12px;
+  height: 12px;
+  margin-right: 3px;
+  opacity: 0.4;
+  display: inline-block;
+}
+
+h1:hover a:after, h2:hover a:after, h3:hover a:after, h4:hover a:after, h5:hover a:after {
+  content: " §";
+}
+.content h1:hover a:hover, .content h2:hover a:hover, .content h3:hover a:hover, .content h4:hover a:hover, .content h5:hover a:hover {
+  text-decoration: none;
+}
