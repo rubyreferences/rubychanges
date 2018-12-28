@@ -8,7 +8,7 @@ permalink: "/index.html"
 
 [![Patreon](https://img.shields.io/badge/patreon-donate-blue.svg)](https://www.patreon.com/zverok)
 
-This site is dedicate to history of [Ruby language](http://ruby-lang.org/) evolution. Basically, it is just the same information that each Ruby version's [NEWS](https://github.com/ruby/ruby/blob/trunk/NEWS) file contains, just in more readable and informative manner.
+This site is dedicated to history of [Ruby language](http://ruby-lang.org/) evolution. Basically, it is just the same information that each Ruby version's [NEWS](https://github.com/ruby/ruby/blob/trunk/NEWS) file contains, just in more readable and informative manner.
 
 Main goals:
 
@@ -29,7 +29,7 @@ Some things to know about the content:
 * ...and also some minor _behavior_ changes are excluded.
 * I want to _eventually_ cover Ruby versions down to 1.8, or maybe even earlier, but it is currently work-in-progress, with the first priority of the recent release of Ruby 2.6, and then going down version by version in my free time.
 
-_The source of the site can be found at [GitHub](https://github.com/rubyreferences/rubychanges)._
+_The source of the site can be found at [GitHub](https://github.com/rubyreferences/rubychanges). See also [Contributing](/Contributing.html) section._
 
 ## Credits and licenses
 

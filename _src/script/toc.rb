@@ -72,4 +72,6 @@ end
 nesting = nest_headers(headers)
 
 chapters.concat(toc_entries(nesting, '/2.6.html'))
+chapters << {title: 'Contributing', path: '/Contributing.html'}
+
 File.write('_data/book.yml', {chapters: chapters}.deep_stringify_keys.to_yaml)

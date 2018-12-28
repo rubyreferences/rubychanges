@@ -106,3 +106,5 @@ chapters:
       path: "/2.6.html#large-updated-libraries"
     - title: Libraries promoted to default gems
       path: "/2.6.html#libraries-promoted-to-default-gems"
+- title: Contributing
+  path: "/Contributing.html"
