@@ -27,7 +27,7 @@ Some things to know about the content:
 * Structure and grouping of the information, as well as the illustrative examples, are mostly decided on this site's [author](https://zverok.github.io). I am trying to make it as useful and logical as humanly possible, but I have my own opinions about what is important, and what is not, what is related and what is not.
 * The site is dedicated to the **language**, not its **implementation(s)**, therefore at the moment it **does not** include the description of MRI implementation changes, optimizations and internals;
 * ...and also some minor _behavior_ changes are excluded.
-* I want to _eventually_ cover Ruby versions down to 1.8, or maybe even earlier, but it is currently work-in-progress, with the first priority of the recent release of Ruby 2.6, and then going down version by version in my free time.
+* I want to _eventually_ cover Ruby versions down to 1.8, or maybe even earlier, but it is currently work-in-progress, with the first priority of the recent release of **[Ruby 2.6](/2.6.html)**, and then going down version by version in my free time.
 
 _The source of the site can be found at [GitHub](https://github.com/rubyreferences/rubychanges). See also [Contributing](/Contributing.html) section._
 
