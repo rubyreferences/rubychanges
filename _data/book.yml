@@ -29,8 +29,10 @@ chapters:
       - title: "<code>&lt;Numeric&gt;()</code> methods have <code>exception:</code>
           argument"
         path: "/2.6.html#numeric-methods-have-exception-argument"
-    - title: Additional argument to <code>Module#method_defined?</code> and similar
-      path: "/2.6.html#additional-argument-to-modulemethod_defined-and-similar"
+      - title: "<code>#system</code> has <code>exception:</code> argument"
+        path: "/2.6.html#system-has-exception-argument"
+    - title: "<code>Module#method_defined?</code>: <code>inherit</code> argument"
+      path: "/2.6.html#modulemethod_defined-inherit-argument"
     - title: "<code>String#split</code> with block"
       path: "/2.6.html#stringsplit-with-block"
     - title: "<code>Time</code>: support for timezones"
@@ -72,6 +74,11 @@ chapters:
         path: "/2.6.html#exception-output-tweaking"
     - title: Filesystem and IO
       path: "/2.6.html#filesystem-and-io"
+      children:
+      - title: "<code>Dir#each_child</code> and <code>Dir#children</code>"
+        path: "/2.6.html#direach_child-and-dirchildren"
+      - title: 'IO open mode: <code>''x''</code>'
+        path: "/2.6.html#io-open-mode-x"
     - title: Minor changes
       path: "/2.6.html#minor-changes"
     - title: Introspection
@@ -81,10 +88,17 @@ chapters:
         path: "/2.6.html#bindingsource_location"
       - title: "<code>RubyVM.resolve_feature_path</code>"
         path: "/2.6.html#rubyvmresolve_feature_path"
-      - title: "<code>TracePoint</code> changes"
-        path: "/2.6.html#tracepoint-changes"
-      - title: RubyVM::AbstractSyntaxTree
+      - title: "<code>RubyVM::AbstractSyntaxTree</code>"
         path: "/2.6.html#rubyvmabstractsyntaxtree"
+    - title: "<code>TracePoint</code> improvements"
+      path: "/2.6.html#tracepoint-improvements"
+      children:
+      - title: "<code>#parameters</code>"
+        path: "/2.6.html#parameters"
+      - title: "<code>:script_compiled</code> event"
+        path: "/2.6.html#script_compiled-event"
+      - title: "<code>#enable</code>: new params <code>target:</code> and <code>target_line:</code>"
+        path: "/2.6.html#enable-new-params-target-and-target_line"
   - title: Standard library
     path: "/2.6.html#standard-library"
     children:

@@ -2,19 +2,7 @@
   padding-left: 20px;
 }
 
-a.remote:not(.ruby-doc):after {
-  content: "\f08e";
-  font-family: FontAwesome;
-  font-weight: normal;
-  font-style: normal;
-  display: inline-block;
-  text-decoration: none;
-  padding-left: 3px;
-  opacity: 0.4;
-  font-size: 0.8em;
-}
-
-a.remote.ruby-doc:before {
+a.ruby-doc:before {
   content: "";
   background-image: url(../images/rubydoc.png);
   width: 12px;
@@ -22,6 +10,13 @@ a.remote.ruby-doc:before {
   margin-right: 3px;
   opacity: 0.4;
   display: inline-block;
+}
+a.ruby-doc {
+  white-space: nowrap;
+}
+a.tracker {
+  font-family: "Source Code Pro", Consolas, "Ubuntu Mono", Menlo, "DejaVu Sans Mono", monospace, monospace;
+  font-weight: 600;
 }
 
 h1:hover a:after, h2:hover a:after, h3:hover a:after, h4:hover a:after, h5:hover a:after {

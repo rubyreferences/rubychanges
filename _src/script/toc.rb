@@ -6,7 +6,7 @@ chapters = [
   {title: 'Introduction', path: '/'}
 ]
 
-doc = Kramdown::Document.new(File.read('2.6.md'))
+doc = Kramdown::Document.new(File.read('_src/2.6.md'))
 
 HTML = Kramdown::Converter::Html
 
