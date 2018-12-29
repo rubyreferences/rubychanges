@@ -21,8 +21,8 @@ File.read(srcpath)
     kind, num = m.values_at(:kind, :num)
     %{<a class="tracker #{kind.downcase}" href="https://bugs.ruby-lang.org/issues/#{num}">#{kind} ##{num}</a>}
   }
-  .gsub(%r{\[([^\]]+ [^\]]+)\]\((https://ruby-doc\.org.+?)\)}, '<a class="ruby-doc" href="\\2">\\1</a>')
-  .gsub(%r{\[([^\]]+)\]\((https://ruby-doc\.org.+?)\)}, '<a class="ruby-doc" href="\\2"><code>\\1</code></a>')
+  .gsub(%r{\[([^\[\]]+ [^\[\]]+)\]\((https://ruby-doc\.org.+?)\)}, '<a class="ruby-doc" href="\\2">\\1</a>')
+  .gsub(%r{\[([^\[\]]+)\]\((https://ruby-doc\.org.+?)\)}, '<a class="ruby-doc" href="\\2"><code>\\1</code></a>')
   .gsub(%r{^\#{2,} (.+)$}) { |header|
     header + "[](##{id(header)})"
   }
