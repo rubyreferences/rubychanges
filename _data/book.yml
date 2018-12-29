@@ -46,8 +46,8 @@ chapters:
     - title: Enumerables
       path: "/2.6.html#enumerables"
       children:
-      - title: "<code>#select</code>/<code>#select!</code>"
-        path: "/2.6.html#selectselect"
+      - title: "<code>#filter</code>/<code>#filter!</code>"
+        path: "/2.6.html#filterfilter"
       - title: "<code>#to_h</code> with a block"
         path: "/2.6.html#to_h-with-a-block"
       - title: "<code>Enumerable::ArithmeticSequence</code>"
