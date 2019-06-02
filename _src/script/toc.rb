@@ -2,22 +2,28 @@ require 'kramdown'
 require 'yaml'
 require 'ostruct'
 
+class Hash
+  def deep_stringify_keys
+    _stringify_keys_any(self)
+  end
+
+  def _stringify_keys_any(v)
+    case v
+    when Hash
+      v.map { |k, v| [k.to_s, _stringify_keys_any(v)] }.to_h
+    when Array
+      v.map(&method(:_stringify_keys_any))
+    else
+      v
+    end
+  end
+end
+
 chapters = [
   {title: 'Introduction', path: '/'}
 ]
 
-doc = Kramdown::Document.new(File.read('_src/2.6.md'))
-
 HTML = Kramdown::Converter::Html
-
-def inner_html(h)
-  h.options[:encoding] = 'UTF-8'
-  h.type = :root
-  HTML.convert(h).first
-end
-
-headers = doc.root.children.select { |c| c.type == :header }
-  .map { |c| OpenStruct.new(level: c.options[:level], text: c.options[:raw_text], html: inner_html(c)) }
 
 def nest_headers(headers, level = 1)
   res = []
@@ -43,35 +49,34 @@ def toc_entries(nodes, prefix)
   nodes.map do |node|
     {
       title: node.html,
-      path: "#{prefix}##{id(node.text)}",
+      path: node.level == 1 ? prefix : "#{prefix}##{id(node.text)}",
       children: toc_entries(node.children, prefix)
     }.tap { |h| h.delete(:children) if h[:children].empty? }
   end
 end
 
-class Hash
-  def deep_stringify_keys
-    _stringify_keys_any(self)
-  end
-
-  def _stringify_keys_any(v)
-    case v
-    when Hash
-      v.map { |k, v| [k.to_s, _stringify_keys_any(v)] }.to_h
-    when Array
-      v.map(&method(:_stringify_keys_any))
-    else
-      v
-    end
-  end
+def inner_html(h)
+  h.options[:encoding] = 'UTF-8'
+  h.type = :root
+  HTML.convert(h).first
 end
 
-# h = headers.detect { |h| h.html.include?('with a block') }
-# p h, id(h.text)
+Dir['_src/*.md'].grep(/\d/).sort.reverse.each do |path|
+  ver = path.scan(%r{_src/(.+)\.md}).flatten.first
 
-nesting = nest_headers(headers)
+  doc = Kramdown::Document.new(File.read(path))
 
-chapters.concat(toc_entries(nesting, '/2.6.html'))
+  headers = doc.root.children
+    .select { |c| c.type == :header }
+    .map { |c|
+      OpenStruct.new(level: c.options[:level], text: c.options[:raw_text], html: inner_html(c))
+    }
+
+  nesting = nest_headers(headers)
+
+  chapters.concat(toc_entries(nesting, "/#{ver}.html"))
+end
+
 chapters << {title: 'Contributing', path: '/Contributing.html'}
 
 File.write('_data/book.yml', {chapters: chapters}.deep_stringify_keys.to_yaml)

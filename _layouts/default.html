@@ -55,7 +55,7 @@
           <li>
             <a href="{{ site.baseurl }}{{ chapter.path }}"{% if page.url == chapter.path %}class="active"{% endif %} > {{ chapter.title }}</a>
           </li>
-          {% if chapter.children %}
+          {% if chapter.children and page.url == chapter.path %}
             <ul class="section">
               {% for section in chapter.children %}
                 <li>
