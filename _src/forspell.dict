@@ -1,4 +1,5 @@
 callstack
+changelog: log
 cmath
 csv
 dbm
@@ -13,6 +14,7 @@ introspectable
 ipaddr
 iseq: dog
 Matz
+metaprogramming: programming
 multiuser
 nano-seconds
 Numerics
@@ -26,6 +28,8 @@ sdbm
 startless
 stringio
 strscan
+symlink: link
+timezone: zone
 thwait
 tracepoints
 zlib
