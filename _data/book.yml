@@ -3,7 +3,7 @@ chapters:
 - title: Introduction
   path: "/"
 - title: Ruby 2.6
-  path: "/2.6.html#ruby-26"
+  path: "/2.6.html"
   children:
   - title: Language
     path: "/2.6.html#language"
@@ -106,5 +106,143 @@ chapters:
       path: "/2.6.html#large-updated-libraries"
     - title: Libraries promoted to default gems
       path: "/2.6.html#libraries-promoted-to-default-gems"
+- title: Ruby 2.5
+  path: "/2.5.html"
+  children:
+  - title: Language
+    path: "/2.5.html#language"
+    children:
+    - title: Top-level constant look-up is removed.
+      path: "/2.5.html#top-level-constant-look-up-is-removed"
+    - title: "<code>rescue</code>/<code>else</code>/<code>ensure</code> are allowed
+        inside blocks"
+      path: "/2.5.html#rescueelseensure-are-allowed-inside-blocks"
+    - title: Refinements work in string interpolations
+      path: "/2.5.html#refinements-work-in-string-interpolations"
+  - title: Core classes and modules
+    path: "/2.5.html#core-classes-and-modules"
+    children:
+    - title: "<code>Kernel</code>"
+      path: "/2.5.html#kernel"
+      children:
+      - title: "<code>#yield_self</code>"
+        path: "/2.5.html#yield_self"
+      - title: "<code>#pp</code>"
+        path: "/2.5.html#pp"
+      - title: "<code>#warn</code>: <code>uplevel:</code> keyword argument"
+        path: "/2.5.html#warn-uplevel-keyword-argument"
+    - title: "<code>Module</code>: methods for defining methods and accessors became
+        public"
+      path: "/2.5.html#module-methods-for-defining-methods-and-accessors-became-public"
+    - title: "<code>Method#===</code>"
+      path: "/2.5.html#method"
+    - title: Integer
+      path: "/2.5.html#integer"
+      children:
+      - title: "<code>#pow</code>: modulo argument"
+        path: "/2.5.html#pow-modulo-argument"
+      - title: "<code>#allbits?</code>, <code>#anybits?</code>, <code>#nobits?</code>"
+        path: "/2.5.html#allbits-anybits-nobits"
+      - title: "<code>.sqrt</code>"
+        path: "/2.5.html#sqrt"
+    - title: "<code>String</code>"
+      path: "/2.5.html#string"
+      children:
+      - title: "<code>#delete_prefix</code>, <code>#delete_prefix!</code>, <code>#delete_suffix</code>,
+          <code>#delete_suffix!</code>"
+        path: "/2.5.html#delete_prefix-delete_prefix-delete_suffix-delete_suffix"
+      - title: "<code>#each_grapheme_cluster</code> and <code>#grapheme_clusters</code>"
+        path: "/2.5.html#each_grapheme_cluster-and-grapheme_clusters"
+      - title: "<code>#undump</code>"
+        path: "/2.5.html#undump"
+      - title: "<code>#casecmp</code> and <code>#casecmp?</code> return <code>nil</code>
+          for non-string arguments"
+        path: "/2.5.html#casecmp-and-casecmp-return-nil-for-non-string-arguments"
+      - title: "<code>#start_with?</code> accepts a regexp"
+        path: "/2.5.html#start_with-accepts-a-regexp"
+      - title: "<code>String#-@</code> optimized for memory preserving"
+        path: "/2.5.html#string--optimized-for-memory-preserving"
+    - title: "<code>Regexp</code>: absence operator"
+      path: "/2.5.html#regexp-absence-operator"
+    - title: "<code>Struct</code> with keyword arguments"
+      path: "/2.5.html#struct-with-keyword-arguments"
+    - title: "<code>Time.at</code>: units"
+      path: "/2.5.html#timeat-units"
+    - title: Collections
+      path: "/2.5.html#collections"
+      children:
+      - title: "<code>Enumerable#any?</code>, <code>#all?</code>, <code>#none?</code>
+          and <code>#one?</code> accept patterns"
+        path: "/2.5.html#enumerableany-all-none-and-one-accept-patterns"
+      - title: "<code>Array#append</code> and <code>#prepend</code>"
+        path: "/2.5.html#arrayappend-and-prepend"
+      - title: "<code>Hash#transform_keys</code> and <code>#transform_keys!</code>"
+        path: "/2.5.html#hashtransform_keys-and-transform_keys"
+      - title: "<code>Hash#slice</code>"
+        path: "/2.5.html#hashslice"
+    - title: Exceptions
+      path: "/2.5.html#exceptions"
+      children:
+      - title: Backtrace and error message in reverse order
+        path: "/2.5.html#backtrace-and-error-message-in-reverse-order"
+      - title: "<code>Exception#full_message</code>"
+        path: "/2.5.html#exceptionfull_message"
+      - title: "<code>KeyError#receiver</code> and <code>#key</code>"
+        path: "/2.5.html#keyerrorreceiver-and-key"
+      - title: 'New class: <code>FrozenError</code>'
+        path: "/2.5.html#new-class-frozenerror"
+      - title: Don’t hide coercion errors
+        path: "/2.5.html#dont-hide-coercion-errors"
+    - title: Filesystem and IO
+      path: "/2.5.html#filesystem-and-io"
+      children:
+      - title: "<code>IO#pread</code> and <code>#pwrite</code>"
+        path: "/2.5.html#iopread-and-pwrite"
+      - title: "<code>IO#write</code> accepts multiple arguments"
+        path: "/2.5.html#iowrite-accepts-multiple-arguments"
+      - title: "<code>File.open</code> better supports <code>newline:</code> option"
+        path: "/2.5.html#fileopen-better-supports-newline-option"
+      - title: "<code>File#path</code> raises when opened with <code>File::Constants::TMPFILE</code>
+          option."
+        path: "/2.5.html#filepath-raises-when-opened-with-fileconstantstmpfile-option"
+      - title: "<code>File.lutime</code>"
+        path: "/2.5.html#filelutime"
+      - title: "<code>Dir.children</code> and <code>.each_child</code>"
+        path: "/2.5.html#dirchildren-and-each_child"
+      - title: "<code>Dir.glob</code>: <code>base:</code> argument"
+        path: "/2.5.html#dirglob-base-argument"
+    - title: "<code>Process.last_status</code> as an alias of <code>$?</code>"
+      path: "/2.5.html#processlast_status-as-an-alias-of-"
+    - title: "<code>Thread#fetch</code>"
+      path: "/2.5.html#threadfetch"
+    - title: "<code>RubyVM::InstructionSequence</code> new methods"
+      path: "/2.5.html#rubyvminstructionsequence-new-methods"
+    - title: Misc
+      path: "/2.5.html#misc"
+  - title: Standard library
+    path: "/2.5.html#standard-library"
+    children:
+    - title: Data types
+      path: "/2.5.html#data-types"
+      children:
+      - title: "<code>Set</code>"
+        path: "/2.5.html#set"
+    - title: Text processing
+      path: "/2.5.html#text-processing"
+    - title: Network and Web
+      path: "/2.5.html#network-and-web"
+      children:
+      - title: "<code>Net::HTTP</code>"
+        path: "/2.5.html#nethttp"
+      - title: WEBrick
+        path: "/2.5.html#webrick"
+    - title: Ruby development and introspection
+      path: "/2.5.html#ruby-development-and-introspection"
+    - title: Misc
+      path: "/2.5.html#misc"
+    - title: Large updated libraries
+      path: "/2.5.html#large-updated-libraries"
+    - title: Libraries promoted to default gems
+      path: "/2.5.html#libraries-promoted-to-default-gems"
 - title: Contributing
   path: "/Contributing.html"
