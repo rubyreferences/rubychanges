@@ -18,8 +18,8 @@ Dir['_src/*.md'].grep(/\d/).sort.each do |path|
   dstpath = File.expand_path("../../#{ver}.md", __dir__)
 
   File.read(srcpath)
-    .gsub(/\[(Bug|Feature) \#\d+\]\(.+?\)/) { |link|
-      m = link.match(%r{\[(?<kind>Bug|Feature) \#(?<num>\d+)\]\(https://bugs\.ruby-lang\.org/issues/(?<num2>\d+)\)}) or fail("Wrong link: #{link}")
+    .gsub(/\[(Bug|Feature|Misc) \#\d+\]\(.+?\)/) { |link|
+      m = link.match(%r{\[(?<kind>Bug|Feature|Misc) \#(?<num>\d+)\]\(https://bugs\.ruby-lang\.org/issues/(?<num2>\d+)\)}) or fail("Wrong link: #{link}")
       m[:num] == m[:num2] or fail "Wrong link: #{link}"
       kind, num = m.values_at(:kind, :num)
       %{<a class="tracker #{kind.downcase}" href="https://bugs.ruby-lang.org/issues/#{num}">#{kind} ##{num}</a>}

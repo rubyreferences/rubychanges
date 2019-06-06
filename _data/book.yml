@@ -119,8 +119,8 @@ chapters:
       path: "/2.5.html#rescueelseensure-are-allowed-inside-blocks"
     - title: Refinements work in string interpolations
       path: "/2.5.html#refinements-work-in-string-interpolations"
-  - title: Core
-    path: "/2.5.html#core"
+  - title: Core classes and modules
+    path: "/2.5.html#core-classes-and-modules"
     children:
     - title: "<code>Kernel</code>"
       path: "/2.5.html#kernel"
@@ -136,6 +136,15 @@ chapters:
       path: "/2.5.html#module-methods-for-defining-methods-and-accessors-became-public"
     - title: "<code>Method#===</code>"
       path: "/2.5.html#method"
+    - title: Integer
+      path: "/2.5.html#integer"
+      children:
+      - title: "<code>#pow</code>: modulo argument"
+        path: "/2.5.html#pow-modulo-argument"
+      - title: "<code>#allbits?</code>, <code>#anybits?</code>, <code>#nobits?</code>"
+        path: "/2.5.html#allbits-anybits-nobits"
+      - title: "<code>.sqrt</code>"
+        path: "/2.5.html#sqrt"
     - title: "<code>String</code>"
       path: "/2.5.html#string"
       children:
@@ -151,6 +160,8 @@ chapters:
         path: "/2.5.html#casecmp-and-casecmp-return-nil-for-non-string-arguments"
       - title: "<code>#start_with?</code> accepts a regexp"
         path: "/2.5.html#start_with-accepts-a-regexp"
+      - title: "<code>String#-@</code> optimized for memory preserving"
+        path: "/2.5.html#string--optimized-for-memory-preserving"
     - title: "<code>Regexp</code>: absence operator"
       path: "/2.5.html#regexp-absence-operator"
     - title: "<code>Struct</code> with keyword arguments"
@@ -172,6 +183,8 @@ chapters:
     - title: Exceptions
       path: "/2.5.html#exceptions"
       children:
+      - title: Backtrace and error message in reverse order
+        path: "/2.5.html#backtrace-and-error-message-in-reverse-order"
       - title: "<code>Exception#full_message</code>"
         path: "/2.5.html#exceptionfull_message"
       - title: "<code>KeyError#receiver</code> and <code>#key</code>"
@@ -187,6 +200,11 @@ chapters:
         path: "/2.5.html#iopread-and-pwrite"
       - title: "<code>IO#write</code> accepts multiple arguments"
         path: "/2.5.html#iowrite-accepts-multiple-arguments"
+      - title: "<code>File.open</code> better supports <code>newline:</code> option"
+        path: "/2.5.html#fileopen-better-supports-newline-option"
+      - title: "<code>File#path</code> raises when opened with <code>File::Constants::TMPFILE</code>
+          option."
+        path: "/2.5.html#filepath-raises-when-opened-with-fileconstantstmpfile-option"
       - title: "<code>File.lutime</code>"
         path: "/2.5.html#filelutime"
       - title: "<code>Dir.children</code> and <code>.each_child</code>"
@@ -201,8 +219,8 @@ chapters:
       path: "/2.5.html#rubyvminstructionsequence-new-methods"
     - title: Misc
       path: "/2.5.html#misc"
-  - title: Stdlib
-    path: "/2.5.html#stdlib"
+  - title: Standard library
+    path: "/2.5.html#standard-library"
     children:
     - title: Data types
       path: "/2.5.html#data-types"
@@ -213,12 +231,17 @@ chapters:
       path: "/2.5.html#text-processing"
     - title: Network and Web
       path: "/2.5.html#network-and-web"
+      children:
+      - title: "<code>Net::HTTP</code>"
+        path: "/2.5.html#nethttp"
+      - title: WEBrick
+        path: "/2.5.html#webrick"
     - title: Ruby development and introspection
       path: "/2.5.html#ruby-development-and-introspection"
     - title: Misc
       path: "/2.5.html#misc"
-    - title: Large updated
-      path: "/2.5.html#large-updated"
+    - title: Large updated libraries
+      path: "/2.5.html#large-updated-libraries"
     - title: Libraries promoted to default gems
       path: "/2.5.html#libraries-promoted-to-default-gems"
 - title: Contributing
