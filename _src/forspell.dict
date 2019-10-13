@@ -1,3 +1,4 @@
+beginless: endless
 callstack
 changelog: log
 cmath
@@ -23,6 +24,9 @@ ostruct
 prev
 rexml
 rss
+reallocation: allocation
+reimplement: implement
+reimplementation: implementation
 scanf
 sdbm
 startless

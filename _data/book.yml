@@ -5,6 +5,8 @@ chapters:
 - title: Ruby 2.6
   path: "/2.6.html"
   children:
+  - title: Highlights
+    path: "/2.6.html#highlights"
   - title: Language
     path: "/2.6.html#language"
     children:
@@ -109,6 +111,8 @@ chapters:
 - title: Ruby 2.5
   path: "/2.5.html"
   children:
+  - title: Highlights
+    path: "/2.5.html#highlights"
   - title: Language
     path: "/2.5.html#language"
     children:
@@ -131,6 +135,8 @@ chapters:
         path: "/2.5.html#pp"
       - title: "<code>#warn</code>: <code>uplevel:</code> keyword argument"
         path: "/2.5.html#warn-uplevel-keyword-argument"
+      - title: "<code>#warn</code>: call <code>Warning.warn</code>"
+        path: "/2.5.html#warn-call-warningwarn"
     - title: "<code>Module</code>: methods for defining methods and accessors became
         public"
       path: "/2.5.html#module-methods-for-defining-methods-and-accessors-became-public"
@@ -171,7 +177,7 @@ chapters:
     - title: Collections
       path: "/2.5.html#collections"
       children:
-      - title: "<code>Enumerable#any?</code>, <code>#all?</code>, <code>#none?</code>
+      - title: "<code>Enumerable#any?</code>, <code>#all?</code>, <code>#none?</code>,
           and <code>#one?</code> accept patterns"
         path: "/2.5.html#enumerableany-all-none-and-one-accept-patterns"
       - title: "<code>Array#append</code> and <code>#prepend</code>"
@@ -244,5 +250,93 @@ chapters:
       path: "/2.5.html#large-updated-libraries"
     - title: Libraries promoted to default gems
       path: "/2.5.html#libraries-promoted-to-default-gems"
+- title: Ruby 2.4
+  path: "/2.4.html"
+  children:
+  - title: Highlights
+    path: "/2.4.html#highlights"
+  - title: Language
+    path: "/2.4.html#language"
+    children:
+    - title: Multiple assignment allowed in conditional expression
+      path: "/2.4.html#multiple-assignment-allowed-in-conditional-expression"
+    - title: Toplevel <code>return</code>
+      path: "/2.4.html#toplevel-return"
+  - title: Core
+    path: "/2.4.html#core"
+    children:
+    - title: "<code>Warning</code> module"
+      path: "/2.4.html#warning-module"
+    - title: "<code>Object#clone(freeze: false)</code>"
+      path: "/2.4.html#objectclonefreeze-false"
+    - title: "<code>Comparable#clamp</code>"
+      path: "/2.4.html#comparableclamp"
+    - title: Numerics
+      path: "/2.4.html#numerics"
+      children:
+      - title: "<code>Fixnum</code> and <code>Bignum</code> are unified into <code>Integer</code>"
+        path: "/2.4.html#fixnum-and-bignum-are-unified-into-integer"
+      - title: "<code>Numeric#finite?</code> and <code>#infinite?</code>"
+        path: "/2.4.html#numericfinite-and-infinite"
+      - title: "<code>Integer#digits</code>"
+        path: "/2.4.html#integerdigits"
+      - title: "<code>ndigits</code> optional argument for rounding methods"
+        path: "/2.4.html#ndigits-optional-argument-for-rounding-methods"
+        children:
+        - title: "<code>half:</code> option for <code>#round</code> method"
+          path: "/2.4.html#half-option-for-round-method"
+    - title: Strings, symbols and regexps
+      path: "/2.4.html#strings-symbols-and-regexps"
+      children:
+      - title: Unicode case conversions
+        path: "/2.4.html#unicode-case-conversions"
+      - title: "<code>String.new(capacity: size)</code>"
+        path: "/2.4.html#stringnewcapacity-size"
+      - title: "<code>#casecmp?</code>"
+        path: "/2.4.html#casecmp"
+      - title: "<code>String#concat</code> and <code>#prepend</code> accept multiple
+          arguments"
+        path: "/2.4.html#stringconcat-and-prepend-accept-multiple-arguments"
+      - title: "<code>String#unpack1</code>"
+        path: "/2.4.html#stringunpack1"
+      - title: "<code>#match?</code> method"
+        path: "/2.4.html#match-method"
+      - title: "<code>MatchData</code>: better support for named captures"
+        path: "/2.4.html#matchdata-better-support-for-named-captures"
+    - title: Collections
+      path: "/2.4.html#collections"
+      children:
+      - title: "<code>Enumerable#chunk</code> without a block returns an <code>Enumerator</code>"
+        path: "/2.4.html#enumerablechunk-without-a-block-returns-an-enumerator"
+      - title: "<code>#sum</code>"
+        path: "/2.4.html#sum"
+      - title: "<code>#uniq</code>"
+        path: "/2.4.html#uniq"
+      - title: "<code>Array#max</code> and <code>#min</code>"
+        path: "/2.4.html#arraymax-and-min"
+      - title: "<code>Array#concat</code> takes multiple arguments"
+        path: "/2.4.html#arrayconcat-takes-multiple-arguments"
+      - title: "<code>Array#pack(buffer:)</code>"
+        path: "/2.4.html#arraypackbuffer"
+      - title: "<code>Hash#compact</code> and <code>#compact!</code>"
+        path: "/2.4.html#hashcompact-and-compact"
+      - title: "<code>Hash#transform_values</code> and <code>#transform_values!</code>"
+        path: "/2.4.html#hashtransform_values-and-transform_values"
+    - title: Filesystem and IO
+      path: "/2.4.html#filesystem-and-io"
+      children:
+      - title: "<code>chomp:</code> option for string splitting"
+        path: "/2.4.html#chomp-option-for-string-splitting"
+      - title: "<code>#empty?</code> method for filesystem objects"
+        path: "/2.4.html#empty-method-for-filesystem-objects"
+    - title: "<code>Thread#report_on_exception</code> and <code>Thread.report_on_exception</code>"
+      path: "/2.4.html#threadreport_on_exception-and-threadreport_on_exception"
+    - title: "<code>TracePoint#callee_id</code>"
+      path: "/2.4.html#tracepointcallee_id"
+  - title: Stdlib
+    path: "/2.4.html#stdlib"
+    children:
+    - title: Libraries promoted to default/bundled gems
+      path: "/2.4.html#libraries-promoted-to-defaultbundled-gems"
 - title: Contributing
   path: "/Contributing.html"
