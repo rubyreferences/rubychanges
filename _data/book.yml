@@ -262,6 +262,15 @@ chapters:
       path: "/2.4.html#multiple-assignment-allowed-in-conditional-expression"
     - title: Toplevel <code>return</code>
       path: "/2.4.html#toplevel-return"
+  - title: Refinements improvements
+    path: "/2.4.html#refinements-improvements"
+    children:
+    - title: Refinements are supported in <code>Symbol#to_proc</code> and <code>send</code>
+      path: "/2.4.html#refinements-are-supported-in-symbolto_proc-and-send"
+    - title: "<code>refine</code> can refine modules, too"
+      path: "/2.4.html#refine-can-refine-modules-too"
+    - title: "<code>Module.used_modules</code>"
+      path: "/2.4.html#moduleused_modules"
   - title: Core
     path: "/2.4.html#core"
     children:
@@ -282,9 +291,8 @@ chapters:
         path: "/2.4.html#integerdigits"
       - title: "<code>ndigits</code> optional argument for rounding methods"
         path: "/2.4.html#ndigits-optional-argument-for-rounding-methods"
-        children:
-        - title: "<code>half:</code> option for <code>#round</code> method"
-          path: "/2.4.html#half-option-for-round-method"
+      - title: "<code>half:</code> option for <code>#round</code> method"
+        path: "/2.4.html#half-option-for-round-method"
     - title: Strings, symbols and regexps
       path: "/2.4.html#strings-symbols-and-regexps"
       children:
@@ -338,5 +346,7 @@ chapters:
     children:
     - title: Libraries promoted to default/bundled gems
       path: "/2.4.html#libraries-promoted-to-defaultbundled-gems"
+- title: History (of this site)
+  path: "/History.html"
 - title: Contributing
   path: "/Contributing.html"

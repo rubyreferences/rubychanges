@@ -2,6 +2,14 @@ require 'kramdown'
 require 'yaml'
 require 'ostruct'
 
+START_CHAPTERS = [
+  {title: 'Introduction', path: '/'}
+]
+FINAL_CHAPTERS = [
+  {title: 'History (of this site)', path: '/History.html'},
+  {title: 'Contributing', path: '/Contributing.html'}
+]
+
 class Hash
   def deep_stringify_keys
     _stringify_keys_any(self)
@@ -19,9 +27,7 @@ class Hash
   end
 end
 
-chapters = [
-  {title: 'Introduction', path: '/'}
-]
+chapters = START_CHAPTERS.dup
 
 HTML = Kramdown::Converter::Html
 
@@ -77,6 +83,6 @@ Dir['_src/*.md'].grep(/\d/).sort.reverse.each do |path|
   chapters.concat(toc_entries(nesting, "/#{ver}.html"))
 end
 
-chapters << {title: 'Contributing', path: '/Contributing.html'}
+chapters.concat(FINAL_CHAPTERS)
 
 File.write('_data/book.yml', {chapters: chapters}.deep_stringify_keys.to_yaml)
