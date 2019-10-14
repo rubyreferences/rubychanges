@@ -18,6 +18,7 @@ Dir['_src/*.md'].grep(/\d/).sort.each do |path|
   dstpath = File.expand_path("../../#{ver}.md", __dir__)
 
   File.read(srcpath)
+    .gsub('<<date>>', File.mtime(srcpath).strftime('%b %d, %Y'))
     .gsub(/\[(Bug|Feature|Misc) \#\d+\]\(.+?\)/) { |link|
       m = link.match(%r{\[(?<kind>Bug|Feature|Misc) \#(?<num>\d+)\]\(https://bugs\.ruby-lang\.org/issues/(?<num2>\d+)\)}) or fail("Wrong link: #{link}")
       m[:num] == m[:num2] or fail "Wrong link: #{link}"

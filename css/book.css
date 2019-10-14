@@ -1452,3 +1452,9 @@ ul#searchresults span.teaser em {
   font-weight: bold;
   font-style: normal;
 }
+
+h2 + p, h3 + p, h4 + p {
+  padding-left: 20px;
+  margin-top: -10px;
+  color: #6e6b5e;
+}
