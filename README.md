@@ -25,7 +25,8 @@ Main goals:
 Some things to know about the content:
 
 * Structure and grouping of the information, as well as the illustrative examples, are mostly decided by this site's [author](https://zverok.github.io). I am trying to make it as useful and logical as humanly possible, but I have my own opinions about what is important, and what is not, what is related and what is not.
-* The site is dedicated to the **language**, not its **implementation(s)**, therefore at the moment it **does not** include the description of MRI implementation changes, optimizations and internals;
+  * Maybe "Highlights" section at the top of each version changelog is more subjective than the rest of the content, but it is totally optional, you can skip it.
+* The site is dedicated to the **language**, not its **implementation(s)**, therefore at the moment it **does not** include the description of MRI implementation changes, optimizations and internals.
 * ...and also some minor _behavior_ changes are excluded.
 * I want to _eventually_ cover Ruby versions down to 1.8, or maybe even earlier, but it is currently work-in-progress, with the first priority of the recent release of **[Ruby 2.6](/2.6.html)**, and then going down version by version in my free time.
 * **UPD 2019-06-06:** **[Ruby 2.5](/2.5.html)** is now covered too. Despite being 1.5 years old news, I believe it is still important to cover it in the same manner as the recent version was.
@@ -36,5 +37,5 @@ _The source of the site can be found at [GitHub](https://github.com/rubyreferenc
 ## Credits and licenses
 
 * The source of information is NEWS files from Ruby repository.
-* Book theme is borrowed from [mdBook](https://github.com/rust-lang-nursery/mdBook) project.
+* Book theme is initially borrowed from [mdBook](https://github.com/rust-lang-nursery/mdBook) project.
 * The work in this repository (text, scripts and custom additions to design) is made by [Victor Shepelev](https://zverok.github.io) and should be considered **Public Domain**.
