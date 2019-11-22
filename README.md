@@ -28,9 +28,9 @@ Some things to know about the content:
   * Maybe "Highlights" section at the top of each version changelog is more subjective than the rest of the content, but it is totally optional, you can skip it.
 * The site is dedicated to the **language**, not its **implementation(s)**, therefore at the moment it **does not** include the description of MRI implementation changes, optimizations and internals.
 * ...and also some minor _behavior_ changes are excluded.
-* I want to _eventually_ cover Ruby versions down to 1.8, or maybe even earlier, but it is currently work-in-progress, with the first priority of the recent release of **[Ruby 2.6](/2.6.html)**, and then going down version by version in my free time.
-* **UPD 2019-06-06:** **[Ruby 2.5](/2.5.html)** is now covered too. Despite being 1.5 years old news, I believe it is still important to cover it in the same manner as the recent version was.
-* **UPD 2019-10-14:** **[Ruby 2.4](/2.4.html)** changelog added, and some other content changed. See [History](/History.html) for detail.
+* I want to _eventually_ cover Ruby versions down to 1.8, or maybe even earlier, but it is currently work-in-progress, with the first priority of the recent release of **[Ruby 2.6](2.6.html)**, and then going down version by version in my free time.
+* **UPD 2019-06-06:** **[Ruby 2.5](2.5.html)** is now covered too. Despite being 1.5 years old news, I believe it is still important to cover it in the same manner as the recent version was.
+* **UPD 2019-10-14:** **[Ruby 2.4](2.4.html)** changelog added, and some other content changed. See [History](/History.html) for detail.
 
 _The source of the site can be found at [GitHub](https://github.com/rubyreferences/rubychanges). See also [Contributing](/Contributing.html) section._
 
