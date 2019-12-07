@@ -4,6 +4,21 @@ chapters:
   path: "/"
 - title: Ruby 2.6
   path: "/2.6.html"
+  is_version: true
+  published_at: Dec 29, 2018
+  description: |
+    <p><strong>Highlights:</strong></p>
+
+    <ul>
+      <li>Endless range</li>
+      <li><code>#then</code> “piping” method</li>
+      <li>Support for timezones in <code>Time</code></li>
+      <li><code>Proc</code> composition</li>
+      <li>Enumerator chaining</li>
+      <li><code>RubyVM::AbstractSyntaxTree</code></li>
+    </ul>
+
+    <p><a href="https://rubyreferences.github.io/rubychanges/2.6.html">Read more »</a></p>
   children:
   - title: Highlights
     path: "/2.6.html#highlights"
@@ -110,6 +125,19 @@ chapters:
       path: "/2.6.html#libraries-promoted-to-default-gems"
 - title: Ruby 2.5
   path: "/2.5.html"
+  is_version: true
+  published_at: Jun 6, 2019
+  description: |
+    <p><strong>Highlights:</strong></p>
+
+    <ul>
+      <li><code>rescue</code>/<code>ensure</code> inside blocks</li>
+      <li><code>#yield_self</code></li>
+      <li><code>Struct</code> with keyword initialization</li>
+      <li>Exceptions output changed</li>
+    </ul>
+
+    <p><a href="https://rubyreferences.github.io/rubychanges/2.5.html">Read more »</a></p>
   children:
   - title: Highlights
     path: "/2.5.html#highlights"
@@ -252,6 +280,20 @@ chapters:
       path: "/2.5.html#libraries-promoted-to-default-gems"
 - title: Ruby 2.4
   path: "/2.4.html"
+  is_version: true
+  published_at: Oct 14, 2019
+  description: |
+    <p><strong>Highlights:</strong></p>
+
+    <ul>
+      <li>Toplevel <code>return</code></li>
+      <li>Unification of <code>Fixnum</code> and <code>Bignum</code> into <code>Integer</code></li>
+      <li>Full Unicode support for String case operations</li>
+      <li><code>Warning</code> module for fine-grained warnings output control</li>
+      <li><code>Comparable#clamp</code></li>
+    </ul>
+
+    <p><a href="https://rubyreferences.github.io/rubychanges/2.4.html">Read more »</a></p>
   children:
   - title: Highlights
     path: "/2.4.html#highlights"

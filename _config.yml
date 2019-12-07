@@ -1,6 +1,7 @@
 # Build settings
 markdown: kramdown
 repository: rubyreferences/rubychanges
+title: Ruby Changes
 
 plugins:
   - jekyll-readme-index

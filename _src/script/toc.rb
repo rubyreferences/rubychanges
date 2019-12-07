@@ -51,11 +51,12 @@ def id(str)
   gen_id
 end
 
-def toc_entries(nodes, prefix)
+def toc_entries(nodes, prefix, **extra)
   nodes.map do |node|
     {
       title: node.html,
       path: node.level == 1 ? prefix : "#{prefix}##{id(node.text)}",
+      **(node.level == 1 ? extra : {}),
       children: toc_entries(node.children, prefix)
     }.tap { |h| h.delete(:children) if h[:children].empty? }
   end
@@ -70,7 +71,8 @@ end
 Dir['_src/*.md'].grep(/\d/).sort.reverse.each do |path|
   ver = path.scan(%r{_src/(.+)\.md}).flatten.first
 
-  doc = Kramdown::Document.new(File.read(path))
+  text = File.read(path)
+  doc = Kramdown::Document.new(text)
 
   headers = doc.root.children
     .select { |c| c.type == :header }
@@ -79,8 +81,15 @@ Dir['_src/*.md'].grep(/\d/).sort.reverse.each do |path|
     }
 
   nesting = nest_headers(headers)
+  pub = text[/\*\*This document first published:\*\* (.+)\n/, 1] or fail "Published at not found"
+  desc = text[/\#\# Highlights\n(.+?)\n\#\# /m, 1] or fail "Description not found"
+  desc = desc
+    .gsub(/\[(.+?)\]\(.+?\)/, '\1') # remove links
+    .then { |highlights| "**Highlights:**\n\n" + highlights + "\n\n[Read more »](https://rubyreferences.github.io/rubychanges/#{ver}.html)" }
+    .then(&Kramdown::Document.method(:new))
+    .to_html
 
-  chapters.concat(toc_entries(nesting, "/#{ver}.html"))
+  chapters.concat(toc_entries(nesting, "/#{ver}.html", is_version: true, published_at: pub, description: desc))
 end
 
 chapters.concat(FINAL_CHAPTERS)
