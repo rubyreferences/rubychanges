@@ -2,6 +2,7 @@
 markdown: kramdown
 repository: rubyreferences/rubychanges
 title: Ruby Changes
+url: https://rubyreferences.github.io/rubychanges/
 
 plugins:
   - jekyll-readme-index
