@@ -2,127 +2,116 @@
 chapters:
 - title: Introduction
   path: "/"
-- title: Ruby 2.6
-  path: "/2.6.html"
+- title: Ruby 2.4
+  path: "/2.4.html"
   is_version: true
-  published_at: Dec 29, 2018
+  published_at: Oct 14, 2019
   description: |
     <p><strong>Highlights:</strong></p>
 
     <ul>
-      <li>Endless range</li>
-      <li><code>#then</code> “piping” method</li>
-      <li>Support for timezones in <code>Time</code></li>
-      <li><code>Proc</code> composition</li>
-      <li>Enumerator chaining</li>
-      <li><code>RubyVM::AbstractSyntaxTree</code></li>
+      <li>Toplevel <code>return</code></li>
+      <li>Unification of <code>Fixnum</code> and <code>Bignum</code> into <code>Integer</code></li>
+      <li>Full Unicode support for String case operations</li>
+      <li><code>Warning</code> module for fine-grained warnings output control</li>
+      <li><code>Comparable#clamp</code></li>
     </ul>
 
-    <p><a href="https://rubyreferences.github.io/rubychanges/2.6.html">Read more »</a></p>
+    <p><a href="https://rubyreferences.github.io/rubychanges/2.4.html">Read more »</a></p>
   children:
   - title: Highlights
-    path: "/2.6.html#highlights"
+    path: "/2.4.html#highlights"
   - title: Language
-    path: "/2.6.html#language"
+    path: "/2.4.html#language"
     children:
-    - title: 'Endless range: <code>(1..)</code>'
-      path: "/2.6.html#endless-range-1"
-    - title: Non-ASCII constant names
-      path: "/2.6.html#non-ascii-constant-names"
-    - title: "<code>else</code> in exception-handling context"
-      path: "/2.6.html#else-in-exception-handling-context"
-    - title: 'Refinements: improved visibility'
-      path: "/2.6.html#refinements-improved-visibility"
-    - title: Misc
-      path: "/2.6.html#misc"
-  - title: Core classes and modules
-    path: "/2.6.html#core-classes-and-modules"
+    - title: Multiple assignment allowed in conditional expression
+      path: "/2.4.html#multiple-assignment-allowed-in-conditional-expression"
+    - title: Toplevel <code>return</code>
+      path: "/2.4.html#toplevel-return"
+  - title: Refinements improvements
+    path: "/2.4.html#refinements-improvements"
     children:
-    - title: "<code>Kernel</code>"
-      path: "/2.6.html#kernel"
+    - title: Refinements are supported in <code>Symbol#to_proc</code> and <code>send</code>
+      path: "/2.4.html#refinements-are-supported-in-symbolto_proc-and-send"
+    - title: "<code>refine</code> can refine modules, too"
+      path: "/2.4.html#refine-can-refine-modules-too"
+    - title: "<code>Module.used_modules</code>"
+      path: "/2.4.html#moduleused_modules"
+  - title: Core
+    path: "/2.4.html#core"
+    children:
+    - title: "<code>Warning</code> module"
+      path: "/2.4.html#warning-module"
+    - title: "<code>Object#clone(freeze: false)</code>"
+      path: "/2.4.html#objectclonefreeze-false"
+    - title: "<code>Comparable#clamp</code>"
+      path: "/2.4.html#comparableclamp"
+    - title: Numerics
+      path: "/2.4.html#numerics"
       children:
-      - title: "<code>#then</code> as an alias for <code>#yield_self</code>"
-        path: "/2.6.html#then-as-an-alias-for-yield_self"
-      - title: "<code>&lt;Numeric&gt;()</code> methods have <code>exception:</code>
-          argument"
-        path: "/2.6.html#numeric-methods-have-exception-argument"
-      - title: "<code>#system</code> has <code>exception:</code> argument"
-        path: "/2.6.html#system-has-exception-argument"
-    - title: "<code>Module#method_defined?</code>: <code>inherit</code> argument"
-      path: "/2.6.html#modulemethod_defined-inherit-argument"
-    - title: "<code>String#split</code> with block"
-      path: "/2.6.html#stringsplit-with-block"
-    - title: "<code>Time</code>: support for timezones"
-      path: "/2.6.html#time-support-for-timezones"
-    - title: "<code>Proc</code> composition"
-      path: "/2.6.html#proc-composition"
-    - title: "<code>Array#union</code> and <code>Array#difference</code>"
-      path: "/2.6.html#arrayunion-and-arraydifference"
-    - title: "<code>Hash#merge</code> with multiple arguments"
-      path: "/2.6.html#hashmerge-with-multiple-arguments"
-    - title: Enumerables
-      path: "/2.6.html#enumerables"
+      - title: "<code>Fixnum</code> and <code>Bignum</code> are unified into <code>Integer</code>"
+        path: "/2.4.html#fixnum-and-bignum-are-unified-into-integer"
+      - title: "<code>Numeric#finite?</code> and <code>#infinite?</code>"
+        path: "/2.4.html#numericfinite-and-infinite"
+      - title: "<code>Integer#digits</code>"
+        path: "/2.4.html#integerdigits"
+      - title: "<code>ndigits</code> optional argument for rounding methods"
+        path: "/2.4.html#ndigits-optional-argument-for-rounding-methods"
+      - title: "<code>half:</code> option for <code>#round</code> method"
+        path: "/2.4.html#half-option-for-round-method"
+    - title: Strings, symbols and regexps
+      path: "/2.4.html#strings-symbols-and-regexps"
       children:
-      - title: "<code>#filter</code>/<code>#filter!</code>"
-        path: "/2.6.html#filterfilter"
-      - title: "<code>#to_h</code> with a block"
-        path: "/2.6.html#to_h-with-a-block"
-      - title: "<code>Enumerable::ArithmeticSequence</code>"
-        path: "/2.6.html#enumerablearithmeticsequence"
-      - title: "<code>Enumerator</code> chaining"
-        path: "/2.6.html#enumerator-chaining"
-    - title: "<code>Range</code>"
-      path: "/2.6.html#range"
+      - title: Unicode case conversions
+        path: "/2.4.html#unicode-case-conversions"
+      - title: "<code>String.new(capacity: size)</code>"
+        path: "/2.4.html#stringnewcapacity-size"
+      - title: "<code>#casecmp?</code>"
+        path: "/2.4.html#casecmp"
+      - title: "<code>String#concat</code> and <code>#prepend</code> accept multiple
+          arguments"
+        path: "/2.4.html#stringconcat-and-prepend-accept-multiple-arguments"
+      - title: "<code>String#unpack1</code>"
+        path: "/2.4.html#stringunpack1"
+      - title: "<code>#match?</code> method"
+        path: "/2.4.html#match-method"
+      - title: "<code>MatchData</code>: better support for named captures"
+        path: "/2.4.html#matchdata-better-support-for-named-captures"
+    - title: Collections
+      path: "/2.4.html#collections"
       children:
-      - title: "<code>Range#===</code> uses <code>#cover?</code> instead of <code>#include?</code>"
-        path: "/2.6.html#range-uses-cover-instead-of-include"
-      - title: "<code>Range#cover?</code> accepts range argument"
-        path: "/2.6.html#rangecover-accepts-range-argument"
-      - title: "<code>Range#%</code> alias"
-        path: "/2.6.html#range-alias"
-    - title: Exceptions
-      path: "/2.6.html#exceptions"
-      children:
-      - title: 'New arguments: <code>receiver:</code> and <code>key:</code>'
-        path: "/2.6.html#new-arguments-receiver-and-key"
-      - title: "<code>Exception#full_message</code> options"
-        path: "/2.6.html#exceptionfull_message-options"
-      - title: Exception output tweaking
-        path: "/2.6.html#exception-output-tweaking"
+      - title: "<code>Enumerable#chunk</code> without a block returns an <code>Enumerator</code>"
+        path: "/2.4.html#enumerablechunk-without-a-block-returns-an-enumerator"
+      - title: "<code>#sum</code>"
+        path: "/2.4.html#sum"
+      - title: "<code>#uniq</code>"
+        path: "/2.4.html#uniq"
+      - title: "<code>Array#max</code> and <code>#min</code>"
+        path: "/2.4.html#arraymax-and-min"
+      - title: "<code>Array#concat</code> takes multiple arguments"
+        path: "/2.4.html#arrayconcat-takes-multiple-arguments"
+      - title: "<code>Array#pack(buffer:)</code>"
+        path: "/2.4.html#arraypackbuffer"
+      - title: "<code>Hash#compact</code> and <code>#compact!</code>"
+        path: "/2.4.html#hashcompact-and-compact"
+      - title: "<code>Hash#transform_values</code> and <code>#transform_values!</code>"
+        path: "/2.4.html#hashtransform_values-and-transform_values"
     - title: Filesystem and IO
-      path: "/2.6.html#filesystem-and-io"
+      path: "/2.4.html#filesystem-and-io"
       children:
-      - title: "<code>Dir#each_child</code> and <code>Dir#children</code>"
-        path: "/2.6.html#direach_child-and-dirchildren"
-      - title: 'IO open mode: <code>''x''</code>'
-        path: "/2.6.html#io-open-mode-x"
-    - title: Minor changes
-      path: "/2.6.html#minor-changes"
-    - title: Introspection
-      path: "/2.6.html#introspection"
-      children:
-      - title: "<code>Binding#source_location</code>"
-        path: "/2.6.html#bindingsource_location"
-      - title: "<code>RubyVM.resolve_feature_path</code>"
-        path: "/2.6.html#rubyvmresolve_feature_path"
-      - title: "<code>RubyVM::AbstractSyntaxTree</code>"
-        path: "/2.6.html#rubyvmabstractsyntaxtree"
-    - title: "<code>TracePoint</code> improvements"
-      path: "/2.6.html#tracepoint-improvements"
-      children:
-      - title: "<code>#parameters</code>"
-        path: "/2.6.html#parameters"
-      - title: "<code>:script_compiled</code> event"
-        path: "/2.6.html#script_compiled-event"
-      - title: "<code>#enable</code>: new params <code>target:</code> and <code>target_line:</code>"
-        path: "/2.6.html#enable-new-params-target-and-target_line"
-  - title: Standard library
-    path: "/2.6.html#standard-library"
+      - title: "<code>chomp:</code> option for string splitting"
+        path: "/2.4.html#chomp-option-for-string-splitting"
+      - title: "<code>#empty?</code> method for filesystem objects"
+        path: "/2.4.html#empty-method-for-filesystem-objects"
+    - title: "<code>Thread#report_on_exception</code> and <code>Thread.report_on_exception</code>"
+      path: "/2.4.html#threadreport_on_exception-and-threadreport_on_exception"
+    - title: "<code>TracePoint#callee_id</code>"
+      path: "/2.4.html#tracepointcallee_id"
+  - title: Stdlib
+    path: "/2.4.html#stdlib"
     children:
-    - title: Large updated libraries
-      path: "/2.6.html#large-updated-libraries"
-    - title: Libraries promoted to default gems
-      path: "/2.6.html#libraries-promoted-to-default-gems"
+    - title: Libraries promoted to default/bundled gems
+      path: "/2.4.html#libraries-promoted-to-defaultbundled-gems"
 - title: Ruby 2.5
   path: "/2.5.html"
   is_version: true
@@ -278,116 +267,238 @@ chapters:
       path: "/2.5.html#large-updated-libraries"
     - title: Libraries promoted to default gems
       path: "/2.5.html#libraries-promoted-to-default-gems"
-- title: Ruby 2.4
-  path: "/2.4.html"
+- title: Ruby 2.6
+  path: "/2.6.html"
   is_version: true
-  published_at: Oct 14, 2019
+  published_at: Dec 29, 2018
   description: |
     <p><strong>Highlights:</strong></p>
 
     <ul>
-      <li>Toplevel <code>return</code></li>
-      <li>Unification of <code>Fixnum</code> and <code>Bignum</code> into <code>Integer</code></li>
-      <li>Full Unicode support for String case operations</li>
-      <li><code>Warning</code> module for fine-grained warnings output control</li>
-      <li><code>Comparable#clamp</code></li>
+      <li>Endless range</li>
+      <li><code>#then</code> “piping” method</li>
+      <li>Support for timezones in <code>Time</code></li>
+      <li><code>Proc</code> composition</li>
+      <li>Enumerator chaining</li>
+      <li><code>RubyVM::AbstractSyntaxTree</code></li>
     </ul>
 
-    <p><a href="https://rubyreferences.github.io/rubychanges/2.4.html">Read more »</a></p>
+    <p><a href="https://rubyreferences.github.io/rubychanges/2.6.html">Read more »</a></p>
   children:
   - title: Highlights
-    path: "/2.4.html#highlights"
+    path: "/2.6.html#highlights"
   - title: Language
-    path: "/2.4.html#language"
+    path: "/2.6.html#language"
     children:
-    - title: Multiple assignment allowed in conditional expression
-      path: "/2.4.html#multiple-assignment-allowed-in-conditional-expression"
-    - title: Toplevel <code>return</code>
-      path: "/2.4.html#toplevel-return"
-  - title: Refinements improvements
-    path: "/2.4.html#refinements-improvements"
+    - title: 'Endless range: <code>(1..)</code>'
+      path: "/2.6.html#endless-range-1"
+    - title: Non-ASCII constant names
+      path: "/2.6.html#non-ascii-constant-names"
+    - title: "<code>else</code> in exception-handling context"
+      path: "/2.6.html#else-in-exception-handling-context"
+    - title: 'Refinements: improved visibility'
+      path: "/2.6.html#refinements-improved-visibility"
+    - title: Misc
+      path: "/2.6.html#misc"
+  - title: Core classes and modules
+    path: "/2.6.html#core-classes-and-modules"
     children:
-    - title: Refinements are supported in <code>Symbol#to_proc</code> and <code>send</code>
-      path: "/2.4.html#refinements-are-supported-in-symbolto_proc-and-send"
-    - title: "<code>refine</code> can refine modules, too"
-      path: "/2.4.html#refine-can-refine-modules-too"
-    - title: "<code>Module.used_modules</code>"
-      path: "/2.4.html#moduleused_modules"
-  - title: Core
-    path: "/2.4.html#core"
-    children:
-    - title: "<code>Warning</code> module"
-      path: "/2.4.html#warning-module"
-    - title: "<code>Object#clone(freeze: false)</code>"
-      path: "/2.4.html#objectclonefreeze-false"
-    - title: "<code>Comparable#clamp</code>"
-      path: "/2.4.html#comparableclamp"
-    - title: Numerics
-      path: "/2.4.html#numerics"
+    - title: "<code>Kernel</code>"
+      path: "/2.6.html#kernel"
       children:
-      - title: "<code>Fixnum</code> and <code>Bignum</code> are unified into <code>Integer</code>"
-        path: "/2.4.html#fixnum-and-bignum-are-unified-into-integer"
-      - title: "<code>Numeric#finite?</code> and <code>#infinite?</code>"
-        path: "/2.4.html#numericfinite-and-infinite"
-      - title: "<code>Integer#digits</code>"
-        path: "/2.4.html#integerdigits"
-      - title: "<code>ndigits</code> optional argument for rounding methods"
-        path: "/2.4.html#ndigits-optional-argument-for-rounding-methods"
-      - title: "<code>half:</code> option for <code>#round</code> method"
-        path: "/2.4.html#half-option-for-round-method"
-    - title: Strings, symbols and regexps
-      path: "/2.4.html#strings-symbols-and-regexps"
+      - title: "<code>#then</code> as an alias for <code>#yield_self</code>"
+        path: "/2.6.html#then-as-an-alias-for-yield_self"
+      - title: "<code>&lt;Numeric&gt;()</code> methods have <code>exception:</code>
+          argument"
+        path: "/2.6.html#numeric-methods-have-exception-argument"
+      - title: "<code>#system</code> has <code>exception:</code> argument"
+        path: "/2.6.html#system-has-exception-argument"
+    - title: "<code>Module#method_defined?</code>: <code>inherit</code> argument"
+      path: "/2.6.html#modulemethod_defined-inherit-argument"
+    - title: "<code>String#split</code> with block"
+      path: "/2.6.html#stringsplit-with-block"
+    - title: "<code>Time</code>: support for timezones"
+      path: "/2.6.html#time-support-for-timezones"
+    - title: "<code>Proc</code> composition"
+      path: "/2.6.html#proc-composition"
+    - title: "<code>Array#union</code> and <code>Array#difference</code>"
+      path: "/2.6.html#arrayunion-and-arraydifference"
+    - title: "<code>Hash#merge</code> with multiple arguments"
+      path: "/2.6.html#hashmerge-with-multiple-arguments"
+    - title: Enumerables
+      path: "/2.6.html#enumerables"
       children:
-      - title: Unicode case conversions
-        path: "/2.4.html#unicode-case-conversions"
-      - title: "<code>String.new(capacity: size)</code>"
-        path: "/2.4.html#stringnewcapacity-size"
-      - title: "<code>#casecmp?</code>"
-        path: "/2.4.html#casecmp"
-      - title: "<code>String#concat</code> and <code>#prepend</code> accept multiple
-          arguments"
-        path: "/2.4.html#stringconcat-and-prepend-accept-multiple-arguments"
-      - title: "<code>String#unpack1</code>"
-        path: "/2.4.html#stringunpack1"
-      - title: "<code>#match?</code> method"
-        path: "/2.4.html#match-method"
-      - title: "<code>MatchData</code>: better support for named captures"
-        path: "/2.4.html#matchdata-better-support-for-named-captures"
-    - title: Collections
-      path: "/2.4.html#collections"
+      - title: "<code>#filter</code>/<code>#filter!</code>"
+        path: "/2.6.html#filterfilter"
+      - title: "<code>#to_h</code> with a block"
+        path: "/2.6.html#to_h-with-a-block"
+      - title: "<code>Enumerable::ArithmeticSequence</code>"
+        path: "/2.6.html#enumerablearithmeticsequence"
+      - title: "<code>Enumerator</code> chaining"
+        path: "/2.6.html#enumerator-chaining"
+    - title: "<code>Range</code>"
+      path: "/2.6.html#range"
       children:
-      - title: "<code>Enumerable#chunk</code> without a block returns an <code>Enumerator</code>"
-        path: "/2.4.html#enumerablechunk-without-a-block-returns-an-enumerator"
-      - title: "<code>#sum</code>"
-        path: "/2.4.html#sum"
-      - title: "<code>#uniq</code>"
-        path: "/2.4.html#uniq"
-      - title: "<code>Array#max</code> and <code>#min</code>"
-        path: "/2.4.html#arraymax-and-min"
-      - title: "<code>Array#concat</code> takes multiple arguments"
-        path: "/2.4.html#arrayconcat-takes-multiple-arguments"
-      - title: "<code>Array#pack(buffer:)</code>"
-        path: "/2.4.html#arraypackbuffer"
-      - title: "<code>Hash#compact</code> and <code>#compact!</code>"
-        path: "/2.4.html#hashcompact-and-compact"
-      - title: "<code>Hash#transform_values</code> and <code>#transform_values!</code>"
-        path: "/2.4.html#hashtransform_values-and-transform_values"
+      - title: "<code>Range#===</code> uses <code>#cover?</code> instead of <code>#include?</code>"
+        path: "/2.6.html#range-uses-cover-instead-of-include"
+      - title: "<code>Range#cover?</code> accepts range argument"
+        path: "/2.6.html#rangecover-accepts-range-argument"
+      - title: "<code>Range#%</code> alias"
+        path: "/2.6.html#range-alias"
+    - title: Exceptions
+      path: "/2.6.html#exceptions"
+      children:
+      - title: 'New arguments: <code>receiver:</code> and <code>key:</code>'
+        path: "/2.6.html#new-arguments-receiver-and-key"
+      - title: "<code>Exception#full_message</code> options"
+        path: "/2.6.html#exceptionfull_message-options"
+      - title: Exception output tweaking
+        path: "/2.6.html#exception-output-tweaking"
     - title: Filesystem and IO
-      path: "/2.4.html#filesystem-and-io"
+      path: "/2.6.html#filesystem-and-io"
       children:
-      - title: "<code>chomp:</code> option for string splitting"
-        path: "/2.4.html#chomp-option-for-string-splitting"
-      - title: "<code>#empty?</code> method for filesystem objects"
-        path: "/2.4.html#empty-method-for-filesystem-objects"
-    - title: "<code>Thread#report_on_exception</code> and <code>Thread.report_on_exception</code>"
-      path: "/2.4.html#threadreport_on_exception-and-threadreport_on_exception"
-    - title: "<code>TracePoint#callee_id</code>"
-      path: "/2.4.html#tracepointcallee_id"
-  - title: Stdlib
-    path: "/2.4.html#stdlib"
+      - title: "<code>Dir#each_child</code> and <code>Dir#children</code>"
+        path: "/2.6.html#direach_child-and-dirchildren"
+      - title: 'IO open mode: <code>''x''</code>'
+        path: "/2.6.html#io-open-mode-x"
+    - title: Minor changes
+      path: "/2.6.html#minor-changes"
+    - title: Introspection
+      path: "/2.6.html#introspection"
+      children:
+      - title: "<code>Binding#source_location</code>"
+        path: "/2.6.html#bindingsource_location"
+      - title: "<code>RubyVM.resolve_feature_path</code>"
+        path: "/2.6.html#rubyvmresolve_feature_path"
+      - title: "<code>RubyVM::AbstractSyntaxTree</code>"
+        path: "/2.6.html#rubyvmabstractsyntaxtree"
+    - title: "<code>TracePoint</code> improvements"
+      path: "/2.6.html#tracepoint-improvements"
+      children:
+      - title: "<code>#parameters</code>"
+        path: "/2.6.html#parameters"
+      - title: "<code>:script_compiled</code> event"
+        path: "/2.6.html#script_compiled-event"
+      - title: "<code>#enable</code>: new params <code>target:</code> and <code>target_line:</code>"
+        path: "/2.6.html#enable-new-params-target-and-target_line"
+  - title: Standard library
+    path: "/2.6.html#standard-library"
     children:
-    - title: Libraries promoted to default/bundled gems
-      path: "/2.4.html#libraries-promoted-to-defaultbundled-gems"
+    - title: Large updated libraries
+      path: "/2.6.html#large-updated-libraries"
+    - title: Libraries promoted to default gems
+      path: "/2.6.html#libraries-promoted-to-default-gems"
+- title: Ruby 2.7
+  path: "/2.7.html"
+  is_version: true
+  published_at: TODO
+  description: |
+    <p><strong>Highlights:</strong></p>
+
+    <p>Ruby 2.7 is a last big release before 3.0</p>
+
+    <p><a href="https://rubyreferences.github.io/rubychanges/2.7.html">Read more »</a></p>
+  children:
+  - title: Highlights
+    path: "/2.7.html#highlights"
+  - title: Language
+    path: "/2.7.html#language"
+    children:
+    - title: Pattern matching
+      path: "/2.7.html#pattern-matching"
+    - title: Keyword argument-related changes
+      path: "/2.7.html#keyword-argument-related-changes"
+    - title: Numbered block parameters
+      path: "/2.7.html#numbered-block-parameters"
+    - title: Beginless range
+      path: "/2.7.html#beginless-range"
+    - title: Syntax changes
+      path: "/2.7.html#syntax-changes"
+    - title: Warnings/deprecations
+      path: "/2.7.html#warningsdeprecations"
+      children:
+      - title: "“Safe” and “taint” concepts are deprecated in general"
+        path: "/2.7.html#safe-and-taint-concepts-are-deprecated-in-general"
+    - title: "<code>self.&lt;private_method&gt;</code>"
+      path: "/2.7.html#selfprivate_method"
+  - title: Core classes and modules
+    path: "/2.7.html#core-classes-and-modules"
+    children:
+    - title: Better <code>Method#inspect</code>
+      path: "/2.7.html#better-methodinspect"
+    - title: "<code>UnboundMethod#bind_call</code>"
+      path: "/2.7.html#unboundmethodbind_call"
+    - title: "<code>Module#const_source_location</code>"
+      path: "/2.7.html#moduleconst_source_location"
+    - title: "<code>Module#autoload?</code>: <code>inherit</code> argument"
+      path: "/2.7.html#moduleautoload-inherit-argument"
+    - title: "<code>Comparable#clamp</code> with <code>Range</code>"
+      path: "/2.7.html#comparableclamp-with-range"
+    - title: "<code>Integer[]</code> with range"
+      path: "/2.7.html#integer-with-range"
+    - title: "<code>Complex#&lt;=&gt;</code>"
+      path: "/2.7.html#complex"
+    - title: Strings, symbols and regexps
+      path: "/2.7.html#strings-symbols-and-regexps"
+      children:
+      - title: Core methods returning frozen strings
+        path: "/2.7.html#core-methods-returning-frozen-strings"
+      - title: "<code>Symbol#start_with?</code> and <code>#end_with?</code>"
+        path: "/2.7.html#symbolstart_with-and-end_with"
+    - title: "<code>Time</code>"
+      path: "/2.7.html#time"
+      children:
+      - title: "<code>#floor</code> and <code>#ceil</code>"
+        path: "/2.7.html#floor-and-ceil"
+      - title: "<code>#inspect</code> includes subseconds"
+        path: "/2.7.html#inspect-includes-subseconds"
+    - title: Enumerables and collections
+      path: "/2.7.html#enumerables-and-collections"
+      children:
+      - title: "<code>Enumerable#filter_map</code>"
+        path: "/2.7.html#enumerablefilter_map"
+      - title: "<code>Enumerable#tally</code>"
+        path: "/2.7.html#enumerabletally"
+      - title: "<code>Enumerator.produce</code>"
+        path: "/2.7.html#enumeratorproduce"
+      - title: "<code>Enumerator::Lazy#eager</code>"
+        path: "/2.7.html#enumeratorlazyeager"
+      - title: "<code>Enumerator::Yielder#to_proc</code>"
+        path: "/2.7.html#enumeratoryielderto_proc"
+      - title: "<code>Array#intersection</code>"
+        path: "/2.7.html#arrayintersection"
+    - title: "<code>Fiber#raise</code>"
+      path: "/2.7.html#fiberraise"
+    - title: "<code>Range</code>"
+      path: "/2.7.html#range"
+      children:
+      - title: "<code>Range#===</code> for <code>String</code>"
+        path: "/2.7.html#range-for-string"
+    - title: Filesystem and IO
+      path: "/2.7.html#filesystem-and-io"
+      children:
+      - title: "<code>IO#set_encoding_by_bom</code>"
+        path: "/2.7.html#ioset_encoding_by_bom"
+      - title: "<code>Dir.glob</code> and <code>Dir.[]</code> not allow <code>\\0</code>-separated
+          patterns"
+        path: "/2.7.html#dirglob-and-dir-not-allow-0-separated-patterns"
+    - title: Exceptions
+      path: "/2.7.html#exceptions"
+      children:
+      - title: "<code>FrozenError</code>: receiver argument"
+        path: "/2.7.html#frozenerror-receiver-argument"
+    - title: Interpreter internals
+      path: "/2.7.html#interpreter-internals"
+      children:
+      - title: "<code>GC.compact</code>"
+        path: "/2.7.html#gccompact"
+  - title: Standard library
+    path: "/2.7.html#standard-library"
+    children:
+    - title: Standard library contents change
+      path: "/2.7.html#standard-library-contents-change"
+    - title: Large updated libraries
+      path: "/2.7.html#large-updated-libraries"
 - title: History (of this site)
   path: "/History.html"
 - title: Contributing
