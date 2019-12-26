@@ -8,6 +8,7 @@ require_relative '_src/lib/toc'
 require_relative '_src/lib/render'
 
 file '_data/book.yml' => FileList['_src/*.md'] do |t|
+  puts "Rerendering TOC"
   chapters = TOC.(t.prerequisites)
   File.write(t.name, Util.deep_stringify_keys(chapters: chapters).to_yaml)
 end

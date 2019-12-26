@@ -5,11 +5,11 @@ class Render < FileProcessor
     text
       .gsub('<<date>>', File.mtime(path).strftime('%b %d, %Y'))
       .gsub(/\[(Bug|Feature|Misc) \#\d+\]\(.+?\)/, &method(:process_link))
-      .gsub(
+      .gsub( # links to official docs to just nicer links (with icon)
         %r{\[([^\[\]]+ [^\[\]]+)\]\((https://ruby-doc\.org.+?)\)},
         '<a class="ruby-doc" href="\\2">\\1</a>'
       )
-      .gsub(
+      .gsub( # links without spaces are typically class/method names, so wrapped in <code>
         %r{\[([^\[\]]+)\]\((https://ruby-doc\.org.+?)\)},
         '<a class="ruby-doc" href="\\2"><code>\\1</code></a>'
       )
