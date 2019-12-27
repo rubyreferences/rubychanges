@@ -2,10 +2,163 @@
 chapters:
 - title: Introduction
   path: "/"
+- title: Ruby 2.7
+  path: "/2.7.html"
+  is_version: true
+  published_at: '2019-12-27'
+  description: |
+    <p><strong>Highlights:</strong></p>
+
+    <p>Ruby 2.7 is a last major release before 3.0¹, so it introduces several important changes, larger in scale than previous releases (and also a bit lean on a “just nice to have” features side). Be prepared!</p>
+
+    <ul>
+      <li>Pattern matching</li>
+      <li>“Real” keyword argument</li>
+      <li>Numbered block parameters</li>
+      <li>Beginless range</li>
+      <li><code>Enumerator.produce</code></li>
+      <li><code>GC.compact</code></li>
+      <li>Large update of IRB</li>
+      <li>Serious cleanup of the standard library</li>
+    </ul>
+
+    <p><small>¹There is a possibility 2.8 will also be released, but in any case, Christmas release of 2020 is promised to be Ruby 3.0.</small></p>
+
+    <p><a href="https://rubyreferences.github.io/rubychanges/2.7.html">Read more »</a></p>
+  children:
+  - title: Highlights
+    path: "/2.7.html#highlights"
+  - title: Language
+    path: "/2.7.html#language"
+    children:
+    - title: Pattern matching
+      path: "/2.7.html#pattern-matching"
+    - title: Keyword argument-related changes
+      path: "/2.7.html#keyword-argument-related-changes"
+    - title: Numbered block parameters
+      path: "/2.7.html#numbered-block-parameters"
+    - title: Beginless range
+      path: "/2.7.html#beginless-range"
+    - title: Other syntax changes
+      path: "/2.7.html#other-syntax-changes"
+    - title: Warnings/deprecations
+      path: "/2.7.html#warningsdeprecations"
+      children:
+      - title: "“Safe” and “taint” concepts are deprecated in general"
+        path: "/2.7.html#safe-and-taint-concepts-are-deprecated-in-general"
+    - title: "<code>self.&lt;private_method&gt;</code>"
+      path: "/2.7.html#selfprivate_method"
+    - title: Refinements in <code>#method</code>/<code>#instance_method</code>
+      path: "/2.7.html#refinements-in-methodinstance_method"
+  - title: Core classes and modules
+    path: "/2.7.html#core-classes-and-modules"
+    children:
+    - title: Better <code>Method#inspect</code>
+      path: "/2.7.html#better-methodinspect"
+    - title: "<code>UnboundMethod#bind_call</code>"
+      path: "/2.7.html#unboundmethodbind_call"
+    - title: "<code>Module</code>"
+      path: "/2.7.html#module"
+      children:
+      - title: "<code>#const_source_location</code>"
+        path: "/2.7.html#const_source_location"
+      - title: "<code>#autoload?</code>: <code>inherit</code> argument"
+        path: "/2.7.html#autoload-inherit-argument"
+    - title: "<code>Comparable#clamp</code> with <code>Range</code>"
+      path: "/2.7.html#comparableclamp-with-range"
+    - title: "<code>Integer[]</code> with range"
+      path: "/2.7.html#integer-with-range"
+    - title: "<code>Complex#&lt;=&gt;</code>"
+      path: "/2.7.html#complex"
+    - title: Strings, symbols and regexps
+      path: "/2.7.html#strings-symbols-and-regexps"
+      children:
+      - title: Core methods returning frozen strings
+        path: "/2.7.html#core-methods-returning-frozen-strings"
+      - title: "<code>Symbol#start_with?</code> and <code>#end_with?</code>"
+        path: "/2.7.html#symbolstart_with-and-end_with"
+    - title: "<code>Time</code>"
+      path: "/2.7.html#time"
+      children:
+      - title: "<code>#floor</code> and <code>#ceil</code>"
+        path: "/2.7.html#floor-and-ceil"
+      - title: "<code>#inspect</code> includes subseconds"
+        path: "/2.7.html#inspect-includes-subseconds"
+    - title: Enumerables and collections
+      path: "/2.7.html#enumerables-and-collections"
+      children:
+      - title: "<code>Enumerable#filter_map</code>"
+        path: "/2.7.html#enumerablefilter_map"
+      - title: "<code>Enumerable#tally</code>"
+        path: "/2.7.html#enumerabletally"
+      - title: "<code>Enumerator.produce</code>"
+        path: "/2.7.html#enumeratorproduce"
+      - title: "<code>Enumerator::Lazy#eager</code>"
+        path: "/2.7.html#enumeratorlazyeager"
+      - title: "<code>Enumerator::Yielder#to_proc</code>"
+        path: "/2.7.html#enumeratoryielderto_proc"
+      - title: "<code>Array#intersection</code>"
+        path: "/2.7.html#arrayintersection"
+      - title: "<code>ObjectSpace::WeakMap#[]=</code> now accepts non-GC-able objects"
+        path: "/2.7.html#objectspaceweakmap-now-accepts-non-gc-able-objects"
+    - title: "<code>Fiber#raise</code>"
+      path: "/2.7.html#fiberraise"
+    - title: "<code>Range</code>"
+      path: "/2.7.html#range"
+      children:
+      - title: "<code>#===</code> for <code>String</code>"
+        path: "/2.7.html#for-string"
+      - title: "<code>#minmax</code> implementation change"
+        path: "/2.7.html#minmax-implementation-change"
+    - title: Filesystem and IO
+      path: "/2.7.html#filesystem-and-io"
+      children:
+      - title: "<code>IO#set_encoding_by_bom</code>"
+        path: "/2.7.html#ioset_encoding_by_bom"
+      - title: "<code>Dir.glob</code> and <code>Dir.[]</code> not allow <code>\\0</code>-separated
+          patterns"
+        path: "/2.7.html#dirglob-and-dir-not-allow-0-separated-patterns"
+      - title: <code>File.extname</code> returns a <code>"."</code> string at a name
+          ending with a dot.
+        path: "/2.7.html#fileextname-returns-a--string-at-a-name-ending-with-a-dot"
+    - title: Exceptions
+      path: "/2.7.html#exceptions"
+      children:
+      - title: "<code>FrozenError</code>: receiver argument"
+        path: "/2.7.html#frozenerror-receiver-argument"
+    - title: Interpreter internals
+      path: "/2.7.html#interpreter-internals"
+      children:
+      - title: "<code>$LOAD_PATH.resolve_feature_path</code>"
+        path: "/2.7.html#load_pathresolve_feature_path"
+      - title: "<code>resolve_feature_path</code> behavior for loaded features fixed"
+        path: "/2.7.html#resolve_feature_path-behavior-for-loaded-features-fixed"
+      - title: "<code>GC.compact</code>"
+        path: "/2.7.html#gccompact"
+      - title: "<code>Warning::[]</code> and <code>::[]=</code>"
+        path: "/2.7.html#warning-and-"
+  - title: Standard library
+    path: "/2.7.html#standard-library"
+    children:
+    - title: Large IRB update
+      path: "/2.7.html#large-irb-update"
+    - title: Network and web
+      path: "/2.7.html#network-and-web"
+    - title: Large updated libraries
+      path: "/2.7.html#large-updated-libraries"
+    - title: Standard library contents change
+      path: "/2.7.html#standard-library-contents-change"
+      children:
+      - title: New libraries
+        path: "/2.7.html#new-libraries"
+      - title: Libraries promoted to default gems
+        path: "/2.7.html#libraries-promoted-to-default-gems"
+      - title: Libraries excluded from the standard library
+        path: "/2.7.html#libraries-excluded-from-the-standard-library"
 - title: Ruby 2.6
   path: "/2.6.html"
   is_version: true
-  published_at: Dec 29, 2018
+  published_at: '2018-12-29'
   description: |
     <p><strong>Highlights:</strong></p>
 
@@ -126,7 +279,7 @@ chapters:
 - title: Ruby 2.5
   path: "/2.5.html"
   is_version: true
-  published_at: Jun 6, 2019
+  published_at: '2019-06-06'
   description: |
     <p><strong>Highlights:</strong></p>
 
@@ -281,7 +434,7 @@ chapters:
 - title: Ruby 2.4
   path: "/2.4.html"
   is_version: true
-  published_at: Oct 14, 2019
+  published_at: '2019-10-14'
   description: |
     <p><strong>Highlights:</strong></p>
 

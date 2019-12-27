@@ -8,11 +8,13 @@ The repo gladly accepts contributions!
 
 Things you need to know, as of now:
 
-* The source is in `_src/<version>.md` (2.6 only);
-* To "compile" the final Jekyll site, you need to run first `_src/script/toc.rb` (create TOC in `_data/book.yml`), and then `_src/script/postprocess.rb` (creates `./2.6.md` with a bit more sophisticated rendering).
+* The source is in `_src/<version>.md`;
+* To "compile" the final Jekyll site, you need to run `rake` in the main folder, or separate tasks (visible with `rake -T`):
+  * `rake toc` (create TOC in `_data/book.yml`)
+  * `rake render` (postprocesses `./_src/<version>.md`→`./<version>.md` adding some nicer formatting not available in pure Markdown);
+* Now you can run `jekyll serve` to preview the site locally.
 
 The main things to do, currently:
 
 * Proofread existing content;
-* Add previous versions of Ruby;
-* Make rendering scripts less ad-hoc.
+* Add previous versions of Ruby.

@@ -31,6 +31,7 @@ Some things to know about the content:
 * I want to _eventually_ cover Ruby versions down to 1.8, or maybe even earlier, but it is currently work-in-progress, with the first priority of the recent release of **[Ruby 2.6](2.6.html)**, and then going down version by version in my free time.
 * **UPD 2019-06-06:** **[Ruby 2.5](2.5.html)** is now covered too. Despite being 1.5 years old news, I believe it is still important to cover it in the same manner as the recent version was.
 * **UPD 2019-10-14:** **[Ruby 2.4](2.4.html)** changelog added, and some other content changed. See [History](/History.html) for detail.
+* **UPD 2019-12-27:** Newly released **[Ruby 2.7](2.7.html)** changelog added.
 
 _The source of the site can be found at [GitHub](https://github.com/rubyreferences/rubychanges). See also [Contributing](/Contributing.html) section._
 
