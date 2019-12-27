@@ -1,16 +1,17 @@
 class Render < FileProcessor
   TRACKER_LINK_RE = %r{\[(?<kind>Bug|Feature|Misc) \#(?<num>\d+)\]\(https://bugs\.ruby-lang\.org/issues/(?<num2>\d+(\#.+)?)\)}
+  DOC_URLS = '(?:https://ruby-doc\.org|https://docs.ruby-lang.org)'
 
   def call
     text
       .gsub('<<date>>', File.mtime(path).strftime('%b %d, %Y'))
       .gsub(/\[(Bug|Feature|Misc) \#\d+\]\(.+?\)/, &method(:process_link))
       .gsub( # links to official docs to just nicer links (with icon)
-        %r{\[([^\[\]]+ [^\[\]]+)\]\((https://ruby-doc\.org.+?)\)},
+        %r{\[([^\[\]]+ [^\[\]]+)\]\((#{DOC_URLS}.+?)\)},
         '<a class="ruby-doc" href="\\2">\\1</a>'
       )
       .gsub( # links without spaces are typically class/method names, so wrapped in <code>
-        %r{\[([^\[\]]+)\]\((https://ruby-doc\.org.+?)\)},
+        %r{\[([^\[\]]+)\]\((#{DOC_URLS}.+?)\)},
         '<a class="ruby-doc" href="\\2"><code>\\1</code></a>'
       )
       .gsub(%r{^\#{2,} (.+)$}) { |header| header + "[](##{Util.id(header)})" } # attach nice clickable links to headers

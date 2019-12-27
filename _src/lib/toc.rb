@@ -1,3 +1,5 @@
+require 'date'
+
 module TOC
   START_CHAPTERS = [
     {title: 'Introduction', path: '/'}
@@ -18,7 +20,8 @@ module TOC
   def self.call(pathes)
     [
       *START_CHAPTERS,
-      *pathes.map(&Item.method(:call)).flatten(1),
+      # Newest version is always on top
+      *pathes.sort.reverse.map(&Item.method(:call)).flatten(1),
       *FINAL_CHAPTERS
     ]
   end
@@ -78,7 +81,10 @@ module TOC
         .then(&Kramdown::Document.method(:new))
         .to_html
 
-      {published_at: pub, description: desc}
+      {
+        published_at: Date.parse(pub).strftime('%Y-%m-%d'),
+        description: desc
+      }
     end
   end
 end
