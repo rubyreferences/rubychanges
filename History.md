@@ -5,7 +5,7 @@
 ## 2019-12-27
 
 * 2.7 changelog added!
-* In 2.7 changelog, links to docs _sometimes_ switched to "official" docs.ruby-lang.org website. Most of the time, we are linking to ruby-doc.org, which, while being unofficial, has two advantages: a) it looks a bit nicer and b) it doesn't mix what is in core and what came from standard libraries. Unfortunately, as of release date of 2.7, ruby-doc.org's rendering is unable to properly handle new core methods implemented in `.rb` files (compare GC docs on [official site](https://docs.ruby-lang.org/en/master/GC.html), and on [ruby-doc.org](https://ruby-doc.org/core-2.7.0/GC.html))
+* ~In 2.7 changelog, links to docs _sometimes_ switched to "official" docs.ruby-lang.org website. Most of the time, we are linking to ruby-doc.org, which, while being unofficial, has two advantages: a) it looks a bit nicer and b) it doesn't mix what is in core and what came from standard libraries. Unfortunately, as of release date of 2.7, ruby-doc.org's rendering is unable to properly handle new core methods implemented in `.rb` files (compare GC docs on [official site](https://docs.ruby-lang.org/en/master/GC.html), and on [ruby-doc.org](https://ruby-doc.org/core-2.7.0/GC.html))~ ruby-doc.org was fixed!
 * [Atom feed](feed.xml) added to the site, allowing to put it in your favorite aggregator _(yes, I am aware it is almost 2020 and nobody does this anymore)_.
 
 ## 2019-10-14
