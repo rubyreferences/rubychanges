@@ -4,7 +4,7 @@ title: Contributing
 
 # Contributing
 
-The repo gladly accepts contributions!
+[The repo](https://github.com/rubyreferences/rubychanges) gladly accepts contributions! 
 
 Things you need to know, as of now:
 
