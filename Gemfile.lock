@@ -197,6 +197,7 @@ GEM
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
       ruby_dep (~> 1.2)
+    memoist (0.16.2)
     mercenary (0.3.6)
     mini_portile2 (2.4.0)
     minima (2.5.0)
@@ -243,6 +244,7 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages
+  memoist
 
 BUNDLED WITH
    1.17.2
