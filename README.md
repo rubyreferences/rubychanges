@@ -8,7 +8,7 @@ permalink: "/index.html"
 
 [![Patreon](https://img.shields.io/badge/patreon-donate-blue.svg)](https://www.patreon.com/zverok)
 
-This site is dedicated to history of [Ruby language](http://ruby-lang.org/) evolution. Basically, it is just the same information that each Ruby version's [NEWS](https://github.com/ruby/ruby/blob/trunk/NEWS) file contains, just in more readable and informative manner.
+This site is dedicated to history of [Ruby language](https://www.ruby-lang.org/) evolution. Basically, it is just the same information that each Ruby version's [NEWS](https://github.com/ruby/ruby/blob/master/NEWS.md) file contains, just in more readable and informative manner.
 
 Main goals:
 
@@ -33,7 +33,7 @@ Some things to know about the content:
 * **UPD 2019-10-14:** **[Ruby 2.4](2.4.html)** changelog added, and some other content changed. See [History](/History.html) for detail.
 * **UPD 2019-12-27:** Newly released **[Ruby 2.7](2.7.html)** changelog added.
 
-_The source of the site can be found at [GitHub](https://github.com/rubyreferences/rubychanges). See also [Contributing](/Contributing.html) section._
+_The source of the site can be found at [GitHub](https://github.com/rubyreferences/rubychanges). See also [Contributing](/rubychanges/Contributing.html) section._
 
 ## Credits and licenses
 
