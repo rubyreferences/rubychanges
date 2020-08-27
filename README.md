@@ -33,7 +33,7 @@ Some things to know about the content:
 * **UPD 2019-10-14:** **[Ruby 2.4](2.4.html)** changelog added, and some other content changed. See [History](/History.html) for detail.
 * **UPD 2019-12-27:** Newly released **[Ruby 2.7](2.7.html)** changelog added.
 
-_The source of the site can be found at [GitHub](https://github.com/rubyreferences/rubychanges). See also [Contributing](/rubychanges/Contributing.html) section._
+_The source of the site can be found at [GitHub](https://github.com/rubyreferences/rubychanges). See also the [Contributing](/Contributing.md) section._
 
 ## Credits and licenses
 
