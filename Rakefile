@@ -21,7 +21,7 @@ rule /^\d+\.\d+\.md$/ => ->(s) { "_src/#{s}" } do |t|
 end
 
 desc 'Convert file contents from source to target (prettify)'
-task contents: ('2.4'..'2.7').to_a.map(&'%s.md'.method(:%))
+task contents: [*('2.4'..'2.7'), '3.0'].map(&'%s.md'.method(:%))
 
 desc 'Render TOC for the changelog "book"'
 task toc: '_data/book.yml'
