@@ -10,6 +10,8 @@ permalink: "/index.html"
 
 This site is dedicated to history of [Ruby language](https://www.ruby-lang.org/) evolution. Basically, it is just the same information that each Ruby version's [NEWS](https://github.com/ruby/ruby/blob/master/NEWS.md) file contains, just in more readable and informative manner.
 
+> <big>Latest version: <b><a href="3.0.html">3.0</a></b></big> ([2.7](2.7.html) − [2.6](2.6.html) −[2.5](2.5.html) − [2.4](2.4.html))
+
 Main goals:
 
 * **Full**: unlike most of "What's new in Ruby x.y?" blog posts, information here targets to cover all the `NEWS` file of current Ruby version;
@@ -32,8 +34,9 @@ Some things to know about the content:
 * **UPD 2019-06-06:** **[Ruby 2.5](2.5.html)** is now covered too. Despite being 1.5 years old news, I believe it is still important to cover it in the same manner as the recent version was.
 * **UPD 2019-10-14:** **[Ruby 2.4](2.4.html)** changelog added, and some other content changed. See [History](/History.html) for detail.
 * **UPD 2019-12-27:** Newly released **[Ruby 2.7](2.7.html)** changelog added.
+* **UPD 2019-12-25:** Newly released **[Ruby 3.0](3.0.html)** changelog added.
 
-_The source of the site can be found at [GitHub](https://github.com/rubyreferences/rubychanges). See also the [Contributing](/Contributing.md) section._
+_The source of the site can be found at [GitHub](https://github.com/rubyreferences/rubychanges). See also the [Contributing](Contributing.html) section._
 
 ## Credits and licenses
 
