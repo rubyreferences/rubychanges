@@ -11,7 +11,17 @@ a.ruby-doc:before {
   opacity: 0.4;
   display: inline-block;
 }
-a.ruby-doc {
+a.github:before {
+  content: "";
+  background-image: url(../images/github.png);
+  width: 14px;
+  height: 14px;
+  margin-right: 3px;
+  margin-left: 2px;
+  opacity: 0.8;
+  display: inline-block;
+}
+a.ruby-doc, a.github {
   white-space: nowrap;
 }
 a.tracker {

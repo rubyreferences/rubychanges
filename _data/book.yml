@@ -9,13 +9,13 @@ chapters:
   description: |
     <p><strong>Highlights:</strong></p>
 
-    <p>Ruby 3.0 is a major language release.</p>
+    <p>Ruby 3.0 is a major language release. The core team worked hard to preserve backward compatibility while delivering some huge and exciting new features.</p>
 
     <ul>
       <li>Full separation of keyword arguments</li>
-      <li>Concurrency: Ractors – actor</li>
+      <li>Ractors: Thread-alike object implementing the actor model, and finally lifting the GVL (Global Virtual machine Lock) and enabling true concurrency</li>
       <li>Non-blocking IO with Fibers</li>
-      <li>Static typing</li>
+      <li>Type declarations (in separate files)</li>
       <li>Pattern matching:
         <ul>
           <li>No longer experimental</li>
@@ -36,8 +36,10 @@ chapters:
     children:
     - title: Keyword arguments are now fully separated from positional arguments
       path: "/3.0.html#keyword-arguments-are-now-fully-separated-from-positional-arguments"
-    - title: 'Procs with “rest” arguments and keywords: change of autosplatting behavior'
-      path: "/3.0.html#procs-with-rest-arguments-and-keywords-change-of-autosplatting-behavior"
+      children:
+      - title: 'Procs with “rest” arguments and keywords: change of autosplatting
+          behavior'
+        path: "/3.0.html#procs-with-rest-arguments-and-keywords-change-of-autosplatting-behavior"
     - title: Arguments forwarding (<code>...</code>) supports leading arguments
       path: "/3.0.html#arguments-forwarding--supports-leading-arguments"
     - title: "“Endless” method definition"
@@ -51,8 +53,8 @@ chapters:
         path: "/3.0.html#in-as-a-truefalse-check"
       - title: Find pattern
         path: "/3.0.html#find-pattern"
-    - title: Changing in class variable behavior
-      path: "/3.0.html#changing-in-class-variable-behavior"
+    - title: Changes in class variable behavior
+      path: "/3.0.html#changes-in-class-variable-behavior"
     - title: Other changes
       path: "/3.0.html#other-changes"
   - title: Types
@@ -75,11 +77,10 @@ chapters:
       - title: "<code>#include</code> and <code>#prepend</code> now affects modules
           including the receiver"
         path: "/3.0.html#include-and-prepend-now-affects-modules-including-the-receiver"
-      - title: improved method visibility declaration
+      - title: Improved method visibility declaration
         path: "/3.0.html#improved-method-visibility-declaration"
-    - title: "<code>Warning#warn</code> now supports a <code>category:</code> keyword
-        argument."
-      path: "/3.0.html#warningwarn-now-supports-a-category-keyword-argument"
+    - title: "<code>Warning#warn</code>: <code>category:</code> keyword argument."
+      path: "/3.0.html#warningwarn-category-keyword-argument"
     - title: Exception output order is changed – again
       path: "/3.0.html#exception-output-order-is-changed----again"
     - title: Strings and symbols
@@ -103,15 +104,17 @@ chapters:
         path: "/3.0.html#hashexcept"
       - title: "<code>Hash#transform_keys</code>: argument for key renaming"
         path: "/3.0.html#hashtransform_keys-argument-for-key-renaming"
+      - title: "<code>Hash#each</code> consistently yields a 2-element array to lambdas"
+        path: "/3.0.html#hasheach-consistently-yields-a-2-element-array-to-lambdas"
     - title: Procs/lambdas
       path: "/3.0.html#procslambdas"
       children:
-      - title: A proc returned by <code>Symbol#to_proc</code> now reported as lambda
-        path: "/3.0.html#a-proc-returned-by-symbolto_proc-now-reported-as-lambda"
-      - title: "<code>Kernel#lambda</code> now warns if called without a literal block"
-        path: "/3.0.html#kernellambda-now-warns-if-called-without-a-literal-block"
-      - title: "<code>Proc#==</code> and <code>Proc#eql?</code> are now defined"
-        path: "/3.0.html#proc-and-proceql-are-now-defined"
+      - title: "<code>Symbol#to_proc</code> reported as lambda"
+        path: "/3.0.html#symbolto_proc-reported-as-lambda"
+      - title: "<code>Kernel#lambda</code> warns if called without a literal block"
+        path: "/3.0.html#kernellambda-warns-if-called-without-a-literal-block"
+      - title: "<code>Proc#==</code> and <code>#eql?</code>"
+        path: "/3.0.html#proc-and-eql"
     - title: "<code>Random::DEFAULT</code> behavior change"
       path: "/3.0.html#randomdefault-behavior-change"
     - title: Filesystem and IO

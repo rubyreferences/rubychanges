@@ -11,8 +11,12 @@ class Render < FileProcessor
         '<a class="ruby-doc" href="\\2">\\1</a>'
       )
       .gsub( # links without spaces are typically class/method names, so wrapped in <code>
-        %r{\[([^\[\]]+)\]\((#{DOC_URLS}.+?)\)},
+        %r{\[(\S+)\]\((#{DOC_URLS}.+?)\)},
         '<a class="ruby-doc" href="\\2"><code>\\1</code></a>'
+      )
+      .gsub(
+        %r{\[(\S+)\]\((https://github\.com.+?)\)},
+        '<a class="github" href="\\2">\\1</a>'
       )
       .gsub(%r{^\#{2,} (.+)$}) { |header| header + "[](##{Util.id(header)})" } # attach nice clickable links to headers
   end
