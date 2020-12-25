@@ -2,6 +2,160 @@
 chapters:
 - title: Introduction
   path: "/"
+- title: Ruby 3.0
+  path: "/3.0.html"
+  is_version: true
+  published_at: '2020-12-25'
+  description: |
+    <p><strong>Highlights:</strong></p>
+
+    <p>Ruby 3.0 is a major language release. The core team worked hard to preserve backward compatibility while delivering some huge and exciting new features.</p>
+
+    <ul>
+      <li>Full separation of keyword arguments</li>
+      <li>Ractors: Thread-alike object implementing the actor model, and finally lifting the GVL (Global Virtual machine Lock) and enabling true concurrency</li>
+      <li>Non-blocking IO with Fibers</li>
+      <li>Type declarations (in separate files)</li>
+      <li>Pattern matching:
+        <ul>
+          <li>No longer experimental</li>
+          <li>Two flavors for one-line pattern matching: <code>=&gt;</code> (aka rightward assignment) and <code>in</code> (aka boolean check)</li>
+          <li>Find patterns</li>
+        </ul>
+      </li>
+      <li>“Endless” methods</li>
+      <li>GC auto-compaction</li>
+    </ul>
+
+    <p><a href="https://rubyreferences.github.io/rubychanges/3.0.html">Read more »</a></p>
+  children:
+  - title: Highlights
+    path: "/3.0.html#highlights"
+  - title: Language changes
+    path: "/3.0.html#language-changes"
+    children:
+    - title: Keyword arguments are now fully separated from positional arguments
+      path: "/3.0.html#keyword-arguments-are-now-fully-separated-from-positional-arguments"
+      children:
+      - title: 'Procs with “rest” arguments and keywords: change of autosplatting
+          behavior'
+        path: "/3.0.html#procs-with-rest-arguments-and-keywords-change-of-autosplatting-behavior"
+    - title: Arguments forwarding (<code>...</code>) supports leading arguments
+      path: "/3.0.html#arguments-forwarding--supports-leading-arguments"
+    - title: "“Endless” method definition"
+      path: "/3.0.html#endless-method-definition"
+    - title: Pattern matching
+      path: "/3.0.html#pattern-matching"
+      children:
+      - title: One-line pattern matching with <code>=&gt;</code>
+        path: "/3.0.html#one-line-pattern-matching-with-"
+      - title: "<code>in</code> as a <code>true</code>/<code>false</code> check"
+        path: "/3.0.html#in-as-a-truefalse-check"
+      - title: Find pattern
+        path: "/3.0.html#find-pattern"
+    - title: Changes in class variable behavior
+      path: "/3.0.html#changes-in-class-variable-behavior"
+    - title: Other changes
+      path: "/3.0.html#other-changes"
+  - title: Types
+    path: "/3.0.html#types"
+  - title: Core classes and modules
+    path: "/3.0.html#core-classes-and-modules"
+    children:
+    - title: "<code>Object#clone(freeze: true)</code>"
+      path: "/3.0.html#objectclonefreeze-true"
+    - title: "<code>Object#clone</code> passes <code>freeze:</code> argument to <code>#initialize_clone</code>"
+      path: "/3.0.html#objectclone-passes-freeze-argument-to-initialize_clone"
+    - title: "<code>Kernel#eval</code> changed processing of <code>__FILE__</code>
+        and <code>__LINE__</code>"
+      path: "/3.0.html#kerneleval-changed-processing-of-__file__-and-__line__"
+    - title: "<code>Regexp</code> and <code>Range</code> objects are frozen"
+      path: "/3.0.html#regexp-and-range-objects-are-frozen"
+    - title: "<code>Module</code>"
+      path: "/3.0.html#module"
+      children:
+      - title: "<code>#include</code> and <code>#prepend</code> now affects modules
+          including the receiver"
+        path: "/3.0.html#include-and-prepend-now-affects-modules-including-the-receiver"
+      - title: Improved method visibility declaration
+        path: "/3.0.html#improved-method-visibility-declaration"
+    - title: "<code>Warning#warn</code>: <code>category:</code> keyword argument."
+      path: "/3.0.html#warningwarn-category-keyword-argument"
+    - title: Exception output order is changed – again
+      path: "/3.0.html#exception-output-order-is-changed----again"
+    - title: Strings and symbols
+      path: "/3.0.html#strings-and-symbols"
+      children:
+      - title: 'Interpolated String literals are no longer frozen when <code># frozen-string-literal:
+          true</code> is used'
+        path: "/3.0.html#interpolated-string-literals-are-no-longer-frozen-when--frozen-string-literal-true-is-used"
+      - title: "<code>String</code>: always returning <code>String</code>"
+        path: "/3.0.html#string-always-returning-string"
+      - title: "<code>Symbol#name</code>"
+        path: "/3.0.html#symbolname"
+    - title: Collections
+      path: "/3.0.html#collections"
+      children:
+      - title: "<code>Array</code>: always returning <code>Array</code>"
+        path: "/3.0.html#array-always-returning-array"
+      - title: "<code>Array</code>: slicing with <code>Enumerator::ArithmeticSequence</code>"
+        path: "/3.0.html#array-slicing-with-enumeratorarithmeticsequence"
+      - title: "<code>Hash#except</code>"
+        path: "/3.0.html#hashexcept"
+      - title: "<code>Hash#transform_keys</code>: argument for key renaming"
+        path: "/3.0.html#hashtransform_keys-argument-for-key-renaming"
+      - title: "<code>Hash#each</code> consistently yields a 2-element array to lambdas"
+        path: "/3.0.html#hasheach-consistently-yields-a-2-element-array-to-lambdas"
+    - title: Procs/lambdas
+      path: "/3.0.html#procslambdas"
+      children:
+      - title: "<code>Symbol#to_proc</code> reported as lambda"
+        path: "/3.0.html#symbolto_proc-reported-as-lambda"
+      - title: "<code>Kernel#lambda</code> warns if called without a literal block"
+        path: "/3.0.html#kernellambda-warns-if-called-without-a-literal-block"
+      - title: "<code>Proc#==</code> and <code>#eql?</code>"
+        path: "/3.0.html#proc-and-eql"
+    - title: "<code>Random::DEFAULT</code> behavior change"
+      path: "/3.0.html#randomdefault-behavior-change"
+    - title: Filesystem and IO
+      path: "/3.0.html#filesystem-and-io"
+      children:
+      - title: "<code>Dir.glob</code> and <code>Dir.[]</code> result sorting"
+        path: "/3.0.html#dirglob-and-dir-result-sorting"
+    - title: Concurrency
+      path: "/3.0.html#concurrency"
+      children:
+      - title: Ractors
+        path: "/3.0.html#ractors"
+      - title: Non-blocking <code>Fiber</code> and scheduler
+        path: "/3.0.html#non-blocking-fiber-and-scheduler"
+      - title: "<code>Thread.ignore_deadlock</code> accessor"
+        path: "/3.0.html#threadignore_deadlock-accessor"
+      - title: "<code>Fiber#backtrace</code> &amp; <code>#backtrace_locations</code>"
+        path: "/3.0.html#fiberbacktrace--backtrace_locations"
+      - title: "<code>Fiber#transfer</code> limitations changed"
+        path: "/3.0.html#fibertransfer-limitations-changed"
+    - title: Internals
+      path: "/3.0.html#internals"
+      children:
+      - title: "<code>GC.auto_compact</code> accessor"
+        path: "/3.0.html#gcauto_compact-accessor"
+  - title: Standard library
+    path: "/3.0.html#standard-library"
+    children:
+    - title: Network
+      path: "/3.0.html#network"
+    - title: Large updated libraries
+      path: "/3.0.html#large-updated-libraries"
+    - title: Standard library contents change
+      path: "/3.0.html#standard-library-contents-change"
+      children:
+      - title: New libraries
+        path: "/3.0.html#new-libraries"
+      - title: Libraries promoted to default gems
+        path: "/3.0.html#libraries-promoted-to-default-gems"
+      - title: Libraries excluded from the standard library
+        path: "/3.0.html#libraries-excluded-from-the-standard-library"
 - title: Ruby 2.7
   path: "/2.7.html"
   is_version: true
@@ -220,8 +374,8 @@ chapters:
         path: "/2.6.html#filterfilter"
       - title: "<code>#to_h</code> with a block"
         path: "/2.6.html#to_h-with-a-block"
-      - title: "<code>Enumerable::ArithmeticSequence</code>"
-        path: "/2.6.html#enumerablearithmeticsequence"
+      - title: "<code>Enumerator::ArithmeticSequence</code>"
+        path: "/2.6.html#enumeratorarithmeticsequence"
       - title: "<code>Enumerator</code> chaining"
         path: "/2.6.html#enumerator-chaining"
     - title: "<code>Range</code>"
