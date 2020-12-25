@@ -19,7 +19,7 @@ chapters:
       <li>Pattern matching:
         <ul>
           <li>No longer experimental</li>
-          <li>Two flavors for one-line pattern matching: <code>=&gt;</code> (aka rightward assignment) and <code>in</code></li>
+          <li>Two flavors for one-line pattern matching: <code>=&gt;</code> (aka rightward assignment) and <code>in</code> (aka boolean check)</li>
           <li>Find patterns</li>
         </ul>
       </li>
