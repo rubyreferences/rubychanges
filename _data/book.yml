@@ -2,6 +2,145 @@
 chapters:
 - title: Introduction
   path: "/"
+- title: Ruby 3.1
+  path: "/3.1.html"
+  is_version: true
+  published_at: '2022-01-05'
+  description: |
+    <p><strong>Highlights:</strong></p>
+
+    <ul>
+      <li>Hash literal value omission</li>
+      <li>Anonymous block argument</li>
+      <li>Pattern-matching: pinning of expressions</li>
+      <li><code>Time</code>: better support for timezones in construction</li>
+      <li>Low-level <code>IO::Buffer</code></li>
+      <li>More methods become async with fiber scheduler</li>
+    </ul>
+
+    <p><a href="https://rubyreferences.github.io/rubychanges/3.1.html">Read more »</a></p>
+  children:
+  - title: Highlights
+    path: "/3.1.html#highlights"
+  - title: Language changes
+    path: "/3.1.html#language-changes"
+    children:
+    - title: Values in Hash literals and keyword arguments can be omitted
+      path: "/3.1.html#values-in-hash-literals-and-keyword-arguments-can-be-omitted"
+    - title: Inside “endless” method definitions, method calls without parenthesis
+        are allowed
+      path: "/3.1.html#inside-endless-method-definitions-method-calls-without-parenthesis-are-allowed"
+    - title: Anonymous block argument
+      path: "/3.1.html#anonymous-block-argument"
+    - title: Pattern-matching
+      path: "/3.1.html#pattern-matching"
+      children:
+      - title: Expressions and non-local variables allowed in pin operator
+        path: "/3.1.html#expressions-and-non-local-variables-allowed-in-pin-operator"
+      - title: Parentheses can be omitted in one-line pattern matching.
+        path: "/3.1.html#parentheses-can-be-omitted-in-one-line-pattern-matching"
+    - title: Multiple assignment evaluation order change
+      path: "/3.1.html#multiple-assignment-evaluation-order-change"
+  - title: Core classes and modules
+    path: "/3.1.html#core-classes-and-modules"
+    children:
+    - title: "<code>Class</code> and <code>Module</code>"
+      path: "/3.1.html#class-and-module"
+      children:
+      - title: "<code>Class#subclasses</code>"
+        path: "/3.1.html#classsubclasses"
+      - title: "<code>Refinement</code> class"
+        path: "/3.1.html#refinement-class"
+      - title: "<code>Module#prepend</code> behavior change"
+        path: "/3.1.html#moduleprepend-behavior-change"
+      - title: "<code>Module#private</code>, <code>#public</code>, <code>#protected</code>,
+          and <code>#module_function</code> return their arguments"
+        path: "/3.1.html#moduleprivate-public-protected-and-module_function-return-their-arguments"
+    - title: "<code>Method</code>/<code>UnboundMethod</code>: <code>#public?</code>,
+        <code>#private?</code>, <code>#protected?</code>"
+      path: "/3.1.html#methodunboundmethod-public-private-protected"
+    - title: "<code>Kernel#load</code>: module as a second argument"
+      path: "/3.1.html#kernelload-module-as-a-second-argument"
+    - title: Integer.try_convert
+      path: "/3.1.html#integertry_convert"
+    - title: "<code>String#unpack</code> and <code>#unpack1</code>: <code>offset:</code>
+        argument"
+      path: "/3.1.html#stringunpack-and-unpack1-offset-argument"
+    - title: "<code>MatchData#match</code> and <code>#match_length</code>"
+      path: "/3.1.html#matchdatamatch-and-match_length"
+    - title: "<code>Time</code>"
+      path: "/3.1.html#time"
+      children:
+      - title: "<code>in:</code> parameter for constructing time"
+        path: "/3.1.html#in-parameter-for-constructing-time"
+      - title: "<code>#strftime</code> supports <code>-00:00</code> offset"
+        path: "/3.1.html#strftime-supports--0000-offset"
+    - title: "<code>Struct</code>"
+      path: "/3.1.html#struct"
+      children:
+      - title: Warning on passing keywords to a non-keyword-initialized struct
+        path: "/3.1.html#warning-on-passing-keywords-to-a-non-keyword-initialized-struct"
+      - title: "<code>StructClass#keyword_init?</code>"
+        path: "/3.1.html#structclasskeyword_init"
+    - title: Collections and sequences
+      path: "/3.1.html#collections-and-sequences"
+      children:
+      - title: "<code>Enumerable#compact</code> and <code>Enumerator::Lazy#compact</code>"
+        path: "/3.1.html#enumerablecompact-and-enumeratorlazycompact"
+      - title: "<code>Enumerable#tally</code> now accepts an optional hash to count"
+        path: "/3.1.html#enumerabletally-now-accepts-an-optional-hash-to-count"
+      - title: "<code>Enumerable#each_cons</code> and <code>#each_slice</code> return
+          a receiver"
+        path: "/3.1.html#enumerableeach_cons-and-each_slice-return-a-receiver"
+      - title: "<code>Array#intersect?</code>"
+        path: "/3.1.html#arrayintersect"
+      - title: "<code>Thread::Queue#initialize</code>: initial values can be passed
+          to initializer"
+        path: "/3.1.html#threadqueueinitialize-initial-values-can-be-passed-to-initializer"
+    - title: "<code>IO::Buffer</code>"
+      path: "/3.1.html#iobuffer"
+    - title: "<code>File.dirname</code>: optional <code>level</code> to go up the
+        directory tree"
+      path: "/3.1.html#filedirname-optional-level-to-go-up-the-directory-tree"
+    - title: "<code>Marshal.load</code> accepts a <code>freeze:</code> option"
+      path: "/3.1.html#marshalload-accepts-a-freeze-option"
+    - title: Concurrency
+      path: "/3.1.html#concurrency"
+      children:
+      - title: "<code>Thread#native_thread_id</code>"
+        path: "/3.1.html#threadnative_thread_id"
+      - title: "<code>Process._fork</code>"
+        path: "/3.1.html#process_fork"
+      - title: 'Fiber Scheduler: New hooks'
+        path: "/3.1.html#fiber-scheduler-new-hooks"
+      - title: Ractors can access module instance variables
+        path: "/3.1.html#ractors-can-access-module-instance-variables"
+    - title: Internals
+      path: "/3.1.html#internals"
+      children:
+      - title: "<code>Thread::Backtrace.limit</code>"
+        path: "/3.1.html#threadbacktracelimit"
+      - title: "<code>GC</code>: measuring total time"
+        path: "/3.1.html#gc-measuring-total-time"
+      - title: "<code>TracePoint.allow_reentry</code>"
+        path: "/3.1.html#tracepointallow_reentry"
+      - title: "<code>$LOAD_PATH.resolve_feature_path</code> does not raise"
+        path: "/3.1.html#load_pathresolve_feature_path-does-not-raise"
+  - title: Standard library
+    path: "/3.1.html#standard-library"
+    children:
+    - title: Version updates
+      path: "/3.1.html#version-updates"
+      children:
+      - title: Default gems
+        path: "/3.1.html#default-gems"
+      - title: Bundled gems
+        path: "/3.1.html#bundled-gems"
+    - title: Standard library content changes
+      path: "/3.1.html#standard-library-content-changes"
+      children:
+      - title: Default gems that became bundled
+        path: "/3.1.html#default-gems-that-became-bundled"
 - title: Ruby 3.0
   path: "/3.0.html"
   is_version: true

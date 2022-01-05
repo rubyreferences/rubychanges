@@ -2,6 +2,10 @@
 
 (Only outstanding content changes listed, the texts and code are constantly updated and fixed thanks to awesome contributors.)
 
+## 2022-01-05
+
+* **[3.1](3.1.html)** changelog added. Better late than never, right?..
+
 ## 2020-12-25
 
 * **[3.0](3.0.html)** changelog added!
