@@ -9,6 +9,8 @@ chapters:
   description: |
     <p><strong>Highlights:</strong></p>
 
+    <p>The first major release after 3.0, Ruby 3.1 mostly dedicated to stabilizing new features like concurrency and pattern-matching, but also introduces a bunch of new features.</p>
+
     <ul>
       <li>Hash literal value omission</li>
       <li>Anonymous block argument</li>
@@ -17,6 +19,8 @@ chapters:
       <li>Low-level <code>IO::Buffer</code></li>
       <li>More methods become async with fiber scheduler</li>
     </ul>
+
+    <p><em><strong>See also my this year’s ongoing post series on the making of the changelog and Ruby development process.</strong></em></p>
 
     <p><a href="https://rubyreferences.github.io/rubychanges/3.1.html">Read more »</a></p>
   children:
