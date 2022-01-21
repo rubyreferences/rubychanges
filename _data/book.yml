@@ -39,8 +39,8 @@ chapters:
     - title: Pattern-matching
       path: "/3.1.html#pattern-matching"
       children:
-      - title: Expressions and non-local variables allowed in pin operator
-        path: "/3.1.html#expressions-and-non-local-variables-allowed-in-pin-operator"
+      - title: Expressions and non-local variables allowed in pin operator <code>^</code>
+        path: "/3.1.html#expressions-and-non-local-variables-allowed-in-pin-operator-"
       - title: Parentheses can be omitted in one-line pattern matching.
         path: "/3.1.html#parentheses-can-be-omitted-in-one-line-pattern-matching"
     - title: Multiple assignment evaluation order change
