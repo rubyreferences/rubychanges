@@ -268,3 +268,49 @@ window.onunload = function () { };
         previousScrollTop = document.scrollingElement.scrollTop;
     }, { passive: true });
 })();
+
+(function highlightSideBarLink() {
+    var anchorsToLink = {};
+    var $sidebarLinks = $('#sidebar .chapter a');
+    $sidebarLinks.each(function(_, link) {
+        var match = link.href.match(/#(.+)$/);
+        if (match) {
+            anchorsToLink[ match[1] ] = link;
+        }
+    });
+
+    function getActiveHeaderId() {
+        var sectionHeaders = $(':header').filter(function(_, el) {
+            return anchorsToLink[ el.id ];
+        });
+
+        var visibleHeaders = getHeadersInViewport(sectionHeaders);
+        if (visibleHeaders.length == 0) return null;
+
+        var activeHeader = visibleHeaders.sort(function(header) {
+            return header.getBoundingClientRect().y;
+        })[0];
+
+        return activeHeader.id;
+    }
+
+    function getHeadersInViewport(headers) {
+        return headers.filter(function(_, header) {
+            var headerRect = header.getBoundingClientRect();
+            var headerTop = headerRect.top;
+            var headerBottom = headerRect.bottom;
+
+            return headerTop >= 0 && headerBottom <= window.innerHeight;
+        });
+    }
+
+    var activeLinkClass = 'active';
+    $('#content').on('scroll', function() {
+        var activeHeaderId = getActiveHeaderId();
+        if (!activeHeaderId) return;
+
+        $sidebarLinks.removeClass(activeLinkClass);
+        var activeLink = anchorsToLink[activeHeaderId];
+        $(activeLink).addClass(activeLinkClass);
+    });
+})();
