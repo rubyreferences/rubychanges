@@ -279,12 +279,12 @@ window.onunload = function () { };
         }
     });
 
-    function getActiveHeaderId() {
-        var sectionHeaders = $(':header').filter(function(_, el) {
-            return anchorsToLink[ el.id ];
-        });
+    var sectionHeaders = $(':header').filter(function(_, el) {
+        return anchorsToLink[ el.id ];
+    });
 
-        var visibleHeaders = getHeadersInViewport(sectionHeaders);
+    function getActiveHeaderId() {
+        var visibleHeaders = getHeadersInViewport();
         if (visibleHeaders.length == 0) return null;
 
         var activeHeader = visibleHeaders.sort(function(header) {
@@ -294,8 +294,8 @@ window.onunload = function () { };
         return activeHeader.id;
     }
 
-    function getHeadersInViewport(headers) {
-        return headers.filter(function(_, header) {
+    function getHeadersInViewport() {
+        return sectionHeaders.filter(function(_, header) {
             var headerRect = header.getBoundingClientRect();
             var headerTop = headerRect.top;
             var headerBottom = headerRect.bottom;
