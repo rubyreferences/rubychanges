@@ -2,6 +2,90 @@
 chapters:
 - title: Introduction
   path: "/"
+- title: Ruby Evolution
+  path: "/evolution.html"
+  is_version: true
+  children:
+  - title: Generic
+    path: "/evolution.html#generic"
+  - title: Expressions
+    path: "/evolution.html#expressions"
+    children:
+    - title: Pattern-matching
+      path: "/evolution.html#pattern-matching"
+  - title: "<code>Kernel</code>"
+    path: "/evolution.html#kernel"
+  - title: "<code>Object</code>"
+    path: "/evolution.html#object"
+  - title: Modules and classes
+    path: "/evolution.html#modules-and-classes"
+  - title: Methods
+    path: "/evolution.html#methods"
+  - title: Procs, blocks and <code>Proc</code> class
+    path: "/evolution.html#procs-blocks-and-proc-class"
+  - title: "<code>Comparable</code>"
+    path: "/evolution.html#comparable"
+  - title: "<code>Numeric</code>"
+    path: "/evolution.html#numeric"
+  - title: Strings, symbols, regexps, encodings
+    path: "/evolution.html#strings-symbols-regexps-encodings"
+  - title: "<code>Struct</code>"
+    path: "/evolution.html#struct"
+  - title: "<code>Time</code>"
+    path: "/evolution.html#time"
+  - title: Enumerables, collections, and iteration
+    path: "/evolution.html#enumerables-collections-and-iteration"
+    children:
+    - title: Numeric iteration
+      path: "/evolution.html#numeric-iteration"
+    - title: "<code>Enumerable</code> and <code>Enumerator</code>"
+      path: "/evolution.html#enumerable-and-enumerator"
+    - title: "<code>Range</code>"
+      path: "/evolution.html#range"
+    - title: "<code>Array</code>"
+      path: "/evolution.html#array"
+    - title: "<code>Hash</code>"
+      path: "/evolution.html#hash"
+    - title: "<code>Set</code>"
+      path: "/evolution.html#set"
+    - title: Other collections
+      path: "/evolution.html#other-collections"
+  - title: Filesystem and IO
+    path: "/evolution.html#filesystem-and-io"
+  - title: Exceptions
+    path: "/evolution.html#exceptions"
+    children:
+    - title: Warnings
+      path: "/evolution.html#warnings"
+  - title: Concurrency and parallelism
+    path: "/evolution.html#concurrency-and-parallelism"
+    children:
+    - title: "<code>Thread</code>"
+      path: "/evolution.html#thread"
+    - title: "<code>Process</code>"
+      path: "/evolution.html#process"
+    - title: "<code>Fiber</code>"
+      path: "/evolution.html#fiber"
+    - title: "<code>Ractor</code>"
+      path: "/evolution.html#ractor"
+  - title: Debugging and internals
+    path: "/evolution.html#debugging-and-internals"
+    children:
+    - title: "<code>Binding</code>"
+      path: "/evolution.html#binding"
+    - title: "<code>GC</code>"
+      path: "/evolution.html#gc"
+    - title: "<code>TracePoint</code>"
+      path: "/evolution.html#tracepoint"
+    - title: "<code>RubyVM::InstructionSequence</code>"
+      path: "/evolution.html#rubyvminstructionsequence"
+  - title: Deeper topics
+    path: "/evolution.html#deeper-topics"
+    children:
+    - title: Refinements
+      path: "/evolution.html#refinements"
+    - title: Freezing
+      path: "/evolution.html#freezing"
 - title: Ruby 3.1
   path: "/3.1.html"
   is_version: true
