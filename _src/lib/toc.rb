@@ -73,6 +73,8 @@ module TOC
     end
 
     def rss_fields
+      return {} if version == 'evolution'
+
       pub = text[/\*\*This document first published:\*\* (.+)\n/, 1] or fail "Published at not found"
       desc = text[/\#\# Highlights\n(.+?)\n\#\# /m, 1] or fail "Description not found"
       desc = desc

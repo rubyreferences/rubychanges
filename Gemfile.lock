@@ -283,6 +283,7 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages
+  kramdown
   memoist
   rake
 

@@ -1458,3 +1458,12 @@ h2 + p, h3 + p, h4 + p {
   margin-top: -10px;
   color: #6e6b5e;
 }
+
+span.ruby-version {
+  font-family: "Source Code Pro", Consolas, "Ubuntu Mono", Menlo, "DejaVu Sans Mono", monospace, monospace;
+  font-size: 0.875em;
+  background-color: #ffefff;
+  padding: 2px;
+  font-weight: bold;
+}
+
