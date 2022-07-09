@@ -27,4 +27,4 @@ The main things to do, currently:
 
 * The source of information is NEWS files from Ruby repository.
 * Book theme is initially borrowed from [mdBook](https://github.com/rust-lang-nursery/mdBook) project.
-* The work in this repository (text, scripts and custom additions to design) is made by [Victor Shepelev](https://zverok.github.io) and should be considered **Public Domain**.
+* The work in this repository (text, scripts and custom additions to design) is made by [Victor Shepelev](https://zverok.space) and should be considered **Public Domain**.

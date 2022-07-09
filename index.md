@@ -8,9 +8,14 @@ permalink: "/index.html"
 
 This site is dedicated to history of [Ruby language](https://www.ruby-lang.org/) evolution. Basically, it is just the same information that each Ruby version's [NEWS](https://github.com/ruby/ruby/blob/master/NEWS.md) file contains, just in more readable and informative manner.
 
-> <big>Latest version: <b><a href="3.1.html">3.1</a></b></big> ([3.0](3.0.html) − [2.7](2.7.html) − [2.6](2.6.html) −[2.5](2.5.html) − [2.4](2.4.html))
+> <big>Latest version: <b><a href="3.1.html">3.1</a></b></big> ([3.0](3.0.html) − [2.7](2.7.html) − [2.6](2.6.html) −[2.5](2.5.html) − [2.4](2.4.html))<br/><br/>**[Ruby Evolution](evolution.html)**: bird-eye view on all significant changes 2.0−3.1, grouped by topic.
 
-Main goals:
+Maintainer's write-up on the creation of the changelogs:
+1. [What you can learn by merely writing a programming language changelog](https://zverok.space/blog/2022-01-06-changelog.html)
+2. [Following the programming language evolution, and taking it personally](https://zverok.space/blog/2022-01-13-it-evolves.html)
+3. [Programming language evolution: with all that, we are still flying](https://zverok.space/blog/2022-01-20-still-flying.html).
+
+### Main goals
 
 * **Full**: unlike most of "What's new in Ruby x.y?" blog posts, information here targets to cover all the `NEWS` file of current Ruby version;
 * **Comprehensive**: unlike the `NEWS` file itself (and most of blog-posts, too), the site provides full context for each change:
@@ -22,7 +27,7 @@ Main goals:
 * **Well-structured**: both regarding order/explanations of each particular change, and design of the site, it is intended to be easily and logically navigated.
 * **Open**: the source of changelog is [available](https://github.com/rubyreferences/rubychanges) on the GitHub and is open for fixes and suggestions.
 
-Some things to know about the content:
+### Some things to know about the content
 
 * Structure and grouping of the information, as well as the illustrative examples, are mostly decided by this site's [author](https://zverok.space). I am trying to make it as useful and logical as humanly possible, but I have my own opinions about what is important, and what is not, what is related and what is not.
   * Maybe "Highlights" section at the top of each version changelog is more subjective than the rest of the content, but it is totally optional, you can skip it.
@@ -34,11 +39,12 @@ Some things to know about the content:
 * **UPD 2019-12-27:** Newly released **[Ruby 2.7](2.7.html)** changelog added.
 * **UPD 2020-12-25:** Newly released **[Ruby 3.0](3.0.html)** changelog added.
 * **UPD 2022-01-05:** Newly released **[Ruby 3.1](3.1.html)** changelog added.
+* **UPD 2022-06-09:** Newly released **[Ruby Evolution](evolution.html)** bird-eye view added.
 
 _The source of the site can be found at [GitHub](https://github.com/rubyreferences/rubychanges). See also the [Contributing](Contributing.html) section._
 
-## Credits and licenses
+### Credits and licenses
 
 * The source of information is NEWS files from Ruby repository.
 * Book theme is initially borrowed from [mdBook](https://github.com/rust-lang-nursery/mdBook) project.
-* The work in this repository (text, scripts and custom additions to design) is made by [Victor Shepelev](https://zverok.github.io) and should be considered **Public Domain**.
+* The work in this repository (text, scripts and custom additions to design) is made by [Victor Shepelev](https://zverok.space) and should be considered **Public Domain**.

@@ -9,6 +9,15 @@
     <meta charset="UTF-8">
     <title>{{ page.title }} - {{ site.title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ page.description | escape_once }}" />
+
+    <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
+    <meta property="og:type" content="article" />
+    <meta property="twitter:card" content="summary" />
+    <meta property="og:title" content="{{ page.title | escape_once }}" />
+    <meta property="og:description" content="{{ page.description | escape_once }}" />
+    <meta property="twitter:title" content="{{ page.title | escape_once }}" />
+    <meta property="twitter:description" content="{{ page.description | escape_once }}" />
 
     <!-- CSS stolen from mdBook -->
     <link rel="stylesheet" href="{{ site.baseurl }}/css/book.css">

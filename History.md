@@ -2,6 +2,10 @@
 
 (Only outstanding content changes listed, the texts and code are constantly updated and fixed thanks to awesome contributors.)
 
+## 2022-06-09
+
+* **[Ruby Evolution](evolution.html)** bird-eye view added.
+
 ## 2022-01-05
 
 * **[3.1](3.1.html)** changelog added. Better late than never, right?..

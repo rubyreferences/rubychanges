@@ -6,8 +6,8 @@ chapters:
   path: "/evolution.html"
   is_version: true
   children:
-  - title: Generic
-    path: "/evolution.html#generic"
+  - title: General changes
+    path: "/evolution.html#general-changes"
   - title: Expressions
     path: "/evolution.html#expressions"
     children:
@@ -86,6 +86,8 @@ chapters:
       path: "/evolution.html#refinements"
     - title: Freezing
       path: "/evolution.html#freezing"
+  - title: 'Appendix: Covered Ruby versions release dates'
+    path: "/evolution.html#appendix-covered-ruby-versions-release-dates"
 - title: Ruby 3.1
   path: "/3.1.html"
   is_version: true
