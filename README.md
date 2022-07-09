@@ -2,7 +2,7 @@
 
 This site is dedicated to history of [Ruby language](https://www.ruby-lang.org/) evolution. Basically, it is just the same information that each Ruby version's [NEWS](https://github.com/ruby/ruby/blob/master/NEWS.md) file contains, just in more readable and informative manner.
 
-**See [The rendered version of the site](https://rubyreferences.github.io/rubychanges/)** for a description.
+## **[The rendered version of the site](https://rubyreferences.github.io/rubychanges/)**.
 
 ## Contributing
 
