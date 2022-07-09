@@ -2,11 +2,14 @@
 title: Ruby Evolution
 prev: /
 next: 3.1
+description: A very brief list of new significant features that emerged in Ruby programming language since version 2.0 (2013).
 ---
 
 # Ruby Evolution
 
-The text/list below is very brief list of new significant features that emerged in Ruby programming language since version 2.0 (2013). It is intended as a "bird eye view" that might be of interest for Ruby novices and experts alike, as well as for curious users of other technologies.
+**A very brief list of new significant features that emerged in Ruby programming language since version 2.0 (2013).**
+
+It is intended as a "bird eye view" that might be of interest for Ruby novices and experts alike, as well as for curious users of other technologies.
 
 It is part of a bigger [Ruby Changes](/) effort, which provides a detailed explanations and justifications on what happens to the language, version by version. The detailed changelog currently covers versions since 2.4, and the brief changelog links to more detailed explanations for those versions (links are under version numbers at the beginning of the list items).
 
@@ -960,3 +963,18 @@ Freezing of object makes its state immutable. The important thing about freezing
 * [3.0](3.0.md#interpolated-string-literals-are-no-longer-frozen-when--frozen-string-literal-true-is-used) Interpolated String literals are no longer frozen when  [`# frozen-string-literal: true` pragma](https://docs.ruby-lang.org/en/3.0.0/syntax/comments_rdoc.html#label-frozen_string_literal+Directive) is used
 * [3.0](3.0.md#regexp-and-range-objects-are-frozen) `Regexp` and `Range` objects are frozen
 * [3.0](3.0.md#symbolname) [Symbol#name](https://docs.ruby-lang.org/en/3.0.0/Symbol.html#method-i-name) method that returns a frozen string equivalent of the symbol (`Symbol#to_s` returns mutable one, and changing it to be frozen would cause too much incompatibilities)
+
+## Appendix: Covered Ruby versions release dates
+
+* **2.0** — 2013, Feb 24
+* **2.1** — 2013, Dec 25 (the same as every version after this)
+* **2.2** — 2014
+* **2.3** — 2015
+* [2.4](/2.4.html) — 2016
+* [2.5](/2.5.html) — 2017
+* [2.6](/2.6.html) — 2018
+* [2.7](/2.7.html) — 2019
+* [3.0](/3.0.html) — 2020
+* [3.1](/3.1.html) — 2021
+
+

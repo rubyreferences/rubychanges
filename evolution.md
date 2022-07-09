@@ -2,11 +2,14 @@
 title: Ruby Evolution
 prev: /
 next: 3.1
+description: A very brief list of new significant features that emerged in Ruby programming language since version 2.0 (2013).
 ---
 
 # Ruby Evolution
 
-The text/list below is very brief list of new significant features that emerged in Ruby programming language since version 2.0 (2013). It is intended as a "bird eye view" that might be of interest for Ruby novices and experts alike, as well as for curious users of other technologies.
+**A very brief list of new significant features that emerged in Ruby programming language since version 2.0 (2013).**
+
+It is intended as a "bird eye view" that might be of interest for Ruby novices and experts alike, as well as for curious users of other technologies.
 
 It is part of a bigger [Ruby Changes](/) effort, which provides a detailed explanations and justifications on what happens to the language, version by version. The detailed changelog currently covers versions since 2.4, and the brief changelog links to more detailed explanations for those versions (links are under version numbers at the beginning of the list items).
 
@@ -17,7 +20,7 @@ As Ruby is highly object-oriented language, most of the changes can be associate
 **🇺🇦 🇺🇦 This work was started in mid-February, before the start of aggressive full-scale war Russia leads against Ukraine. I am finishing it after my daily volunteer work (delivering food through my district), why my homecity Kharkiv is still constantly bombed. Please care to read two of my appeals to Ruby community before proceeding: [first](https://zverok.space/blog/2022-03-03-WAR.html), [second](https://zverok.space/blog/2022-03-15-STILL-WAR.html). 🇺🇦 🇺🇦**
 
 
-## Generic[](#generic)
+## General changes[](#general-changes)
 
 * <span class="ruby-version">**2.0**</span> **Refinements are introduced as experimental feature**. It is meant to be a hygienic replacement for contextual extending of modules and classes. The feature became stable in 2.1, but still has questionable mindshare, so the further enhancements to it [are covered in "deeper topics" section](#refinements). Example of refinements usage:
   ```ruby
@@ -265,7 +268,7 @@ This section lists changes in how methods are defined and invoked, as well as ne
   private def foo # `private` will receive :foo that `def` returned
   end
   ```
-  * <span class="ruby-version">**2.1**</span> <a class="ruby-doc" href="https://docs.ruby-lang.org/en/2.1.0/Module.html#method-i-define_method"><code>Module#define_method</code></a> and <a class="ruby-doc" href="https://docs.ruby-lang.org/en/2.1.0/Object.html#method-i-define_singleton_method"><code>Object#define_singleton_method</code></a> return the symbols of the defined methods, not the methods/procs
+  * <a class="ruby-doc" href="https://docs.ruby-lang.org/en/2.1.0/Module.html#method-i-define_method"><code>Module#define_method</code></a> and <a class="ruby-doc" href="https://docs.ruby-lang.org/en/2.1.0/Object.html#method-i-define_singleton_method"><code>Object#define_singleton_method</code></a> also return the symbols of the defined methods, not the methods/procs
 * <span class="ruby-version">**2.2**</span> <a class="ruby-doc" href="https://docs.ruby-lang.org/en/2.2.0/Method.html#method-i-curry"><code>Method#curry</code></a>:
   ```ruby
   writer = File.method(:write).curry(2).call('test.txt') # curry with 2 arguments, supply first of them
@@ -682,7 +685,6 @@ Included in many classes to implement comparison methods. Once class defines a m
 
 * <span class="ruby-version">**2.1**</span> <a class="ruby-doc" href="https://docs.ruby-lang.org/en/2.1.0/Set.html#method-i-intersect-3F"><code>#intersect?</code></a> and <a class="ruby-doc" href="https://docs.ruby-lang.org/en/2.1.0/Set.html#method-i-disjoint-3F"><code>#disjoint?</code></a>
 * <span class="ruby-version">**2.4**</span> <a class="ruby-doc" href="https://docs.ruby-lang.org/en/2.4.0/Set.html#method-i-compare_by_identity"><code>#compare_by_identity</code></a> and <a class="ruby-doc" href="https://docs.ruby-lang.org/en/2.4.0/Set.html#method-i-compare_by_identity-3F"><code>#compare_by_identity?</code></a>
-* <span class="ruby-version">**2.5**</span> `#to_s` as alias to `#inspect`
 * <span class="ruby-version">**2.5**</span> <a class="ruby-doc" href="https://docs.ruby-lang.org/en/2.5.0/Set.html#method-i-3D-3D-3D"><code>#===</code></a> as alias to `#include?`, so `Set` can be used in `grep` and `case`:
   ```ruby
   file_list.grep(Set['README.md', 'License.txt']) # find an item that matches any of sets elements
@@ -691,6 +693,10 @@ Included in many classes to implement comparison methods. Once class defines a m
 * <span class="ruby-version">**3.0**</span> `SortedSet` (that was a part of `set` standard library before) has been removed for dependency and performance reasons (it silently depended upon `rbtree` gem).
 * <span class="ruby-version">**3.0**</span> <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.0/Set.html#method-i-join"><code>#join</code></a> is added as a shorthand for `.to_a.join`.
 * <span class="ruby-version">**3.0**</span> <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.0/Set.html#method-i-3C-3D-3E"><code>#<=></code></a> generic comparison operator (separate operators like `#<` or `#>` have been worked in previous versions, too)
+
+<!--
+* <span class="ruby-version">**2.5**</span> `#to_s` as alias to `#inspect`
+-->
 
 ### Other collections[](#other-collections)
 
@@ -828,8 +834,8 @@ This section covers exception raising/handling behavior changes, as well as chan
 * <span class="ruby-version">**2.2**</span> `callcc` is obsolete, and `Fiber` should be used
 * <span class="ruby-version">[2.7](2.7.md#fiberraise)</span> <a class="ruby-doc" href="https://ruby-doc.org/core-2.7.0/Fiber.html#method-i-raise"><code>#raise</code></a>
 * <span class="ruby-version">[3.0](3.0.md#non-blocking-fiber-and-scheduler)</span> **Non-blocking <a class="ruby-doc" href="https://docs.ruby-lang.org/en/master/Fiber.html#class-Fiber-label-Non-blocking+Fibers"><code>Fiber</code></a> and <a class="ruby-doc" href="https://docs.ruby-lang.org/en/master/Fiber/SchedulerInterface.html"><code>Fiber::SchedulerInterface</code></a>**. This is a big and important change, see [detailed explanation and code examples](3.0.md#non-blocking-fiber-and-scheduler) in 3.0's changelog. In brief, Ruby code now can perform non-blocking I/O concurrently from several fibers, with no code changes other than setting a _fiber scheduler_, which should be implemented by a third-party library.
+  * <span class="ruby-version">[3.1](3.1.md#fiber-scheduler-new-hooks)</span> New hooks for fiber scheduler: <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.1/Fiber/SchedulerInterface.html#method-i-address_resolve"><code>#address_resolve</code></a>, <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.1/Fiber/SchedulerInterface.html#method-i-timeout_after"><code>#timeout_after</code></a>, <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.1/Fiber/SchedulerInterface.html#method-i-io_read"><code>#io_read</code></a>, and <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.1/Fiber/SchedulerInterface.html#method-i-io_write"><code>#io_write</code></a>
 * <span class="ruby-version">[3.0](3.0.md#fiberbacktrace--backtrace_locations)</span> <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.0.0/Fiber.html#method-i-backtrace"><code>#backtrace</code></a> and <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.0.0/Fiber.html#method-i-backtrace_locations"><code>#backtrace_locations</code></a>
-* <span class="ruby-version">[3.1](3.1.md#fiber-scheduler-new-hooks)</span> New hooks for fiber scheduler: <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.1/Fiber/SchedulerInterface.html#method-i-address_resolve"><code>#address_resolve</code></a>, <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.1/Fiber/SchedulerInterface.html#method-i-timeout_after"><code>#timeout_after</code></a>, <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.1/Fiber/SchedulerInterface.html#method-i-io_read"><code>#io_read</code></a>, and <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.1/Fiber/SchedulerInterface.html#method-i-io_write"><code>#io_write</code></a>
 
 <!--
   * <span class="ruby-version">[3.0](3.0.md#fibertransfer-limitations-changed)</span> `#transfer` limitations changed (<a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.0.0/Fiber.html#method-i-transfer"><code>Fiber#transfer</code></a>)
@@ -865,7 +871,7 @@ This section covers exception raising/handling behavior changes, as well as chan
   # The syntax might be useful for DSLs like
   validate :foo, if: -> { condition }
   ```
-* <span class="ruby-version">**2.2**</span> <a class="ruby-doc" href="https://docs.ruby-lang.org/en/2.2.0/Binding.html#method-i-local_variables"><code>#local_variables</code></a>
+  * <span class="ruby-version">**2.2**</span> <a class="ruby-doc" href="https://docs.ruby-lang.org/en/2.2.0/Binding.html#method-i-local_variables"><code>#local_variables</code></a>
 * <span class="ruby-version">**2.2**</span> <a class="ruby-doc" href="https://docs.ruby-lang.org/en/2.2.0/Binding.html#method-i-receiver"><code>#receiver</code></a>
 * <span class="ruby-version">[2.6](2.6.md#bindingsource_location)</span> <a class="ruby-doc" href="https://ruby-doc.org/core-2.6/Binding.html#method-i-source_location"><code>#source_location</code></a>
 
@@ -957,3 +963,18 @@ Freezing of object makes its state immutable. The important thing about freezing
 * <span class="ruby-version">[3.0](3.0.md#interpolated-string-literals-are-no-longer-frozen-when--frozen-string-literal-true-is-used)</span> Interpolated String literals are no longer frozen when  <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.0.0/syntax/comments_rdoc.html#label-frozen_string_literal+Directive">`# frozen-string-literal: true` pragma</a> is used
 * <span class="ruby-version">[3.0](3.0.md#regexp-and-range-objects-are-frozen)</span> `Regexp` and `Range` objects are frozen
 * <span class="ruby-version">[3.0](3.0.md#symbolname)</span> <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.0.0/Symbol.html#method-i-name"><code>Symbol#name</code></a> method that returns a frozen string equivalent of the symbol (`Symbol#to_s` returns mutable one, and changing it to be frozen would cause too much incompatibilities)
+
+## Appendix: Covered Ruby versions release dates[](#appendix-covered-ruby-versions-release-dates)
+
+* <span class="ruby-version">**2.0**</span> — 2013, Feb 24
+* <span class="ruby-version">**2.1**</span> — 2013, Dec 25 (the same as every version after this)
+* <span class="ruby-version">**2.2**</span> — 2014
+* <span class="ruby-version">**2.3**</span> — 2015
+* <span class="ruby-version">[2.4](/2.4.html)</span> — 2016
+* <span class="ruby-version">[2.5](/2.5.html)</span> — 2017
+* <span class="ruby-version">[2.6](/2.6.html)</span> — 2018
+* <span class="ruby-version">[2.7](/2.7.html)</span> — 2019
+* <span class="ruby-version">[3.0](/3.0.html)</span> — 2020
+* <span class="ruby-version">[3.1](/3.1.html)</span> — 2021
+
+
