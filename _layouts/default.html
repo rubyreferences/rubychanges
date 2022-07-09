@@ -18,6 +18,10 @@
     <meta property="og:description" content="{{ page.description | escape_once }}" />
     <meta property="twitter:title" content="{{ page.title | escape_once }}" />
     <meta property="twitter:description" content="{{ page.description | escape_once }}" />
+    {% if page.image %}
+      <meta property="twitter:image" content="{{ site.url }}/{{ page.image }}" />
+      <meta property="og:image" content="{{ site.url }}/{{ page.image }}" />
+    {% endif %}
 
     <!-- CSS stolen from mdBook -->
     <link rel="stylesheet" href="{{ site.baseurl }}/css/book.css">

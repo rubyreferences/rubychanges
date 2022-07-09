@@ -3,6 +3,7 @@ title: Ruby Evolution
 prev: /
 next: 3.1
 description: A very brief list of new significant features that emerged in Ruby programming language since version 2.0 (2013).
+image: images/evolution.png
 ---
 
 # Ruby Evolution
