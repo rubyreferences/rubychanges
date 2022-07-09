@@ -1,41 +1,27 @@
----
-title: Introduction
-next: "/2.6.html"
-permalink: "/index.html"
----
-
-## The Ruby Changes
+# The Ruby Changes
 
 This site is dedicated to history of [Ruby language](https://www.ruby-lang.org/) evolution. Basically, it is just the same information that each Ruby version's [NEWS](https://github.com/ruby/ruby/blob/master/NEWS.md) file contains, just in more readable and informative manner.
 
-> <big>Latest version: <b><a href="3.1.html">3.1</a></b></big> ([3.0](3.0.html) − [2.7](2.7.html) − [2.6](2.6.html) −[2.5](2.5.html) − [2.4](2.4.html))
+**See [The rendered version of the site](https://rubyreferences.github.io/rubychanges/)** for a description.
 
-Main goals:
+## Contributing
 
-* **Full**: unlike most of "What's new in Ruby x.y?" blog posts, information here targets to cover all the `NEWS` file of current Ruby version;
-* **Comprehensive**: unlike the `NEWS` file itself (and most of blog-posts, too), the site provides full context for each change:
-  * Where and how it was discussed;
-  * Related documentation at ruby-doc.org;
-  * Code examples;
-  * Reasoning for the change, if known.
-* **Concise**: given two goals above, content still tries to stay short and focused, so the changes could be quickly navigated through;
-* **Well-structured**: both regarding order/explanations of each particular change, and design of the site, it is intended to be easily and logically navigated.
-* **Open**: the source of changelog is [available](https://github.com/rubyreferences/rubychanges) on the GitHub and is open for fixes and suggestions.
+> Also duplicated on [Contributing](https://rubyreferences.github.io/rubychanges/Contributing.html) page of teh site.
 
-Some things to know about the content:
+[The repo](https://github.com/rubyreferences/rubychanges) gladly accepts contributions!
 
-* Structure and grouping of the information, as well as the illustrative examples, are mostly decided by this site's [author](https://zverok.github.io). I am trying to make it as useful and logical as humanly possible, but I have my own opinions about what is important, and what is not, what is related and what is not.
-  * Maybe "Highlights" section at the top of each version changelog is more subjective than the rest of the content, but it is totally optional, you can skip it.
-* The site is dedicated to the **language**, not its **implementation(s)**, therefore at the moment it **does not** include the description of MRI implementation changes, optimizations and internals.
-* ...and also some minor _behavior_ changes are excluded.
-* I want to _eventually_ cover Ruby versions down to 1.8, or maybe even earlier, but it is currently work-in-progress, with the first priority of the recent release of **[Ruby 2.6](2.6.html)**, and then going down version by version in my free time.
-* **UPD 2019-06-06:** **[Ruby 2.5](2.5.html)** is now covered too. Despite being 1.5 years old news, I believe it is still important to cover it in the same manner as the recent version was.
-* **UPD 2019-10-14:** **[Ruby 2.4](2.4.html)** changelog added, and some other content changed. See [History](/History.html) for detail.
-* **UPD 2019-12-27:** Newly released **[Ruby 2.7](2.7.html)** changelog added.
-* **UPD 2020-12-25:** Newly released **[Ruby 3.0](3.0.html)** changelog added.
-* **UPD 2022-01-05:** Newly released **[Ruby 3.1](3.1.html)** changelog added.
+Things you need to know, as of now:
 
-_The source of the site can be found at [GitHub](https://github.com/rubyreferences/rubychanges). See also the [Contributing](Contributing.html) section._
+* The source is in `_src/<version>.md`;
+* To "compile" the final Jekyll site, you need to run `rake` in the main folder, or separate tasks (visible with `rake -T`):
+  * `bundle exec rake toc` (create TOC in `_data/book.yml`)
+  * `bundle exec rake contents` (postprocesses `./_src/<version>.md`→`./<version>.md` adding some nicer formatting not available in pure Markdown);
+* Now you can run `jekyll serve` to preview the site locally.
+
+The main things to do, currently:
+
+* Proofread existing content;
+* Add previous versions of Ruby.
 
 ## Credits and licenses
 

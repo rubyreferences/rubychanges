@@ -4,5 +4,7 @@ repository: rubyreferences/rubychanges
 title: Ruby Changes
 url: https://rubyreferences.github.io/rubychanges/
 
-plugins:
-  - jekyll-readme-index
+exclude: ['README.md', 'Rakefile', 'Gemfile', 'Gemfile.lock', 'tmp']
+
+# plugins:
+#   - jekyll-readme-index
