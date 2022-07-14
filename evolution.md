@@ -18,7 +18,7 @@ The choice of important features, their grouping, and depth of comment provided 
 
 As Ruby is highly object-oriented language, most of the changes can be associated with some of its core classes. Nevertheless, a new method in one of the core classes frequently changes the way code could be written, not just adds some small convenience.
 
-**🇺🇦 🇺🇦 This work was started in mid-February, before the start of aggressive full-scale war Russia leads against Ukraine. I am finishing it after my daily volunteer work (delivering food through my district), why my homecity Kharkiv is still constantly bombed. Please care to read two of my appeals to Ruby community before proceeding: [first](https://zverok.space/blog/2022-03-03-WAR.html), [second](https://zverok.space/blog/2022-03-15-STILL-WAR.html). 🇺🇦 🇺🇦**
+**🇺🇦 🇺🇦 This work was started in mid-February, before the start of aggressive full-scale war Russia leads against Ukraine. I am finishing it after my daily volunteer work (delivering food through my district), why my homecity Kharkiv is still constantly bombed. Please care to read two of my appeals to Ruby community before proceeding: [first](https://zverok.space/blog/2022-03-03-WAR.html), [second](https://zverok.space/blog/2022-03-15-STILL-WAR.html).<br/><big>[The latest blog post](https://zverok.space/blog/2022-06-11-ruby-evolution.html)</big> dedicated to the reference creation also juxtaposes the evolution of the language with my personal history and history of my country.🇺🇦 🇺🇦**
 
 
 ## General changes[](#general-changes)
