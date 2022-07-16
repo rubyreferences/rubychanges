@@ -327,7 +327,7 @@ This section lists changes in how methods are defined and invoked, as well as ne
 * <span class="ruby-version">[2.6](2.6.md#proc-composition)</span> **`Proc` composition with <a class="ruby-doc" href="https://docs.ruby-lang.org/en/2.6.0/Proc.html#method-i-3E-3E"><code>>></code></a> and <a class="ruby-doc" href="https://docs.ruby-lang.org/en/2.6.0/Proc.html#method-i-3C-3C"><code><<</code></a>**:
   ```ruby
   PROCESSOR = proc { |str| '{' + str + '}' } >> :upcase.to_proc >> method(:puts)
-  %w[test me please].map(&PROCESSORS)
+  %w[test me please].map(&PROCESSOR)
   # prints
   #   {TEST}
   #   {ME}
@@ -950,7 +950,7 @@ Freezing of object makes its state immutable. The important thing about freezing
 * <span class="ruby-version">**2.0**</span> Fixnums, Bignums and Floats are frozen. While number values never were mutable, before Ruby 2.0 it was possible to change additional internal state for them, making it weird:
   ```ruby
   10.instance_variable_set('@foo', 5) # works in 1.9, "can't modify frozen Fixnum" in 2.0
-  10.instance_variable_set('@foo') # => 5 in Ruby 1.9
+  10.instance_variable_get('@foo') # => 5 in Ruby 1.9
   ```
 * <span class="ruby-version">**2.1**</span> All symbols are frozen.
 * <span class="ruby-version">**2.1**</span> `"string_literal".freeze` is optimized to always return the same object for same literal
@@ -971,11 +971,11 @@ Freezing of object makes its state immutable. The important thing about freezing
 * <span class="ruby-version">**2.1**</span> — 2013, Dec 25 (the same as every version after this)
 * <span class="ruby-version">**2.2**</span> — 2014
 * <span class="ruby-version">**2.3**</span> — 2015
-* <span class="ruby-version">[2.4](/2.4.html)</span> — 2016
-* <span class="ruby-version">[2.5](/2.5.html)</span> — 2017
-* <span class="ruby-version">[2.6](/2.6.html)</span> — 2018
-* <span class="ruby-version">[2.7](/2.7.html)</span> — 2019
-* <span class="ruby-version">[3.0](/3.0.html)</span> — 2020
-* <span class="ruby-version">[3.1](/3.1.html)</span> — 2021
+* <span class="ruby-version">[2.4](2.4.md)</span> — 2016
+* <span class="ruby-version">[2.5](2.5.md)</span> — 2017
+* <span class="ruby-version">[2.6](2.6.md)</span> — 2018
+* <span class="ruby-version">[2.7](2.7.md)</span> — 2019
+* <span class="ruby-version">[3.0](3.0.md)</span> — 2020
+* <span class="ruby-version">[3.1](3.1.md)</span> — 2021
 
 

@@ -327,7 +327,7 @@ This section lists changes in how methods are defined and invoked, as well as ne
 * [2.6](2.6.md#proc-composition) **`Proc` composition with [>>](https://docs.ruby-lang.org/en/2.6.0/Proc.html#method-i-3E-3E) and [<<](https://docs.ruby-lang.org/en/2.6.0/Proc.html#method-i-3C-3C)**:
   ```ruby
   PROCESSOR = proc { |str| '{' + str + '}' } >> :upcase.to_proc >> method(:puts)
-  %w[test me please].map(&PROCESSORS)
+  %w[test me please].map(&PROCESSOR)
   # prints
   #   {TEST}
   #   {ME}
@@ -950,7 +950,7 @@ Freezing of object makes its state immutable. The important thing about freezing
 * **2.0** Fixnums, Bignums and Floats are frozen. While number values never were mutable, before Ruby 2.0 it was possible to change additional internal state for them, making it weird:
   ```ruby
   10.instance_variable_set('@foo', 5) # works in 1.9, "can't modify frozen Fixnum" in 2.0
-  10.instance_variable_set('@foo') # => 5 in Ruby 1.9
+  10.instance_variable_get('@foo') # => 5 in Ruby 1.9
   ```
 * **2.1** All symbols are frozen.
 * **2.1** `"string_literal".freeze` is optimized to always return the same object for same literal
@@ -971,11 +971,11 @@ Freezing of object makes its state immutable. The important thing about freezing
 * **2.1** — 2013, Dec 25 (the same as every version after this)
 * **2.2** — 2014
 * **2.3** — 2015
-* [2.4](/2.4.html) — 2016
-* [2.5](/2.5.html) — 2017
-* [2.6](/2.6.html) — 2018
-* [2.7](/2.7.html) — 2019
-* [3.0](/3.0.html) — 2020
-* [3.1](/3.1.html) — 2021
+* [2.4](2.4.md) — 2016
+* [2.5](2.5.md) — 2017
+* [2.6](2.6.md) — 2018
+* [2.7](2.7.md) — 2019
+* [3.0](3.0.md) — 2020
+* [3.1](3.1.md) — 2021
 
 
