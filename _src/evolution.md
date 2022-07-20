@@ -427,7 +427,7 @@ Included in many classes to implement comparison methods. Once class defines a m
   'Straße'.upcase # => 'STRASSE'
   'İzmir'.upcase(:turkic) # => İZMİR -- locale-specific case conversion
   ```
-* [2.4](2.4.md#stringnewcapacity-size) [String::new](https://ruby-doc.org/core-2.4.0/String.html#method-c-new): `capacity:` argument to pre-allocate memory if it is known the string will grow
+* [2.4](2.4.md#stringnewcapacity-size) [String.new](https://ruby-doc.org/core-2.4.0/String.html#method-c-new): `capacity:` argument to pre-allocate memory if it is known the string will grow
 * [2.4](2.4.md#casecmp) [String#casecmp?](https://ruby-doc.org/core-2.4.0/String.html#method-i-casecmp-3F), [Symbol#casecmp?](https://ruby-doc.org/core-2.4.0/Symbol.html#method-i-casecmp-3F) as a more expressive version of `#casecmp` when boolean value is needed (`#casecmp` returns `-1`/`0`/`1`):
   ```ruby
   'FOO'.casecmp?('foo') # => true
@@ -470,7 +470,7 @@ Included in many classes to implement comparison methods. Once class defines a m
   User.new(name: 'Matz', email: 'matz@ruby-lang.org')
   ```
 * [3.1](3.1.md#warning-on-passing-keywords-to-a-non-keyword-initialized-struct) Warning on passing keywords to a non-keyword-initialized struct
-* [3.1](3.1.md#structclasskeyword_init) [Strict::keyword_init?](https://docs.ruby-lang.org/en/3.1/Struct.html#method-c-keyword_init-3F)
+* [3.1](3.1.md#structclasskeyword_init) [Strict.keyword_init?](https://docs.ruby-lang.org/en/3.1/Struct.html#method-c-keyword_init-3F)
 
 ## `Time`
 
@@ -782,7 +782,7 @@ This section covers exception raising/handling behavior changes, as well as chan
 * [2.6](2.6.md#else-in-exception-handling-context) `else` in exception-handling context without any `rescue` is prohibited.
 * [2.6](2.6.md#numeric-methods-have-exception-argument) [#Integer()](https://ruby-doc.org/core-2.6/Kernel.html#method-i-Integer) and other similar conversion methods now have optional argument `exception: true/false`, defining whether to raise error on input that can't be converted or just return `nil`
 * [2.6](2.6.md#system-has-exception-argument) [#system](https://ruby-doc.org/core-2.6/Kernel.html#method-i-system): optional argument `exception: true/false`
-* [2.6](2.6.md#new-arguments-receiver-and-key) New arguments: `receiver:` for [NameError::new](https://ruby-doc.org/core-2.6/NameError.html#method-c-new) and [NoMethodError::new](https://ruby-doc.org/core-2.6/NoMethodError.html#method-c-new); `key:`  for [KeyError::new](https://ruby-doc.org/core-2.6/KeyError.html#method-c-new). It allows user code to construct errors with the same level of detail the language can.
+* [2.6](2.6.md#new-arguments-receiver-and-key) New arguments: `receiver:` for [NameError.new](https://ruby-doc.org/core-2.6/NameError.html#method-c-new) and [NoMethodError.new](https://ruby-doc.org/core-2.6/NoMethodError.html#method-c-new); `key:`  for [KeyError.new](https://ruby-doc.org/core-2.6/KeyError.html#method-c-new). It allows user code to construct errors with the same level of detail the language can.
 * [2.6](2.6.md#exceptionfull_message-options) [Exception#full_message](https://ruby-doc.org/core-2.6/Exception.html#method-i-full_message): formatting options `highlight:` and `order:` added
 * [2.7](2.7.md#frozenerror-receiver-argument) [FrozenError#new](https://ruby-doc.org/core-2.7.0/FrozenError.html#method-c-new): receiver argument
 * [3.1](3.1.md#threadbacktracelimit) [Thread::Backtrace.limit](https://docs.ruby-lang.org/en/3.1/Thread/Backtrace.html#method-c-limit) reader to get the maximum backtrace size set with `--backtrace-limit` command-line option
