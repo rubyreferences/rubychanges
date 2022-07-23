@@ -427,7 +427,7 @@ Included in many classes to implement comparison methods. Once class defines a m
   'Straße'.upcase # => 'STRASSE'
   'İzmir'.upcase(:turkic) # => İZMİR -- locale-specific case conversion
   ```
-* <span class="ruby-version">[2.4](2.4.md#stringnewcapacity-size)</span> <a class="ruby-doc" href="https://ruby-doc.org/core-2.4.0/String.html#method-c-new"><code>String::new</code></a>: `capacity:` argument to pre-allocate memory if it is known the string will grow
+* <span class="ruby-version">[2.4](2.4.md#stringnewcapacity-size)</span> <a class="ruby-doc" href="https://ruby-doc.org/core-2.4.0/String.html#method-c-new"><code>String.new</code></a>: `capacity:` argument to pre-allocate memory if it is known the string will grow
 * <span class="ruby-version">[2.4](2.4.md#casecmp)</span> <a class="ruby-doc" href="https://ruby-doc.org/core-2.4.0/String.html#method-i-casecmp-3F"><code>String#casecmp?</code></a>, <a class="ruby-doc" href="https://ruby-doc.org/core-2.4.0/Symbol.html#method-i-casecmp-3F"><code>Symbol#casecmp?</code></a> as a more expressive version of `#casecmp` when boolean value is needed (`#casecmp` returns `-1`/`0`/`1`):
   ```ruby
   'FOO'.casecmp?('foo') # => true
@@ -470,7 +470,7 @@ Included in many classes to implement comparison methods. Once class defines a m
   User.new(name: 'Matz', email: 'matz@ruby-lang.org')
   ```
 * <span class="ruby-version">[3.1](3.1.md#warning-on-passing-keywords-to-a-non-keyword-initialized-struct)</span> Warning on passing keywords to a non-keyword-initialized struct
-* <span class="ruby-version">[3.1](3.1.md#structclasskeyword_init)</span> <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.1/Struct.html#method-c-keyword_init-3F"><code>Struct::keyword_init?</code></a>
+* <span class="ruby-version">[3.1](3.1.md#structclasskeyword_init)</span> <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.1/Struct.html#method-c-keyword_init-3F"><code>Struct.keyword_init?</code></a>
 
 ## `Time`[](#time)
 
@@ -782,7 +782,7 @@ This section covers exception raising/handling behavior changes, as well as chan
 * <span class="ruby-version">[2.6](2.6.md#else-in-exception-handling-context)</span> `else` in exception-handling context without any `rescue` is prohibited.
 * <span class="ruby-version">[2.6](2.6.md#numeric-methods-have-exception-argument)</span> <a class="ruby-doc" href="https://ruby-doc.org/core-2.6/Kernel.html#method-i-Integer"><code>#Integer()</code></a> and other similar conversion methods now have optional argument `exception: true/false`, defining whether to raise error on input that can't be converted or just return `nil`
 * <span class="ruby-version">[2.6](2.6.md#system-has-exception-argument)</span> <a class="ruby-doc" href="https://ruby-doc.org/core-2.6/Kernel.html#method-i-system"><code>#system</code></a>: optional argument `exception: true/false`
-* <span class="ruby-version">[2.6](2.6.md#new-arguments-receiver-and-key)</span> New arguments: `receiver:` for <a class="ruby-doc" href="https://ruby-doc.org/core-2.6/NameError.html#method-c-new"><code>NameError::new</code></a> and <a class="ruby-doc" href="https://ruby-doc.org/core-2.6/NoMethodError.html#method-c-new"><code>NoMethodError::new</code></a>; `key:`  for <a class="ruby-doc" href="https://ruby-doc.org/core-2.6/KeyError.html#method-c-new"><code>KeyError::new</code></a>. It allows user code to construct errors with the same level of detail the language can.
+* <span class="ruby-version">[2.6](2.6.md#new-arguments-receiver-and-key)</span> New arguments: `receiver:` for <a class="ruby-doc" href="https://ruby-doc.org/core-2.6/NameError.html#method-c-new"><code>NameError.new</code></a> and <a class="ruby-doc" href="https://ruby-doc.org/core-2.6/NoMethodError.html#method-c-new"><code>NoMethodError.new</code></a>; `key:`  for <a class="ruby-doc" href="https://ruby-doc.org/core-2.6/KeyError.html#method-c-new"><code>KeyError.new</code></a>. It allows user code to construct errors with the same level of detail the language can.
 * <span class="ruby-version">[2.6](2.6.md#exceptionfull_message-options)</span> <a class="ruby-doc" href="https://ruby-doc.org/core-2.6/Exception.html#method-i-full_message"><code>Exception#full_message</code></a>: formatting options `highlight:` and `order:` added
 * <span class="ruby-version">[2.7](2.7.md#frozenerror-receiver-argument)</span> <a class="ruby-doc" href="https://ruby-doc.org/core-2.7.0/FrozenError.html#method-c-new"><code>FrozenError#new</code></a>: receiver argument
 * <span class="ruby-version">[3.1](3.1.md#threadbacktracelimit)</span> <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.1/Thread/Backtrace.html#method-c-limit"><code>Thread::Backtrace.limit</code></a> reader to get the maximum backtrace size set with `--backtrace-limit` command-line option
