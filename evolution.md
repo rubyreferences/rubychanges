@@ -470,7 +470,7 @@ Included in many classes to implement comparison methods. Once class defines a m
   User.new(name: 'Matz', email: 'matz@ruby-lang.org')
   ```
 * <span class="ruby-version">[3.1](3.1.md#warning-on-passing-keywords-to-a-non-keyword-initialized-struct)</span> Warning on passing keywords to a non-keyword-initialized struct
-* <span class="ruby-version">[3.1](3.1.md#structclasskeyword_init)</span> <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.1/Struct.html#method-c-keyword_init-3F"><code>Strict.keyword_init?</code></a>
+* <span class="ruby-version">[3.1](3.1.md#structclasskeyword_init)</span> <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.1/Struct.html#method-c-keyword_init-3F"><code>Struct.keyword_init?</code></a>
 
 ## `Time`[](#time)
 
