@@ -108,6 +108,7 @@ As Ruby is highly object-oriented language, most of the changes can be associate
   # ...
   ```
 * <span class="ruby-version">[3.0](3.0.md#find-pattern)</span> <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.0/syntax/pattern_matching_rdoc.html#label-Patterns">Find pattern</a> is supported: `[*elements_before, <complicated pattern>, *elements_after]`
+* <span class="ruby-version">[3.1](3.1.md#pattern-matching)</span> **One-line pattern matching is no longer experimental**
 * <span class="ruby-version">[3.1](3.1.md#expressions-and-non-local-variables-allowed-in-pin-operator-)</span> Expressions and non-local variables <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.1/syntax/pattern_matching_rdoc.html#label-Variable+pinning">allowed in pin operator `^`</a>
 * <span class="ruby-version">[3.1](3.1.md#parentheses-can-be-omitted-in-one-line-pattern-matching)</span> Parentheses can be omitted in one-line pattern matching:
   ```ruby
