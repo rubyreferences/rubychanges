@@ -1,11 +1,11 @@
 class Render < FileProcessor
-  TRACKER_LINK_RE = %r{\[(?<kind>Bug|Feature|Misc) \#(?<num>\d+)\]\(https://bugs\.ruby-lang\.org/issues/(?<num2>\d+(\#.+)?)\)}
+  TRACKER_LINK_RE = %r{\[(?<kind>Bug|Feature|Misc) \#(?<num>\d+)(?<note>\#note-\d+)?\]\(https://bugs\.ruby-lang\.org/issues/(?<num2>\d+(\#.+)?)(\#note-\d+)?\)}
   DOC_URLS = '(?:https://ruby-doc\.org|https://docs.ruby-lang.org)'
 
   def call
     text
       .gsub('<<date>>', File.mtime(path).strftime('%b %d, %Y'))
-      .gsub(/\[(Bug|Feature|Misc) \#\d+\]\(.+?\)/, &method(:process_link))
+      .gsub(/\[(Bug|Feature|Misc) \#\d+.*?\]\(.+?\)/, &method(:process_link))
       .gsub( # links to official docs to just nicer links (with icon)
         %r{\[([^\[\]]+ [^\[\]]+)\]\((#{DOC_URLS}.+?)\)},
         '<a class="ruby-doc" href="\\2">\\1</a>'
@@ -30,8 +30,9 @@ class Render < FileProcessor
 
   def process_link(link)
     m = link.match(TRACKER_LINK_RE) or fail("Wrong link: #{link}")
-    kind, num, num2 = m.values_at(:kind, :num, :num2)
+    kind, num, num2, note = m.values_at(:kind, :num, :num2, :note)
     num == num2.sub(/\#.+$/, '') or fail "Wrong link: #{link}"
-    %{<a class="tracker #{kind.downcase}" href="https://bugs.ruby-lang.org/issues/#{num2}">#{kind} ##{num}</a>}
+    note_render = "<small>#{note}</small>" if note
+    %{<a class="tracker #{kind.downcase}" href="https://bugs.ruby-lang.org/issues/#{num2}#{note}">#{kind} ##{num}#{note_render}</a>}
   end
 end

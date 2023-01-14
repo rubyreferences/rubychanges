@@ -20,8 +20,10 @@ rule /^(\d+\.\d+|evolution)\.md$/ => ->(s) { "_src/#{s}" } do |t|
   File.write(to, Render.(from))
 end
 
+VERSIONS = [*('2.4'..'2.7'), *('3.0'..'3.2')]
+
 desc 'Convert file contents from source to target (prettify)'
-task contents: ['evolution', *('2.4'..'2.7'), *('3.0'..'3.1')].map(&'%s.md'.method(:%))
+task contents: ['evolution', *VERSIONS].map(&'%s.md'.method(:%))
 
 desc 'Render TOC for the changelog "book"'
 task toc: '_data/book.yml'

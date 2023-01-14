@@ -8,7 +8,7 @@ permalink: "/index.html"
 
 This site is dedicated to history of [Ruby language](https://www.ruby-lang.org/) evolution. Basically, it is just the same information that each Ruby version's [NEWS](https://github.com/ruby/ruby/blob/master/NEWS.md) file contains, just in more readable and informative manner.
 
-> <big>Latest version: <b><a href="3.1.html">3.1</a></b></big> ([3.0](3.0.html) − [2.7](2.7.html) − [2.6](2.6.html) −[2.5](2.5.html) − [2.4](2.4.html))<br/><br/>**[Ruby Evolution](evolution.html)**: bird-eye view on all significant changes 2.0−3.1, grouped by topic.
+> <big>Latest version: <b><a href="3.2.html">3.2</a></b></big> ([3.1](3.1.html) − [3.0](3.0.html) − [2.7](2.7.html) − [2.6](2.6.html) −[2.5](2.5.html) − [2.4](2.4.html))<br/><br/>**[Ruby Evolution](evolution.html)**: bird-eye view on all significant changes 2.0−3.2, grouped by topic.
 
 Maintainer's write-up on the creation of the changelogs:
 1. [What you can learn by merely writing a programming language changelog](https://zverok.space/blog/2022-01-06-changelog.html)
@@ -33,13 +33,14 @@ Maintainer's write-up on the creation of the changelogs:
   * Maybe "Highlights" section at the top of each version changelog is more subjective than the rest of the content, but it is totally optional, you can skip it.
 * The site is dedicated to the **language**, not its **implementation(s)**, therefore at the moment it **does not** include the description of MRI implementation changes, optimizations and internals.
 * ...and also some minor _behavior_ changes are excluded.
-* I want to _eventually_ cover Ruby versions down to 1.8, or maybe even earlier, but it is currently work-in-progress, with the first priority of the recent release of **[Ruby 2.6](2.6.html)**, and then going down version by version in my free time.
+* I want to _eventually_ cover Ruby versions down to 1.8, or maybe even earlier, but it is currently work-in-progress. I started doing it at the wake of **[Ruby 2.6](2.6.html)**, and maintaining the changelog since.
 * **UPD 2019-06-06:** **[Ruby 2.5](2.5.html)** is now covered too. Despite being 1.5 years old news, I believe it is still important to cover it in the same manner as the recent version was.
 * **UPD 2019-10-14:** **[Ruby 2.4](2.4.html)** changelog added, and some other content changed. See [History](/History.html) for detail.
 * **UPD 2019-12-27:** Newly released **[Ruby 2.7](2.7.html)** changelog added.
 * **UPD 2020-12-25:** Newly released **[Ruby 3.0](3.0.html)** changelog added.
 * **UPD 2022-01-05:** Newly released **[Ruby 3.1](3.1.html)** changelog added.
 * **UPD 2022-06-09:** Newly released **[Ruby Evolution](evolution.html)** bird-eye view added.
+* **UPD 2023-02-04:** Newly released **[Ruby 3.2](3.2.html)** changelog added.
 
 _The source of the site can be found at [GitHub](https://github.com/rubyreferences/rubychanges). See also the [Contributing](Contributing.html) section._
 

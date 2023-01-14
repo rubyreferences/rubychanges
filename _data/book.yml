@@ -31,6 +31,8 @@ chapters:
     path: "/evolution.html#strings-symbols-regexps-encodings"
   - title: "<code>Struct</code>"
     path: "/evolution.html#struct"
+  - title: "<code>Data</code>"
+    path: "/evolution.html#data"
   - title: "<code>Time</code>"
     path: "/evolution.html#time"
   - title: Enumerables, collections, and iteration
@@ -77,8 +79,12 @@ chapters:
       path: "/evolution.html#gc"
     - title: "<code>TracePoint</code>"
       path: "/evolution.html#tracepoint"
+    - title: "<code>RubyVM::AbstractSyntaxTree</code>"
+      path: "/evolution.html#rubyvmabstractsyntaxtree"
     - title: "<code>RubyVM::InstructionSequence</code>"
       path: "/evolution.html#rubyvminstructionsequence"
+    - title: "<code>ObjectSpace</code>"
+      path: "/evolution.html#objectspace"
   - title: Deeper topics
     path: "/evolution.html#deeper-topics"
     children:
@@ -88,6 +94,170 @@ chapters:
       path: "/evolution.html#freezing"
   - title: 'Appendix: Covered Ruby versions release dates'
     path: "/evolution.html#appendix-covered-ruby-versions-release-dates"
+- title: Ruby 3.2
+  path: "/3.2.html"
+  is_version: true
+  published_at: '2022-02-04'
+  description: |
+    <p><strong>Highlights:</strong></p>
+
+    <ul>
+      <li>Anonymous method argument passing</li>
+      <li>More inspectable refinements</li>
+      <li><code>Data</code> class</li>
+      <li>Support for pattern-matching in <code>Time</code> and <code>MatchData</code></li>
+      <li><code>Set</code> is a built-in class</li>
+      <li>Per-<code>Fiber</code> storage</li>
+      <li><code>RubyVM::AbstractSyntaxTree</code>: fault-tolerant and token-level parsing</li>
+    </ul>
+
+    <p><a href="https://rubyreferences.github.io/rubychanges/3.2.html">Read more »</a></p>
+  children:
+  - title: Highlights
+    path: "/3.2.html#highlights"
+  - title: Language changes
+    path: "/3.2.html#language-changes"
+    children:
+    - title: Anonymous arguments passing improvements
+      path: "/3.2.html#anonymous-arguments-passing-improvements"
+    - title: Constant assignment evaluation order changed
+      path: "/3.2.html#constant-assignment-evaluation-order-changed"
+    - title: Behavior of module reopening/redefinition with included modules changed
+      path: "/3.2.html#behavior-of-module-reopeningredefinition-with-included-modules-changed"
+    - title: Keyword argument separation leftovers
+      path: "/3.2.html#keyword-argument-separation-leftovers"
+    - title: Removals
+      path: "/3.2.html#removals"
+  - title: Core classes and modules
+    path: "/3.2.html#core-classes-and-modules"
+    children:
+    - title: "<code>Kernel#binding</code> raises if accessed not from Ruby"
+      path: "/3.2.html#kernelbinding-raises-if-accessed-not-from-ruby"
+    - title: Class and Module
+      path: "/3.2.html#class-and-module"
+      children:
+      - title: "<code>Class#attached_object</code>"
+        path: "/3.2.html#classattached_object"
+      - title: "<code>Module#const_added</code>"
+        path: "/3.2.html#moduleconst_added"
+      - title: "<code>Module#undefined_instance_methods</code>"
+        path: "/3.2.html#moduleundefined_instance_methods"
+    - title: Refinements
+      path: "/3.2.html#refinements"
+      children:
+      - title: "<code>Module#refinements</code>"
+        path: "/3.2.html#modulerefinements"
+      - title: "<code>Refinement#refined_class</code>"
+        path: "/3.2.html#refinementrefined_class"
+      - title: "<code>Module.used_refinements</code>"
+        path: "/3.2.html#moduleused_refinements"
+    - title: Integer#ceildiv
+      path: "/3.2.html#integerceildiv"
+    - title: Strings and regexps
+      path: "/3.2.html#strings-and-regexps"
+      children:
+      - title: Byte-oriented methods
+        path: "/3.2.html#byte-oriented-methods"
+      - title: <code>String#dedup</code> as an alias for <code>-"string"</code>
+        path: "/3.2.html#stringdedup-as-an-alias-for--string"
+      - title: "<code>Regexp.new</code>: passing flags as a string is supported"
+        path: "/3.2.html#regexpnew-passing-flags-as-a-string-is-supported"
+      - title: "<code>Regexp</code>: ReDoS vulnerability prevention"
+        path: "/3.2.html#regexp-redos-vulnerability-prevention"
+    - title: "<code>Time.new</code> can parse a string"
+      path: "/3.2.html#timenew-can-parse-a-string"
+    - title: "<code>Struct</code> and <code>Data</code>"
+      path: "/3.2.html#struct-and-data"
+      children:
+      - title: "<code>Struct</code> can be initialized by keyword arguments by default"
+        path: "/3.2.html#struct-can-be-initialized-by-keyword-arguments-by-default"
+      - title: "<code>Data</code>: new immutable value object class"
+        path: "/3.2.html#data-new-immutable-value-object-class"
+    - title: Pattern matching
+      path: "/3.2.html#pattern-matching"
+      children:
+      - title: "<code>MatchData</code>: added <code>#deconstruct</code> and <code>#deconstruct_keys</code>"
+        path: "/3.2.html#matchdata-added-deconstruct-and-deconstruct_keys"
+      - title: "<code>Time#deconstruct_keys</code>"
+        path: "/3.2.html#timedeconstruct_keys"
+    - title: Enumerables and collections
+      path: "/3.2.html#enumerables-and-collections"
+      children:
+      - title: "<code>Enumerator.product</code>"
+        path: "/3.2.html#enumeratorproduct"
+      - title: "<code>Hash#shift</code> always returns <code>nil</code> if the hash
+          is empty"
+        path: "/3.2.html#hashshift-always-returns-nil-if-the-hash-is-empty"
+      - title: "<code>Set</code> became a built-in class"
+        path: "/3.2.html#set-became-a-built-in-class"
+      - title: "<code>Thread::Queue</code>: timeouts for <code>pop</code> and <code>push</code>"
+        path: "/3.2.html#threadqueue-timeouts-for-pop-and-push"
+    - title: Procs and methods
+      path: "/3.2.html#procs-and-methods"
+      children:
+      - title: "<code>Proc#dup</code> returns an instance of subclass"
+        path: "/3.2.html#procdup-returns-an-instance-of-subclass"
+      - title: "<code>Proc#parameters</code>: new keyword argument <code>lambda: true/false</code>"
+        path: "/3.2.html#procparameters-new-keyword-argument-lambda-truefalse"
+      - title: "<code>Method#public?</code>, <code>#protected?</code>, and <code>#private?</code>
+          are removed"
+        path: "/3.2.html#methodpublic-protected-and-private-are-removed"
+      - title: "<code>UnboundMethod</code>: more consistent reporting on what module
+          it belongs to"
+        path: "/3.2.html#unboundmethod-more-consistent-reporting-on-what-module-it-belongs-to"
+    - title: IO and network
+      path: "/3.2.html#io-and-network"
+      children:
+      - title: "<code>IO</code>: support for timeouts for blocking IO"
+        path: "/3.2.html#io-support-for-timeouts-for-blocking-io"
+      - title: "<code>IO#path</code>"
+        path: "/3.2.html#iopath"
+    - title: Exceptions
+      path: "/3.2.html#exceptions"
+      children:
+      - title: "<code>Exception#detailed_message</code>"
+        path: "/3.2.html#exceptiondetailed_message"
+      - title: "<code>SyntaxError#path</code>"
+        path: "/3.2.html#syntaxerrorpath"
+    - title: Concurrency
+      path: "/3.2.html#concurrency"
+      children:
+      - title: "<code>Fiber</code> storage"
+        path: "/3.2.html#fiber-storage"
+      - title: "<code>Fiber::Scheduler#io_select</code>"
+        path: "/3.2.html#fiberschedulerio_select"
+    - title: Internals
+      path: "/3.2.html#internals"
+      children:
+      - title: "<code>Thread.each_caller_location</code>"
+        path: "/3.2.html#threadeach_caller_location"
+      - title: "<code>GC.latest_gc_info</code>: add <code>need_major_gc:</code> key"
+        path: "/3.2.html#gclatest_gc_info-add-need_major_gc-key"
+      - title: "<code>ObjectSpace</code>: dumping object shapes"
+        path: "/3.2.html#objectspace-dumping-object-shapes"
+      - title: "<code>TracePoint#binding</code> returns <code>nil</code> for <code>c_call</code>/<code>c_return</code>"
+        path: "/3.2.html#tracepointbinding-returns-nil-for-c_callc_return"
+      - title: "<code>TracePoint</code> for block default to trace the current thread"
+        path: "/3.2.html#tracepoint-for-block-default-to-trace-the-current-thread"
+    - title: "<code>RubyVM::AbstractSyntaxTree</code>"
+      path: "/3.2.html#rubyvmabstractsyntaxtree"
+      children:
+      - title: "<code>error_tolerant: true</code> option for parsing"
+        path: "/3.2.html#error_tolerant-true-option-for-parsing"
+      - title: "<code>keep_tokens: true</code> option for parsing"
+        path: "/3.2.html#keep_tokens-true-option-for-parsing"
+  - title: Standard library
+    path: "/3.2.html#standard-library"
+    children:
+    - title: Version updates
+      path: "/3.2.html#version-updates"
+      children:
+      - title: Default gems
+        path: "/3.2.html#default-gems"
+      - title: Bundled gems
+        path: "/3.2.html#bundled-gems"
+    - title: Standard library content changes
+      path: "/3.2.html#standard-library-content-changes"
 - title: Ruby 3.1
   path: "/3.1.html"
   is_version: true
