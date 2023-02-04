@@ -75,8 +75,8 @@ module TOC
     def rss_fields
       return {} if version == 'evolution'
 
-      pub = text[/\*\*This document first published:\*\* (.+)\n/, 1] or fail "Published at not found"
-      desc = text[/\#\# Highlights\n(.+?)\n\#\# /m, 1] or fail "Description not found"
+      pub = text[/\*\*This document first published:\*\* (.+)\n/, 1] or fail "Published at not found: #{path}"
+      desc = text[/\#\# Highlights\n(.+?)\n\#\# /m, 1] or fail "Description not found: #{path}"
       desc = desc
         .gsub(/\[(.+?)\]\(.+?\)/, '\1') # remove links
         .then { |desc| RSS_DESCRIPTION % [desc, version] }

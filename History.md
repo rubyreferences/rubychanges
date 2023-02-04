@@ -2,6 +2,11 @@
 
 (Only outstanding content changes listed, the texts and code are constantly updated and fixed thanks to awesome contributors.)
 
+## 2023-02-04
+
+* **[3.2](3.2.html)** changelog added. "Better late than never," war year edition!
+* [Ruby Evolution](evolution.html) updated accordingly.
+
 ## 2022-06-09
 
 * **[Ruby Evolution](evolution.html)** bird-eye view added.
