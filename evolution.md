@@ -533,7 +533,7 @@ Included in many classes to implement comparison methods. Once class defines a m
 
 ## `Data`[](#data)
 
-* <span class="ruby-version">[3.2](3.2.md#data-new-immutable-value-object-class)</span> **<a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.2/Data.html"><code>Data</code></a>: new immutable value object class introduced.** It has a stricter and leander interface than `Struct`:
+* <span class="ruby-version">[3.2](3.2.md#data-new-immutable-value-object-class)</span> **<a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.2/Data.html"><code>Data</code></a>: new immutable value object class introduced.** It has a stricter and leaner interface than `Struct`:
   ```ruby
   Point = Data.define(:x, :y)
 
