@@ -321,7 +321,7 @@ This section lists changes in how methods are defined and invoked, as well as ne
   (1..50).grep(Prime.method(:prime?))
   #=> [2, 3, 5, 7, 11, 13, 17, 19, 23, 29]
   ```
-* <span class="ruby-version">[2.7](2.7.md#selfprivate_method)</span> `self.<private_method>` <a class="ruby-doc" href="https://ruby-doc.org/core-2.7.0/syntax/modules_and_classes_rdoc.html#label-Visibility">is allowed</a>
+* <span class="ruby-version">[2.7](2.7.md#selfprivate_method)</span> `self.<private_method>` <a class="ruby-doc" href="https://ruby-doc.org/core-2.7.0/syntax/doc/modules_and_classes_rdoc.html#label-Visibility">is allowed</a>
 * <span class="ruby-version">[2.7](2.7.md#keyword-argument-related-changes)</span> **[Big Keyword Argument Separation](https://www.ruby-lang.org/en/news/2019/12/12/separation-of-positional-and-keyword-arguments-in-ruby-3-0/):** some incompatibilities were introduced by need, so the distinction of keyword arguments and hashes in method arguments was more clear, handling numerous irritating edge cases.
 * <span class="ruby-version">[2.7](2.7.md#keyword-argument-related-changes)</span> Introduce argument forwarding with `method(...)` syntax. As after the keyword argument separation "delegate everything" syntax became more complicated (you need to use and pass `(*args, **kwargs)`, because just `*args` wouldn't always work), simplified syntax was introduced:
   ```ruby
