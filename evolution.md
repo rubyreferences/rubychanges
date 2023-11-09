@@ -321,7 +321,7 @@ This section lists changes in how methods are defined and invoked, as well as ne
   (1..50).grep(Prime.method(:prime?))
   #=> [2, 3, 5, 7, 11, 13, 17, 19, 23, 29]
   ```
-* <span class="ruby-version">[2.7](2.7.md#selfprivate_method)</span> `self.<private_method>` <a class="ruby-doc" href="https://ruby-doc.org/core-2.7.0/syntax/doc/modules_and_classes_rdoc.html#label-Visibility">is allowed</a>
+* <span class="ruby-version">[2.7](2.7.md#selfprivate_method)</span> `self.<private_method>` <a class="ruby-doc" href="https://ruby-doc.org/core-2.7.0/doc/syntax/modules_and_classes_rdoc.html#label-Visibility">is allowed</a>
 * <span class="ruby-version">[2.7](2.7.md#keyword-argument-related-changes)</span> **[Big Keyword Argument Separation](https://www.ruby-lang.org/en/news/2019/12/12/separation-of-positional-and-keyword-arguments-in-ruby-3-0/):** some incompatibilities were introduced by need, so the distinction of keyword arguments and hashes in method arguments was more clear, handling numerous irritating edge cases.
 * <span class="ruby-version">[2.7](2.7.md#keyword-argument-related-changes)</span> Introduce argument forwarding with `method(...)` syntax. As after the keyword argument separation "delegate everything" syntax became more complicated (you need to use and pass `(*args, **kwargs)`, because just `*args` wouldn't always work), simplified syntax was introduced:
   ```ruby
@@ -341,7 +341,7 @@ This section lists changes in how methods are defined and invoked, as well as ne
   ```
 * <span class="ruby-version">[3.1](3.1.md#methodunboundmethod-public-private-protected)</span> <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.1/Method.html#method-i-private-3F"><code>Method#private?</code></a>, `#protected?`, `#public?`, same are defined for `UnboundMethod`
   * <span class="ruby-version">[3.2](3.2.md#methodpublic-protected-and-private-are-removed)</span> The change was reverted.
-* <span class="ruby-version">[3.1](3.1.md#values-in-hash-literals-and-keyword-arguments-can-be-omitted)</span> **Values in keyword arguments <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.1/syntax/methods_rdoc.html#label-Keyword+Arguments">can be omitted</a>**:
+* <span class="ruby-version">[3.1](3.1.md#values-in-hash-literals-and-keyword-arguments-can-be-omitted)</span> **Values in keyword arguments <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.1/syntax/calling_methods_rdoc.html#label-Keyword+Arguments">can be omitted</a>**:
   ```ruby
   x = 100
   p(x:) # same as p(x: x), prints: {:x => 100}

@@ -341,7 +341,7 @@ This section lists changes in how methods are defined and invoked, as well as ne
   ```
 * [3.1](3.1.md#methodunboundmethod-public-private-protected) [Method#private?](https://docs.ruby-lang.org/en/3.1/Method.html#method-i-private-3F), `#protected?`, `#public?`, same are defined for `UnboundMethod`
   * [3.2](3.2.md#methodpublic-protected-and-private-are-removed) The change was reverted.
-* [3.1](3.1.md#values-in-hash-literals-and-keyword-arguments-can-be-omitted) **Values in keyword arguments [can be omitted](https://docs.ruby-lang.org/en/3.1/syntax/methods_rdoc.html#label-Keyword+Arguments)**:
+* [3.1](3.1.md#values-in-hash-literals-and-keyword-arguments-can-be-omitted) **Values in keyword arguments [can be omitted](https://docs.ruby-lang.org/en/3.1/syntax/calling_methods_rdoc.html#label-Keyword+Arguments)**:
   ```ruby
   x = 100
   p(x:) # same as p(x: x), prints: {:x => 100}
@@ -533,7 +533,7 @@ Included in many classes to implement comparison methods. Once class defines a m
 
 ## `Data`
 
-* [3.2](3.2.md#data-new-immutable-value-object-class) **[Data](https://docs.ruby-lang.org/en/3.2/Data.html): new immutable value object class introduced.** It has a stricter and leander interface than `Struct`:
+* [3.2](3.2.md#data-new-immutable-value-object-class) **[Data](https://docs.ruby-lang.org/en/3.2/Data.html): new immutable value object class introduced.** It has a stricter and leaner interface than `Struct`:
   ```ruby
   Point = Data.define(:x, :y)
 
