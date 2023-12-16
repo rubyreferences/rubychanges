@@ -94,6 +94,89 @@ chapters:
       path: "/evolution.html#freezing"
   - title: 'Appendix: Covered Ruby versions release dates'
     path: "/evolution.html#appendix-covered-ruby-versions-release-dates"
+- title: Ruby 3.3
+  path: "/3.3.html"
+  is_version: true
+  published_at: '2023-12-25'
+  description: |
+    <p><strong>Highlights:</strong></p>
+
+    <p>TODO</p>
+
+    <p><a href="https://rubyreferences.github.io/rubychanges/3.3.html">Read more »</a></p>
+  children:
+  - title: Highlights
+    path: "/3.3.html#highlights"
+  - title: Language changes
+    path: "/3.3.html#language-changes"
+    children:
+    - title: Standalone <code>it</code> in blocks will become anonymous argument in
+        Ruby 3.4
+      path: "/3.3.html#standalone-it-in-blocks-will-become-anonymous-argument-in-ruby-34"
+  - title: Core classes and modules
+    path: "/3.3.html#core-classes-and-modules"
+    children:
+    - title: "<code>Kernel#lambda</code> raises when passed <code>Proc</code> instance"
+      path: "/3.3.html#kernellambda-raises-when-passed-proc-instance"
+    - title: "<code>Proc#dup</code> and <code>#clone</code> call <code>#initialize_dup</code>
+        and <code>#initialize_copy</code>"
+      path: "/3.3.html#procdup-and-clone-call-initialize_dup-and-initialize_copy"
+    - title: "<code>Module#set_temporary_name</code>"
+      path: "/3.3.html#moduleset_temporary_name"
+    - title: "<code>Refinement#refined_class</code> is renamed to <code>Refinement#target</code>"
+      path: "/3.3.html#refinementrefined_class-is-renamed-to-refinementtarget"
+    - title: Strings and regexps
+      path: "/3.3.html#strings-and-regexps"
+      children:
+      - title: "<code>String#bytesplice</code>: new arguments to select a portion
+          of the replacement string"
+        path: "/3.3.html#stringbytesplice-new-arguments-to-select-a-portion-of-the-replacement-string"
+      - title: "<code>MatchData#named_captures</code>: <code>symbolize_names:</code>
+          argument"
+        path: "/3.3.html#matchdatanamed_captures-symbolize_names-argument"
+    - title: "<code>Array#pack</code> and <code>String#unpack</code>: raise <code>ArgumentError</code>
+        for unknown directives"
+      path: "/3.3.html#arraypack-and-stringunpack-raise-argumenterror-for-unknown-directives"
+    - title: Enumerables and collections
+      path: "/3.3.html#enumerables-and-collections"
+      children:
+      - title: "<code>ObjectSpace::WeakKeyMap</code>"
+        path: "/3.3.html#objectspaceweakkeymap"
+      - title: "<code>ObjectSpace::WeakMap#delete</code>"
+        path: "/3.3.html#objectspaceweakmapdelete"
+      - title: "<code>Thread::Queue#freeze</code> and <code>SizedQueue#freeze</code>
+          raise <code>TypeError</code>"
+        path: "/3.3.html#threadqueuefreeze-and-sizedqueuefreeze-raise-typeerror"
+    - title: "<code>Range</code>"
+      path: "/3.3.html#range"
+      children:
+      - title: "<code>#reverse_each</code>"
+        path: "/3.3.html#reverse_each"
+      - title: "<code>#overlap?</code>"
+        path: "/3.3.html#overlap"
+    - title: Filesystem and IO
+      path: "/3.3.html#filesystem-and-io"
+      children:
+      - title: "<code>Dir.for_fd</code> and <code>Dir.fchdir</code>"
+        path: "/3.3.html#dirfor_fd-and-dirfchdir"
+      - title: "<code>Dir#chdir</code>"
+        path: "/3.3.html#dirchdir"
+      - title: Deprecate subprocess creation with method dedicated to files
+        path: "/3.3.html#deprecate-subprocess-creation-with-method-dedicated-to-files"
+    - title: "<code>Fiber#kill</code>"
+      path: "/3.3.html#fiberkill"
+    - title: Internals
+      path: "/3.3.html#internals"
+      children:
+      - title: 'New <code>Warning</code> category: <code>:performance</code>'
+        path: "/3.3.html#new-warning-category-performance"
+      - title: "<code>Process.warmup</code>"
+        path: "/3.3.html#processwarmup"
+      - title: "<code>Process::Status#&amp;</code>  and <code>#&gt;&gt;</code> are
+          deprecated"
+        path: "/3.3.html#processstatus--and--are-deprecated"
+      - title: "<code>TracePoint</code> supports <code>:rescue</code> event"
+        path: "/3.3.html#tracepoint-supports-rescue-event"
 - title: Ruby 3.2
   path: "/3.2.html"
   is_version: true
