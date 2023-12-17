@@ -177,6 +177,27 @@ chapters:
         path: "/3.3.html#processstatus--and--are-deprecated"
       - title: "<code>TracePoint</code> supports <code>:rescue</code> event"
         path: "/3.3.html#tracepoint-supports-rescue-event"
+  - title: Standard library
+    path: "/3.3.html#standard-library"
+    children:
+    - title: Version updates
+      path: "/3.3.html#version-updates"
+      children:
+      - title: Default gems
+        path: "/3.3.html#default-gems"
+      - title: Bundled gems
+        path: "/3.3.html#bundled-gems"
+    - title: Standard library content changes
+      path: "/3.3.html#standard-library-content-changes"
+      children:
+      - title: Additions
+        path: "/3.3.html#additions"
+      - title: Removals
+        path: "/3.3.html#removals"
+      - title: Default gems that became bundled
+        path: "/3.3.html#default-gems-that-became-bundled"
+      - title: Gems that are warned to become bundled in the next version
+        path: "/3.3.html#gems-that-are-warned-to-become-bundled-in-the-next-version"
 - title: Ruby 3.2
   path: "/3.2.html"
   is_version: true
