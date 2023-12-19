@@ -101,7 +101,17 @@ chapters:
   description: |
     <p><strong>Highlights:</strong></p>
 
-    <p>TODO</p>
+    <blockquote>
+      <p>3.3 has many important <em>internal</em> changes related to performance optimizations, parser, and JIT (which are mostly of scope of what I am able and willing to cover), but somewhat lighter on the “small quality of life improvement” side.</p>
+    </blockquote>
+
+    <ul>
+      <li><a href=""><code>it</code> will become anonymous block argument in 3.4</a></li>
+      <li><a href=""><code>Module#set_temporary_name</code></a></li>
+      <li><a href=""><code>ObjectSpace::WeakKeyMap</code></a></li>
+      <li><a href=""><code>Range#overlap?</code></a></li>
+      <li><a href=""><code>Fiber#kill</code></a></li>
+    </ul>
 
     <p><a href="https://rubyreferences.github.io/rubychanges/3.3.html">Read more »</a></p>
   children:
