@@ -106,11 +106,11 @@ chapters:
     </blockquote>
 
     <ul>
-      <li><a href=""><code>it</code> will become anonymous block argument in 3.4</a></li>
-      <li><a href=""><code>Module#set_temporary_name</code></a></li>
-      <li><a href=""><code>ObjectSpace::WeakKeyMap</code></a></li>
-      <li><a href=""><code>Range#overlap?</code></a></li>
-      <li><a href=""><code>Fiber#kill</code></a></li>
+      <li><code>it</code> will become anonymous block argument in 3.4</li>
+      <li><code>Module#set_temporary_name</code></li>
+      <li><code>ObjectSpace::WeakKeyMap</code></li>
+      <li><code>Range#overlap?</code></li>
+      <li><code>Fiber#kill</code></li>
     </ul>
 
     <p><a href="https://rubyreferences.github.io/rubychanges/3.3.html">Read more »</a></p>
@@ -144,6 +144,8 @@ chapters:
       - title: "<code>MatchData#named_captures</code>: <code>symbolize_names:</code>
           argument"
         path: "/3.3.html#matchdatanamed_captures-symbolize_names-argument"
+    - title: "<code>Time.new</code> with string argument became stricter"
+      path: "/3.3.html#timenew-with-string-argument-became-stricter"
     - title: "<code>Array#pack</code> and <code>String#unpack</code>: raise <code>ArgumentError</code>
         for unknown directives"
       path: "/3.3.html#arraypack-and-stringunpack-raise-argumenterror-for-unknown-directives"
@@ -173,6 +175,8 @@ chapters:
         path: "/3.3.html#dirchdir"
       - title: Deprecate subprocess creation with method dedicated to files
         path: "/3.3.html#deprecate-subprocess-creation-with-method-dedicated-to-files"
+    - title: "<code>NoMethodError</code>: change of rendering logic"
+      path: "/3.3.html#nomethoderror-change-of-rendering-logic"
     - title: "<code>Fiber#kill</code>"
       path: "/3.3.html#fiberkill"
     - title: Internals
