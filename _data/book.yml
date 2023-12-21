@@ -102,7 +102,7 @@ chapters:
     <p><strong>Highlights:</strong></p>
 
     <blockquote>
-      <p>3.3 has many important <em>internal</em> changes related to performance optimizations, parser, and JIT (which are mostly of scope of what I am able and willing to cover), but somewhat lighter on the “small quality of life improvement” side.</p>
+      <p>3.3 has many important <em>internal</em> changes related to performance optimizations, parser, and JIT (which are mostly of scope of what I am able and willing to cover), but somewhat lighter on the “small quality of life improvement” side. See also big FastRuby’s post mostly focused on the change we do not cover here.</p>
     </blockquote>
 
     <ul>

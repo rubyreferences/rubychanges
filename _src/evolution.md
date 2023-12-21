@@ -12,7 +12,7 @@ image: images/evolution.png
 
 It is intended as a "bird eye view" that might be of interest for Ruby novices and experts alike, as well as for curious users of other technologies.
 
-It is part of a bigger [Ruby Changes](/) effort, which provides a detailed explanations and justifications on what happens to the language, version by version. The detailed changelog currently covers versions since 2.4, and the brief changelog links to more detailed explanations for those versions (links are under version numbers at the beginning of the list items).
+It is part of a bigger [Ruby Changes](https://rubyreferences.github.io/rubychanges/) effort, which provides a detailed explanations and justifications on what happens to the language, version by version. The detailed changelog currently covers versions since 2.4, and the brief changelog links to more detailed explanations for those versions (links are under version numbers at the beginning of the list items).
 
 The choice of important features, their grouping, and depth of comment provided are informal and somewhat subjective. The author of this list is focused on the changes of the language as a system of thinking and its syntax/semantics more than on a particular implementation.
 
