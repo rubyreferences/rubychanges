@@ -793,6 +793,7 @@ Included in many classes to implement comparison methods. Once class defines a m
 * **3.0** [#join](https://docs.ruby-lang.org/en/3.0/Set.html#method-i-join) is added as a shorthand for `.to_a.join`.
 * **3.0** [#<=>](https://docs.ruby-lang.org/en/3.0/Set.html#method-i-3C-3D-3E) generic comparison operator (separate operators like `#<` or `#>` have been worked in previous versions, too)
 * [3.2](3.2.md#set-became-a-built-in-class) **[Set](https://docs.ruby-lang.org/en/3.2/Set.html) became a built-in class**
+* [3.3](3.3.md#setmerge-accepts-multiple-arguments) [Set#merge](https://docs.ruby-lang.org/en/master/Set.html#method-i-merge) accepts multiple arguments.
 
 <!--
 * **2.5** `#to_s` as alias to `#inspect`

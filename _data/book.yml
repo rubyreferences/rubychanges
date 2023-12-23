@@ -101,10 +101,6 @@ chapters:
   description: |
     <p><strong>Highlights:</strong></p>
 
-    <blockquote>
-      <p>3.3 has many important <em>internal</em> changes related to performance optimizations, parser, and JIT (which are mostly of scope of what I am able and willing to cover), but somewhat lighter on the “small quality of life improvement” side. See also big FastRuby’s post mostly focused on the change we do not cover here.</p>
-    </blockquote>
-
     <ul>
       <li><code>it</code> will become anonymous block argument in 3.4</li>
       <li><code>Module#set_temporary_name</code></li>
@@ -152,6 +148,8 @@ chapters:
     - title: Enumerables and collections
       path: "/3.3.html#enumerables-and-collections"
       children:
+      - title: "<code>Set#merge</code> accepts multiple arguments"
+        path: "/3.3.html#setmerge-accepts-multiple-arguments"
       - title: "<code>ObjectSpace::WeakKeyMap</code>"
         path: "/3.3.html#objectspaceweakkeymap"
       - title: "<code>ObjectSpace::WeakMap#delete</code>"
@@ -204,8 +202,8 @@ chapters:
     - title: Standard library content changes
       path: "/3.3.html#standard-library-content-changes"
       children:
-      - title: Additions
-        path: "/3.3.html#additions"
+      - title: New libraries
+        path: "/3.3.html#new-libraries"
       - title: Removals
         path: "/3.3.html#removals"
       - title: Default gems that became bundled
@@ -376,6 +374,9 @@ chapters:
         path: "/3.2.html#bundled-gems"
     - title: Standard library content changes
       path: "/3.2.html#standard-library-content-changes"
+      children:
+      - title: New libraries
+        path: "/3.2.html#new-libraries"
 - title: Ruby 3.1
   path: "/3.1.html"
   is_version: true
