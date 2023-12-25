@@ -119,7 +119,7 @@ As Ruby is highly object-oriented language, most of the changes can be associate
   ```ruby
   {a: 1, b: 2} => a:
   ```
-* <span class="ruby-version">[3.2](3.2.html#pattern-matching)</span> Deconstruction added to core and standard library objects: `MatchData`: <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.2/MatchData.html#method-i-deconstruct"><code>#deconstruct</code></a> and <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.2/MatchData.html#method-i-deconstruct_keys"><code>#deconstruct_keys</code></a>), <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.2/Time.html#method-i-deconstruct_keys"><code>Time#deconstruct_keys</code></a>, <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.2/Date.html#method-i-deconstruct_keys"><code>Date#deconstruct_keys</code></a>, <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.2/DateTime.html#method-i-deconstruct_keys"><code>DateTime#deconstruct_keys</code></a>:
+* <span class="ruby-version">[3.2](3.2.html#pattern-matching)</span> Deconstruction added to core and standard library objects: <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.2/MatchData.html#method-i-deconstruct"><code>MatchData#deconstruct</code></a> and <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.2/MatchData.html#method-i-deconstruct_keys"><code>#deconstruct_keys</code></a>, <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.2/Time.html#method-i-deconstruct_keys"><code>Time#deconstruct_keys</code></a>, <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.2/Date.html#method-i-deconstruct_keys"><code>Date#deconstruct_keys</code></a>, <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.2/DateTime.html#method-i-deconstruct_keys"><code>DateTime#deconstruct_keys</code></a>:
   ```ruby
   'Ruby 3.2.0'.match(/Ruby (\d)\.(\d)\.(\d)/) => major, minor, patch
   major #=> "3"
@@ -266,7 +266,7 @@ end
   class HTTP
   end
   ```
-* <span class="ruby-version">[3.3](3.3.md#moduleset_temporary_name)</span> <a class="ruby-doc" href="https://docs.ruby-lang.org/en/master/Module.html#method-i-set_temporary_name"><code>Module#set_temporary_name</code></a> to set a human-readable name for a module without assigning it to a constant.
+* <span class="ruby-version">[3.3](3.3.md#moduleset_temporary_name)</span> **<a class="ruby-doc" href="https://docs.ruby-lang.org/en/master/Module.html#method-i-set_temporary_name"><code>Module#set_temporary_name</code></a>** to set a human-readable name for a module without assigning it to a constant.
 
 
 <!--

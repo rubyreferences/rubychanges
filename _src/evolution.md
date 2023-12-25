@@ -119,7 +119,7 @@ As Ruby is highly object-oriented language, most of the changes can be associate
   ```ruby
   {a: 1, b: 2} => a:
   ```
-* [3.2](3.2.html#pattern-matching) Deconstruction added to core and standard library objects: `MatchData`: [#deconstruct](https://docs.ruby-lang.org/en/3.2/MatchData.html#method-i-deconstruct) and [#deconstruct_keys](https://docs.ruby-lang.org/en/3.2/MatchData.html#method-i-deconstruct_keys)), [Time#deconstruct_keys](https://docs.ruby-lang.org/en/3.2/Time.html#method-i-deconstruct_keys), [Date#deconstruct_keys](https://docs.ruby-lang.org/en/3.2/Date.html#method-i-deconstruct_keys), [DateTime#deconstruct_keys](https://docs.ruby-lang.org/en/3.2/DateTime.html#method-i-deconstruct_keys):
+* [3.2](3.2.html#pattern-matching) Deconstruction added to core and standard library objects: [MatchData#deconstruct](https://docs.ruby-lang.org/en/3.2/MatchData.html#method-i-deconstruct) and [#deconstruct_keys](https://docs.ruby-lang.org/en/3.2/MatchData.html#method-i-deconstruct_keys), [Time#deconstruct_keys](https://docs.ruby-lang.org/en/3.2/Time.html#method-i-deconstruct_keys), [Date#deconstruct_keys](https://docs.ruby-lang.org/en/3.2/Date.html#method-i-deconstruct_keys), [DateTime#deconstruct_keys](https://docs.ruby-lang.org/en/3.2/DateTime.html#method-i-deconstruct_keys):
   ```ruby
   'Ruby 3.2.0'.match(/Ruby (\d)\.(\d)\.(\d)/) => major, minor, patch
   major #=> "3"
@@ -266,7 +266,7 @@ end
   class HTTP
   end
   ```
-* [3.3](3.3.md#moduleset_temporary_name) [Module#set_temporary_name](https://docs.ruby-lang.org/en/master/Module.html#method-i-set_temporary_name) to set a human-readable name for a module without assigning it to a constant.
+* [3.3](3.3.md#moduleset_temporary_name) **[Module#set_temporary_name](https://docs.ruby-lang.org/en/master/Module.html#method-i-set_temporary_name)** to set a human-readable name for a module without assigning it to a constant.
 
 
 <!--
