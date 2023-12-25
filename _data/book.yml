@@ -119,6 +119,8 @@ chapters:
     - title: Standalone <code>it</code> in blocks will become anonymous argument in
         Ruby 3.4
       path: "/3.3.html#standalone-it-in-blocks-will-become-anonymous-argument-in-ruby-34"
+    - title: Anonymous parameters forwarding inside blocks are disallowed
+      path: "/3.3.html#anonymous-parameters-forwarding-inside-blocks-are-disallowed"
   - title: Core classes and modules
     path: "/3.3.html#core-classes-and-modules"
     children:

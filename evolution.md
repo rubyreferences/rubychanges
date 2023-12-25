@@ -355,7 +355,7 @@ This section lists changes in how methods are defined and invoked, as well as ne
     File.open(filename, &)
   end
   ```
-* <span class="ruby-version">[3.2](3.2.md#anonymous-arguments-passing-improvements)</span> Anonymous keyword and positional arguments (<a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.2/syntax/methods_rdoc.html#label-Array-2FHash+Argument">Methods: Array/Hash Argument</a>):
+* <span class="ruby-version">[3.2](3.2.md#anonymous-arguments-passing-improvements)</span> Anonymous keyword and positional arguments forwarding (<a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.2/syntax/methods_rdoc.html#label-Array-2FHash+Argument">Methods: Array/Hash Argument</a>):
   ```ruby
   # Only accepts positional arguments and passes them further
   def log(level, *) = logger.log(level, *)
@@ -363,6 +363,7 @@ This section lists changes in how methods are defined and invoked, as well as ne
   # Only accepts anonymous keyword args and passes them further
   def get(url, **) = send_request(:get, url, **)
   ```
+  * <span class="ruby-version">[3.3](3.3.md#anonymous-parameters-forwarding-inside-blocks-are-disallowed)</span> Anonymous parameters forwarding inside blocks are disallowed, when the block also has anonymous parameters.
 
 <!--
 * <span class="ruby-version">[3.1](3.1.md#inside-endless-method-definitions-method-calls-without-parenthesis-are-allowed)</span> Inside "endless" method definitions, method calls without parenthesis are allowed (— (<a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.1/syntax/methods_rdoc.html"><code>doc/syntax/methods.rdoc</code></a> doesn't mention new or old behavior.))
