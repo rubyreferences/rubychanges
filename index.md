@@ -1,19 +1,16 @@
 ---
-title: Introduction
+title: The Ruby Changes
+description: "Changelog of the Ruby programming language: full, comprehensive, concise, well-structured, and open."
 next: "/evolution.html"
 permalink: "/index.html"
+image: images/intro.png
 ---
 
 ## The Ruby Changes
 
 This site is dedicated to history of [Ruby language](https://www.ruby-lang.org/) evolution. Basically, it is just the same information that each Ruby version's [NEWS](https://github.com/ruby/ruby/blob/master/NEWS.md) file contains, just in more readable and informative manner.
 
-> <big>Latest version: <b><a href="3.2.html">3.2</a></b></big> ([3.1](3.1.html) − [3.0](3.0.html) − [2.7](2.7.html) − [2.6](2.6.html) −[2.5](2.5.html) − [2.4](2.4.html))<br/><br/>**[Ruby Evolution](evolution.html)**: bird-eye view on all significant changes 2.0−3.2, grouped by topic.
-
-Maintainer's write-up on the creation of the changelogs:
-1. [What you can learn by merely writing a programming language changelog](https://zverok.space/blog/2022-01-06-changelog.html)
-2. [Following the programming language evolution, and taking it personally](https://zverok.space/blog/2022-01-13-it-evolves.html)
-3. [Programming language evolution: with all that, we are still flying](https://zverok.space/blog/2022-01-20-still-flying.html).
+> <big>Latest version: <b><a href="3.3.html">3.3</a></b></big> ([3.2](3.2.html) − [3.1](3.1.html) − [3.0](3.0.html) − [2.7](2.7.html) − [2.6](2.6.html) −[2.5](2.5.html) − [2.4](2.4.html))<br/><br/>**[Ruby Evolution](evolution.html)**: bird-eye view on all significant changes 2.0−3.2, grouped by topic.
 
 ### Main goals
 
@@ -41,8 +38,21 @@ Maintainer's write-up on the creation of the changelogs:
 * **UPD 2022-01-05:** Newly released **[Ruby 3.1](3.1.html)** changelog added.
 * **UPD 2022-06-09:** Newly released **[Ruby Evolution](evolution.html)** bird-eye view added.
 * **UPD 2023-02-04:** Newly released **[Ruby 3.2](3.2.html)** changelog added.
+* **UPD 2023-12-25:** Newly released **[Ruby 3.3](3.3.html)** changelog added.
 
 _The source of the site can be found at [GitHub](https://github.com/rubyreferences/rubychanges). See also the [Contributing](Contributing.html) section._
+
+## Blog posts about the changelog
+
+Maintainer's posts on work on the changelogs:
+
+* Deceber 2023: _Advent of Changelog_ (coming in a couple of days after 3.3's changelog)
+* February 2023: [Participating in programming language's evolution during interesting times](https://zverok.space/blog/2023-02-07-changelog2023.html)
+* June 2022: [Ruby language evolution on a large scale (as observed from Ukraine)](https://zverok.space/blog/2022-06-11-ruby-evolution.html)
+* January 2022's write up:
+  1. [What you can learn by merely writing a programming language changelog](https://zverok.space/blog/2022-01-06-changelog.html)
+  2. [Following the programming language evolution, and taking it personally](https://zverok.space/blog/2022-01-13-it-evolves.html)
+  3. [Programming language evolution: with all that, we are still flying](https://zverok.space/blog/2022-01-20-still-flying.html).
 
 ### Credits and licenses
 

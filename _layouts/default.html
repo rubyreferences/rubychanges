@@ -7,7 +7,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>{{ page.title }} - {{ site.title }}</title>
+    <title>{{ page.title }}{% if page.title != site.title %} - {{ site.title }}{% endif %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="{{ page.description | escape_once }}" />
 

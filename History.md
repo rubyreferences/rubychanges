@@ -2,6 +2,11 @@
 
 (Only outstanding content changes listed, the texts and code are constantly updated and fixed thanks to awesome contributors.)
 
+## 2023-12-25
+
+* **[3.3](3.3.html)** changelog added. Right on time this year, thanks to the "[Advent of the Changelog](https://zverok.space/blog/2023-12-07-advent-of-changelog-week1.html)"
+* [Ruby Evolution](evolution.html) updated accordingly.
+
 ## 2023-02-04
 
 * **[3.2](3.2.html)** changelog added. "Better late than never," war year edition!
