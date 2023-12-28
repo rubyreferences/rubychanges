@@ -266,7 +266,7 @@ end
   class HTTP
   end
   ```
-* [3.3](3.3.md#moduleset_temporary_name) **[Module#set_temporary_name](https://docs.ruby-lang.org/en/master/Module.html#method-i-set_temporary_name)** to set a human-readable name for a module without assigning it to a constant.
+* [3.3](3.3.md#moduleset_temporary_name) **[Module#set_temporary_name](https://docs.ruby-lang.org/en/3.3/Module.html#method-i-set_temporary_name)** to set a human-readable name for a module without assigning it to a constant.
 
 
 <!--
@@ -337,7 +337,7 @@ This section lists changes in how methods are defined and invoked, as well as ne
 * [2.7](2.7.md#better-methodinspect) Better [Method#inspect](https://ruby-doc.org/core-2.7.0/Method.html#method-i-inspect) with signature and source code location
 * [2.7](2.7.md#unboundmethodbind_call) [UnboundMethod#bind_call](https://ruby-doc.org/core-2.7.0/UnboundMethod.html#method-i-bind_call)
 * [3.0](3.0.md#arguments-forwarding--supports-leading-arguments) Arguments forwarding (`...`) [supports](https://docs.ruby-lang.org/en/3.1/syntax/methods_rdoc.html#label-Argument+Forwarding) leading arguments
-* [3.0](3.0.md#endless-method-definition) **"[Endless](https://docs.ruby-lang.org/en/master/syntax/methods_rdoc.html)" (one-line) method definition**:
+* [3.0](3.0.md#endless-method-definition) **"[Endless](https://docs.ruby-lang.org/en/3.3/syntax/methods_rdoc.html)" (one-line) method definition**:
   ```ruby
   def square(n) = n**n
   ```
@@ -398,8 +398,8 @@ This section lists changes in how methods are defined and invoked, as well as ne
 * [3.0](3.0.md#kernellambda-warns-if-called-without-a-literal-block) `Kernel#lambda` warns if called without a literal block (—)
 * [3.0](3.0.md#proc-and-eql) Procs/lambdas: `Proc#==` and `#eql?` ([Proc#==](https://docs.ruby-lang.org/en/3.0.0/Proc.html#method-i-3D-3D))
 * [3.2](3.2.md#procdup-returns-an-instance-of-subclass) Core classes and modules: Procs and methods: `Proc#dup` returns an instance of subclass (—)
-* [3.3](3.3.md#kernellambda-raises-when-passed-proc-instance) Core classes and modules: `Kernel#lambda` raises when passed `Proc` instance ([Kernel#lambda](https://docs.ruby-lang.org/en/master/Kernel.html#method-i-lambda) _(no specific details are provided, though)_)
-* [3.3](3.3.md#procdup-and-clone-call-initialize_dup-and-initialize_copy) Core classes and modules: `Proc#dup` and `#clone` call `#initialize_dup` and `#initialize_copy` (— (Adheres to the behavior described for [Object#dup](https://docs.ruby-lang.org/en/master/Object.html#method-i-dup) and [#clone](https://docs.ruby-lang.org/en/master/Kernel.html#method-i-clone)))
+* [3.3](3.3.md#kernellambda-raises-when-passed-proc-instance) Core classes and modules: `Kernel#lambda` raises when passed `Proc` instance ([Kernel#lambda](https://docs.ruby-lang.org/en/3.3/Kernel.html#method-i-lambda) _(no specific details are provided, though)_)
+* [3.3](3.3.md#procdup-and-clone-call-initialize_dup-and-initialize_copy) Core classes and modules: `Proc#dup` and `#clone` call `#initialize_dup` and `#initialize_copy` (— (Adheres to the behavior described for [Object#dup](https://docs.ruby-lang.org/en/3.3/Object.html#method-i-dup) and [#clone](https://docs.ruby-lang.org/en/3.3/Kernel.html#method-i-clone)))
 -->
 
 ## `Comparable`
@@ -517,8 +517,8 @@ Included in many classes to implement comparison methods. Once class defines a m
   Regexp.new('foo', 'im') #=> /foo/im
   ```
 * [3.2](3.2.md#regexp-redos-vulnerability-prevention) ReDoS vulnerability prevention: [Regexp.timeout](https://docs.ruby-lang.org/en/3.2/Regexp.html#method-c-timeout), [Regexp.timeout=](https://docs.ruby-lang.org/en/3.2/Regexp.html#method-c-timeout-3D), [Regexp.new](https://docs.ruby-lang.org/en/3.2/Regexp.html#method-c-new) (`timeout:` keyword argument), [Regexp.linear_time?](https://docs.ruby-lang.org/en/3.2/Regexp.html#method-c-linear_time-3F).
-* [3.3](3.3.md#stringbytesplice-new-arguments-to-select-a-portion-of-the-replacement-string) [String#bytesplice](https://docs.ruby-lang.org/en/master/String.html#method-i-bytesplice): additional arguments to select a portion of the inserted string.
-* [3.3](3.3.md#matchdatanamed_captures-symbolize_names-argument) [MatchData#named_captures](https://docs.ruby-lang.org/en/master/MatchData.html#method-i-named_captures): `symbolize_names:` argument.
+* [3.3](3.3.md#stringbytesplice-new-arguments-to-select-a-portion-of-the-replacement-string) [String#bytesplice](https://docs.ruby-lang.org/en/3.3/String.html#method-i-bytesplice): additional arguments to select a portion of the inserted string.
+* [3.3](3.3.md#matchdatanamed_captures-symbolize_names-argument) [MatchData#named_captures](https://docs.ruby-lang.org/en/3.3/MatchData.html#method-i-named_captures): `symbolize_names:` argument.
 
 
 
@@ -527,7 +527,7 @@ Included in many classes to implement comparison methods. Once class defines a m
 * **2.1** `pack/unpack` (Array/String): `Q!` and `q!` directives for long long type if platform has the type.
 * [2.5](2.5.md#casecmp-and-casecmp-return-nil-for-non-string-arguments) `String#casecmp` and `#casecmp?` return `nil` for non-string arguments ([String#casecmp](https://ruby-doc.org/core-2.5.0/String.html#method-i-casecmp), [String#casecmp?](https://ruby-doc.org/core-2.5.0/String.html#method-i-casecmp-3F))
 * [3.0](3.0.md#string-always-returning-string) `String`: always returning `String` (—)
-* [3.3](3.3.md#arraypack-and-stringunpack-raise-argumenterror-for-unknown-directives) Core classes and modules: `Array#pack` and `String#unpack`: raise `ArgumentError` for unknown directives ([doc/packed_data.rdoc](https://docs.ruby-lang.org/en/master/packed_data_rdoc.html))
+* [3.3](3.3.md#arraypack-and-stringunpack-raise-argumenterror-for-unknown-directives) Core classes and modules: `Array#pack` and `String#unpack`: raise `ArgumentError` for unknown directives ([doc/packed_data.rdoc](https://docs.ruby-lang.org/en/3.3/packed_data_rdoc.html))
 -->
 
 ## `Struct`
@@ -591,7 +591,7 @@ Included in many classes to implement comparison methods. Once class defines a m
 * **2.0** `Time#to_s` now returns US-ASCII encoding instead of BINARY.
 * [2.7](2.7.md#inspect-includes-subseconds) `Time#inspect` includes subseconds ([Time#inspect](https://ruby-doc.org/core-2.7.0/Time.html#method-i-inspect))
 * [3.1](3.1.md#strftime-supports--0000-offset) `#strftime` supports `-00:00` offset ([Time#strftime](https://docs.ruby-lang.org/en/3.1/Time.html#method-i-strftime))
-* [3.3](3.3.md#timenew-with-string-argument-became-stricter) Core classes and modules: `Time.new` with string argument became stricter ([Time#new](https://docs.ruby-lang.org/en/master/Time.html#method-c-new))
+* [3.3](3.3.md#timenew-with-string-argument-became-stricter) Core classes and modules: `Time.new` with string argument became stricter ([Time#new](https://docs.ruby-lang.org/en/3.3/Time.html#method-c-new))
 -->
 
 ## Enumerables, collections, and iteration
@@ -709,8 +709,8 @@ Included in many classes to implement comparison methods. Once class defines a m
   ```
 * [2.6](2.6.md#rangecover-accepts-range-argument) [#cover?](https://docs.ruby-lang.org/en/2.6.0/Range.html#method-i-cover-3F) accepts range argument
 * [2.7](2.7.md#beginless-range) **Beginless range: `(...100)`**
-* [3.3](3.3.md#reverse_each) [Range#reverse_each](https://docs.ruby-lang.org/en/master/Range.html#method-i-reverse_each) (specialized form of `Enumerable#reverse_each`)
-* [3.3](3.3.md#overlap) [Range#overlap?](https://docs.ruby-lang.org/en/master/Range.html#method-i-overlap-3F)
+* [3.3](3.3.md#reverse_each) [Range#reverse_each](https://docs.ruby-lang.org/en/3.3/Range.html#method-i-reverse_each) (specialized form of `Enumerable#reverse_each`)
+* [3.3](3.3.md#overlap) [Range#overlap?](https://docs.ruby-lang.org/en/3.3/Range.html#method-i-overlap-3F)
 
 
 <!--
@@ -794,7 +794,7 @@ Included in many classes to implement comparison methods. Once class defines a m
 * **3.0** [#join](https://docs.ruby-lang.org/en/3.0/Set.html#method-i-join) is added as a shorthand for `.to_a.join`.
 * **3.0** [#<=>](https://docs.ruby-lang.org/en/3.0/Set.html#method-i-3C-3D-3E) generic comparison operator (separate operators like `#<` or `#>` have been worked in previous versions, too)
 * [3.2](3.2.md#set-became-a-built-in-class) **[Set](https://docs.ruby-lang.org/en/3.2/Set.html) became a built-in class**
-* [3.3](3.3.md#setmerge-accepts-multiple-arguments) [Set#merge](https://docs.ruby-lang.org/en/master/Set.html#method-i-merge) accepts multiple arguments.
+* [3.3](3.3.md#setmerge-accepts-multiple-arguments) [Set#merge](https://docs.ruby-lang.org/en/3.3/Set.html#method-i-merge) accepts multiple arguments.
 
 <!--
 * **2.5** `#to_s` as alias to `#inspect`
@@ -807,9 +807,9 @@ Included in many classes to implement comparison methods. Once class defines a m
 * [2.7](2.7.md#objectspaceweakmap-now-accepts-non-gc-able-objects) [ObjectSpace::WeakMap#[]=](https://ruby-doc.org/core-2.7.0/ObjectSpace/WeakMap.html#method-i-5B-5D-3D) now accepts non-GC-able objects
 * [3.1](3.1.md#threadqueueinitialize-initial-values-can-be-passed-to-initializer) [Thread::Queue.new](https://docs.ruby-lang.org/en/3.1/Thread/Queue.html#method-c-new) allows initial queue content to be passed
 * [3.2](3.2.md#threadqueue-timeouts-for-pop-and-push) [Thread::Queue#pop](https://docs.ruby-lang.org/en/3.2/Thread/Queue.html#method-i-pop), [Thread::SizedQueue#pop](https://docs.ruby-lang.org/en/3.2/Thread/SizedQueue.html#method-i-pop), and [Thread::SizedQueue#push](https://docs.ruby-lang.org/en/3.2/Thread/SizedQueue.html#method-i-push) have `timeout:` argument.
-* [3.3](3.3.md#objectspaceweakkeymap) [ObjectSpace::WeakKeyMap](https://docs.ruby-lang.org/en/master/ObjectSpace/WeakKeyMap.html) introduced
-* [3.3](3.3.md#objectspaceweakmapdelete) [ObjectSpace::WeakMap#delete](https://docs.ruby-lang.org/en/master/ObjectSpace/WeakMap.html#method-i-delete)
-* [3.3](3.3.md#threadqueuefreeze-and-sizedqueuefreeze-raise-typeerror) [Thread::Queue#freeze](https://docs.ruby-lang.org/en/master/Thread/Queue.html#method-i-freeze) and [Thread::SizedQueue#freeze](https://docs.ruby-lang.org/en/master/Thread/SizedQueue.html#method-i-freeze) raise `TypeError`.
+* [3.3](3.3.md#objectspaceweakkeymap) [ObjectSpace::WeakKeyMap](https://docs.ruby-lang.org/en/3.3/ObjectSpace/WeakKeyMap.html) introduced
+* [3.3](3.3.md#objectspaceweakmapdelete) [ObjectSpace::WeakMap#delete](https://docs.ruby-lang.org/en/3.3/ObjectSpace/WeakMap.html#method-i-delete)
+* [3.3](3.3.md#threadqueuefreeze-and-sizedqueuefreeze-raise-typeerror) [Thread::Queue#freeze](https://docs.ruby-lang.org/en/3.3/Thread/Queue.html#method-i-freeze) and [Thread::SizedQueue#freeze](https://docs.ruby-lang.org/en/3.3/Thread/SizedQueue.html#method-i-freeze) raise `TypeError`.
 
 
 
@@ -841,8 +841,8 @@ Included in many classes to implement comparison methods. Once class defines a m
 * [3.1](3.1.md#iobuffer) **[IO::Buffer](https://docs.ruby-lang.org/en/3.1/IO/Buffer.html) low-level class introduced**
 * [3.2](3.2.md#io-support-for-timeouts-for-blocking-io) Support for timeouts for blocking IO via [IO#timeout=](https://docs.ruby-lang.org/en/3.2/IO.html#method-i-timeout-3D).
 * [3.2](3.2.md#iopath) Generic [IO#path](https://docs.ruby-lang.org/en/3.2/IO.html#method-i-path) that can be assigned on [creation](https://docs.ruby-lang.org/en/3.2/IO.html#class-IO-label-Open+Options).
-* [3.3](3.3.md#dirfor_fd-and-dirfchdir) [Dir.for_fd](https://docs.ruby-lang.org/en/master/Dir.html#method-c-for_fd) and [Dir.fchdir](https://docs.ruby-lang.org/en/master/Dir.html#method-c-fchdir).
-* [3.3](3.3.md#dirchdir) [Dir#chdir](https://docs.ruby-lang.org/en/master/Dir.html#method-i-chdir).
+* [3.3](3.3.md#dirfor_fd-and-dirfchdir) [Dir.for_fd](https://docs.ruby-lang.org/en/3.3/Dir.html#method-c-for_fd) and [Dir.fchdir](https://docs.ruby-lang.org/en/3.3/Dir.html#method-c-fchdir).
+* [3.3](3.3.md#dirchdir) [Dir#chdir](https://docs.ruby-lang.org/en/3.3/Dir.html#method-i-chdir).
 * [3.3](3.3.md#deprecate-subprocess-creation-with-method-dedicated-to-files) Create subprocesses with `IO.read('| command')` and similar methods is deprecated.
 
 
@@ -906,7 +906,7 @@ This section covers exception raising/handling behavior changes, as well as chan
 * [2.5](2.5.md#backtrace-and-error-message-in-reverse-order) Backtrace and error message are (experimentally) displayed in a reverse order.
 * [2.6](2.6.md#exception-output-tweaking) Exception output tweaking (—)
 * [3.0](3.0.md#exception-output-order-is-changed----again) Exception output order is changed -- again (—)
-* [3.3](3.3.md#nomethoderror-change-of-rendering-logic) Core classes and modules: `NoMethodError`: change of rendering logic ([NoMethodError](https://docs.ruby-lang.org/en/master/NoMethodError.html))
+* [3.3](3.3.md#nomethoderror-change-of-rendering-logic) Core classes and modules: `NoMethodError`: change of rendering logic ([NoMethodError](https://docs.ruby-lang.org/en/3.3/NoMethodError.html))
 -->
 
 ### Warnings
@@ -917,7 +917,7 @@ This section covers exception raising/handling behavior changes, as well as chan
 * [2.5](2.5.md#warn-uplevel-keyword-argument) [Kernel#warn](https://ruby-doc.org/core-2.6/Kernel.html#method-i-warn): `uplevel:` keyword argument allows to tune which line to specify in warning message as a source of warning
 * [2.7](2.7.md#warning-and-) [Warning::[]](https://ruby-doc.org/core-2.7.0/Warning.html#method-c-5B-5D) and [Warning::[]=](https://ruby-doc.org/core-2.7.0/Warning.html#method-c-5B-5D-3D) to choose which categories of warnings to show; the categories are predefined by Ruby and only can be `:deprecated` or `:experimental` (or none)
   * <span class="ruby-version">[3.0](3.0.md#warningwarn-category-keyword-argument)</span> User code allowed to specify category of its warnings with [Kernel#warn](https://docs.ruby-lang.org/en/3.0.0/Kernel.html#method-i-warn) and intercept the warning category [Warning#warn](https://docs.ruby-lang.org/en/3.0.0/Warning.html#method-i-warn) with `category:` keyword argument; the list of categories is still closed.
-* [3.3](3.3.md#new-warning-category-performance) New `Warning` [category](https://docs.ruby-lang.org/en/master/Warning.html#method-c-5B-5D): `:performance`.
+* [3.3](3.3.md#new-warning-category-performance) New `Warning` [category](https://docs.ruby-lang.org/en/3.3/Warning.html#method-c-5B-5D): `:performance`.
 
 
 ## Concurrency and parallelism
@@ -942,12 +942,12 @@ This section covers exception raising/handling behavior changes, as well as chan
 * **2.1** [.clock_gettime](https://docs.ruby-lang.org/en/2.1.0/Process.html#method-c-clock_gettime) and [.clock_getres](https://docs.ruby-lang.org/en/2.1.0/Process.html#method-c-clock_getres)
 * [2.5](2.5.md#processlast_status-as-an-alias-of-) [Process.last_status](https://ruby-doc.org/core-2.5.0/Process.html#method-c-last_status) as an alias of `$?`
 * [3.1](3.1.md#process_fork) [Process._fork](https://docs.ruby-lang.org/en/3.1/Process.html#method-c-_fork)
-* [3.3](3.3.md#processwarmup) [Process.warmup](https://docs.ruby-lang.org/en/master/Process.html#method-c-warmup)
+* [3.3](3.3.md#processwarmup) [Process.warmup](https://docs.ruby-lang.org/en/3.3/Process.html#method-c-warmup)
 
 
 <!--
 * **2.2** Process execution methods such as [.spawn](https://docs.ruby-lang.org/en/2.2.0/Process.html#method-c-spawn) opens the file in write  mode for redirect from `[:out, :err]`.
-* [3.3](3.3.md#processstatus--and--are-deprecated) Core classes and modules: Internals: `Process::Status#&`  and `#>>` are deprecated ([Process::Status#&](https://docs.ruby-lang.org/en/master/Process/Status.html#method-i-26), [#>>](https://docs.ruby-lang.org/en/master/Process/Status.html#method-i-3E-3E))
+* [3.3](3.3.md#processstatus--and--are-deprecated) Core classes and modules: Internals: `Process::Status#&`  and `#>>` are deprecated ([Process::Status#&](https://docs.ruby-lang.org/en/3.3/Process/Status.html#method-i-26), [#>>](https://docs.ruby-lang.org/en/3.3/Process/Status.html#method-i-3E-3E))
 -->
 
 ### `Fiber`
@@ -955,13 +955,13 @@ This section covers exception raising/handling behavior changes, as well as chan
 * **2.0** [#resume](https://docs.ruby-lang.org/en/2.0.0/Fiber.html#method-i-resume) cannot resume a fiber which invokes [#transfer](https://docs.ruby-lang.org/en/2.0.0/Fiber.html#method-i-transfer).
 * **2.2** `callcc` is obsolete, and `Fiber` should be used
 * [2.7](2.7.md#fiberraise) [#raise](https://ruby-doc.org/core-2.7.0/Fiber.html#method-i-raise)
-* [3.0](3.0.md#non-blocking-fiber-and-scheduler) **Non-blocking [Fiber](https://docs.ruby-lang.org/en/master/Fiber.html#class-Fiber-label-Non-blocking+Fibers) and [Fiber::SchedulerInterface](https://docs.ruby-lang.org/en/master/Fiber/SchedulerInterface.html)**. This is a big and important change, see [detailed explanation and code examples](3.0.md#non-blocking-fiber-and-scheduler) in 3.0's changelog. In brief, Ruby code now can perform non-blocking I/O concurrently from several fibers, with no code changes other than setting a _fiber scheduler_, which should be implemented by a third-party library.
+* [3.0](3.0.md#non-blocking-fiber-and-scheduler) **Non-blocking [Fiber](https://docs.ruby-lang.org/en/3.3/Fiber.html#class-Fiber-label-Non-blocking+Fibers) and [Fiber::SchedulerInterface](https://docs.ruby-lang.org/en/3.3/Fiber/SchedulerInterface.html)**. This is a big and important change, see [detailed explanation and code examples](3.0.md#non-blocking-fiber-and-scheduler) in 3.0's changelog. In brief, Ruby code now can perform non-blocking I/O concurrently from several fibers, with no code changes other than setting a _fiber scheduler_, which should be implemented by a third-party library.
   * [3.1](3.1.md#fiber-scheduler-new-hooks) New hooks for fiber scheduler: [#address_resolve](https://docs.ruby-lang.org/en/3.1/Fiber/SchedulerInterface.html#method-i-address_resolve), [#timeout_after](https://docs.ruby-lang.org/en/3.1/Fiber/SchedulerInterface.html#method-i-timeout_after), [#io_read](https://docs.ruby-lang.org/en/3.1/Fiber/SchedulerInterface.html#method-i-io_read), and [#io_write](https://docs.ruby-lang.org/en/3.1/Fiber/SchedulerInterface.html#method-i-io_write)
   * **3.2** `Fiber::SchedulerInterface` is renamed to [Fiber::Scheduler](https://docs.ruby-lang.org/en/3.2/Fiber/Scheduler.html) for documetation purposes;
   * [3.2](3.2.md#fiberschedulerio_select) [#io_select](https://docs.ruby-lang.org/en/3.2/Fiber/Scheduler.html#method-i-io_select) hook added
 * [3.0](3.0.md#fiberbacktrace--backtrace_locations) [#backtrace](https://docs.ruby-lang.org/en/3.0.0/Fiber.html#method-i-backtrace) and [#backtrace_locations](https://docs.ruby-lang.org/en/3.0.0/Fiber.html#method-i-backtrace_locations)
 * [3.2](3.2.md#fiber-storage) **Storage concept**: [.[]](https://docs.ruby-lang.org/en/3.2/Fiber.html#method-c-5B-5D), [.[]=](https://docs.ruby-lang.org/en/3.2/Fiber.html#method-c-5B-5D-3D), [#storage](https://docs.ruby-lang.org/en/3.2/Fiber.html#method-i-storage), and [#storage=](https://docs.ruby-lang.org/en/3.2/Fiber.html#method-i-storage-3D)
-* [3.3](3.3.md#fiberkill) [Fiber#kill](https://docs.ruby-lang.org/en/master/Fiber.html#method-i-kill)
+* [3.3](3.3.md#fiberkill) [Fiber#kill](https://docs.ruby-lang.org/en/3.3/Fiber.html#method-i-kill)
 
 
 <!--
@@ -1030,7 +1030,7 @@ _Note: in the spirit of the rest of this reference, this section only describes 
 * [3.1](3.1.md#tracepointallow_reentry) [.allow_reentry](https://docs.ruby-lang.org/en/3.1/TracePoint.html#method-c-allow_reentry)
 * [3.2](3.2.md#tracepointbinding-returns-nil-for-c_callc_return) [TracePoint#binding](https://docs.ruby-lang.org/en/3.2/TracePoint.html#method-i-binding) returns `nil` for `c_call`/`c_return`
 * [3.2](3.2.md#tracepoint-for-block-default-to-trace-the-current-thread) [TracePoint#enable](https://docs.ruby-lang.org/en/3.2/TracePoint.html#method-i-enable) with a block default to trace the current thread.
-* [3.3](3.3.md#tracepoint-supports-rescue-event) [TracePoint](https://docs.ruby-lang.org/en/master/TracePoint.html#class-TracePoint-label-Events) supports `:rescue` event.
+* [3.3](3.3.md#tracepoint-supports-rescue-event) [TracePoint](https://docs.ruby-lang.org/en/3.3/TracePoint.html#class-TracePoint-label-Events) supports `:rescue` event.
 
 
 ### `RubyVM::AbstractSyntaxTree`
@@ -1088,7 +1088,7 @@ Refinements are hygienic replacement for reopening of classes and modules. They 
 * [3.2](3.2.md#modulerefinements) [Module#refinements](https://docs.ruby-lang.org/en/3.2/Module.html#method-i-refinements) to introspect which refinements some module defines;
   * [3.2](3.2.md#moduleused_refinements) [Module.used_refinements](https://docs.ruby-lang.org/en/3.2/Module.html#method-c-used_refinements) to check which refinements are active in the current context; and
   * [3.2](3.2.md#refinementrefined_class) [Refinement#refined_class](https://docs.ruby-lang.org/en/3.2/Refinement.html#method-i-refined_class) to see what class/module they refine.
-  * [3.3](3.3.md#refinementrefined_class-is-renamed-to-refinementtarget) `Refinement#refined_class` is renamed to [Refinement#target](https://docs.ruby-lang.org/en/master/Refinement.html#method-i-target).
+  * [3.3](3.3.md#refinementrefined_class-is-renamed-to-refinementtarget) `Refinement#refined_class` is renamed to [Refinement#target](https://docs.ruby-lang.org/en/3.3/Refinement.html#method-i-target).
 
 
 ### Freezing

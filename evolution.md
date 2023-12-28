@@ -266,7 +266,7 @@ end
   class HTTP
   end
   ```
-* <span class="ruby-version">[3.3](3.3.md#moduleset_temporary_name)</span> **<a class="ruby-doc" href="https://docs.ruby-lang.org/en/master/Module.html#method-i-set_temporary_name"><code>Module#set_temporary_name</code></a>** to set a human-readable name for a module without assigning it to a constant.
+* <span class="ruby-version">[3.3](3.3.md#moduleset_temporary_name)</span> **<a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.3/Module.html#method-i-set_temporary_name"><code>Module#set_temporary_name</code></a>** to set a human-readable name for a module without assigning it to a constant.
 
 
 <!--
@@ -337,7 +337,7 @@ This section lists changes in how methods are defined and invoked, as well as ne
 * <span class="ruby-version">[2.7](2.7.md#better-methodinspect)</span> Better <a class="ruby-doc" href="https://ruby-doc.org/core-2.7.0/Method.html#method-i-inspect"><code>Method#inspect</code></a> with signature and source code location
 * <span class="ruby-version">[2.7](2.7.md#unboundmethodbind_call)</span> <a class="ruby-doc" href="https://ruby-doc.org/core-2.7.0/UnboundMethod.html#method-i-bind_call"><code>UnboundMethod#bind_call</code></a>
 * <span class="ruby-version">[3.0](3.0.md#arguments-forwarding--supports-leading-arguments)</span> Arguments forwarding (`...`) <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.1/syntax/methods_rdoc.html#label-Argument+Forwarding"><code>supports</code></a> leading arguments
-* <span class="ruby-version">[3.0](3.0.md#endless-method-definition)</span> **"<a class="ruby-doc" href="https://docs.ruby-lang.org/en/master/syntax/methods_rdoc.html"><code>Endless</code></a>" (one-line) method definition**:
+* <span class="ruby-version">[3.0](3.0.md#endless-method-definition)</span> **"<a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.3/syntax/methods_rdoc.html"><code>Endless</code></a>" (one-line) method definition**:
   ```ruby
   def square(n) = n**n
   ```
@@ -398,8 +398,8 @@ This section lists changes in how methods are defined and invoked, as well as ne
 * <span class="ruby-version">[3.0](3.0.md#kernellambda-warns-if-called-without-a-literal-block)</span> `Kernel#lambda` warns if called without a literal block (—)
 * <span class="ruby-version">[3.0](3.0.md#proc-and-eql)</span> Procs/lambdas: `Proc#==` and `#eql?` (<a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.0.0/Proc.html#method-i-3D-3D"><code>Proc#==</code></a>)
 * <span class="ruby-version">[3.2](3.2.md#procdup-returns-an-instance-of-subclass)</span> Core classes and modules: Procs and methods: `Proc#dup` returns an instance of subclass (—)
-* <span class="ruby-version">[3.3](3.3.md#kernellambda-raises-when-passed-proc-instance)</span> Core classes and modules: `Kernel#lambda` raises when passed `Proc` instance (<a class="ruby-doc" href="https://docs.ruby-lang.org/en/master/Kernel.html#method-i-lambda"><code>Kernel#lambda</code></a> _(no specific details are provided, though)_)
-* <span class="ruby-version">[3.3](3.3.md#procdup-and-clone-call-initialize_dup-and-initialize_copy)</span> Core classes and modules: `Proc#dup` and `#clone` call `#initialize_dup` and `#initialize_copy` (— (Adheres to the behavior described for <a class="ruby-doc" href="https://docs.ruby-lang.org/en/master/Object.html#method-i-dup"><code>Object#dup</code></a> and <a class="ruby-doc" href="https://docs.ruby-lang.org/en/master/Kernel.html#method-i-clone"><code>#clone</code></a>))
+* <span class="ruby-version">[3.3](3.3.md#kernellambda-raises-when-passed-proc-instance)</span> Core classes and modules: `Kernel#lambda` raises when passed `Proc` instance (<a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.3/Kernel.html#method-i-lambda"><code>Kernel#lambda</code></a> _(no specific details are provided, though)_)
+* <span class="ruby-version">[3.3](3.3.md#procdup-and-clone-call-initialize_dup-and-initialize_copy)</span> Core classes and modules: `Proc#dup` and `#clone` call `#initialize_dup` and `#initialize_copy` (— (Adheres to the behavior described for <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.3/Object.html#method-i-dup"><code>Object#dup</code></a> and <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.3/Kernel.html#method-i-clone"><code>#clone</code></a>))
 -->
 
 ## `Comparable`[](#comparable)
@@ -517,8 +517,8 @@ Included in many classes to implement comparison methods. Once class defines a m
   Regexp.new('foo', 'im') #=> /foo/im
   ```
 * <span class="ruby-version">[3.2](3.2.md#regexp-redos-vulnerability-prevention)</span> ReDoS vulnerability prevention: <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.2/Regexp.html#method-c-timeout"><code>Regexp.timeout</code></a>, <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.2/Regexp.html#method-c-timeout-3D"><code>Regexp.timeout=</code></a>, <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.2/Regexp.html#method-c-new"><code>Regexp.new</code></a> (`timeout:` keyword argument), <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.2/Regexp.html#method-c-linear_time-3F"><code>Regexp.linear_time?</code></a>.
-* <span class="ruby-version">[3.3](3.3.md#stringbytesplice-new-arguments-to-select-a-portion-of-the-replacement-string)</span> <a class="ruby-doc" href="https://docs.ruby-lang.org/en/master/String.html#method-i-bytesplice"><code>String#bytesplice</code></a>: additional arguments to select a portion of the inserted string.
-* <span class="ruby-version">[3.3](3.3.md#matchdatanamed_captures-symbolize_names-argument)</span> <a class="ruby-doc" href="https://docs.ruby-lang.org/en/master/MatchData.html#method-i-named_captures"><code>MatchData#named_captures</code></a>: `symbolize_names:` argument.
+* <span class="ruby-version">[3.3](3.3.md#stringbytesplice-new-arguments-to-select-a-portion-of-the-replacement-string)</span> <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.3/String.html#method-i-bytesplice"><code>String#bytesplice</code></a>: additional arguments to select a portion of the inserted string.
+* <span class="ruby-version">[3.3](3.3.md#matchdatanamed_captures-symbolize_names-argument)</span> <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.3/MatchData.html#method-i-named_captures"><code>MatchData#named_captures</code></a>: `symbolize_names:` argument.
 
 
 
@@ -527,7 +527,7 @@ Included in many classes to implement comparison methods. Once class defines a m
 * <span class="ruby-version">**2.1**</span> `pack/unpack` (Array/String): `Q!` and `q!` directives for long long type if platform has the type.
 * <span class="ruby-version">[2.5](2.5.md#casecmp-and-casecmp-return-nil-for-non-string-arguments)</span> `String#casecmp` and `#casecmp?` return `nil` for non-string arguments (<a class="ruby-doc" href="https://ruby-doc.org/core-2.5.0/String.html#method-i-casecmp"><code>String#casecmp</code></a>, <a class="ruby-doc" href="https://ruby-doc.org/core-2.5.0/String.html#method-i-casecmp-3F"><code>String#casecmp?</code></a>)
 * <span class="ruby-version">[3.0](3.0.md#string-always-returning-string)</span> `String`: always returning `String` (—)
-* <span class="ruby-version">[3.3](3.3.md#arraypack-and-stringunpack-raise-argumenterror-for-unknown-directives)</span> Core classes and modules: `Array#pack` and `String#unpack`: raise `ArgumentError` for unknown directives (<a class="ruby-doc" href="https://docs.ruby-lang.org/en/master/packed_data_rdoc.html"><code>doc/packed_data.rdoc</code></a>)
+* <span class="ruby-version">[3.3](3.3.md#arraypack-and-stringunpack-raise-argumenterror-for-unknown-directives)</span> Core classes and modules: `Array#pack` and `String#unpack`: raise `ArgumentError` for unknown directives (<a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.3/packed_data_rdoc.html"><code>doc/packed_data.rdoc</code></a>)
 -->
 
 ## `Struct`[](#struct)
@@ -591,7 +591,7 @@ Included in many classes to implement comparison methods. Once class defines a m
 * <span class="ruby-version">**2.0**</span> `Time#to_s` now returns US-ASCII encoding instead of BINARY.
 * <span class="ruby-version">[2.7](2.7.md#inspect-includes-subseconds)</span> `Time#inspect` includes subseconds (<a class="ruby-doc" href="https://ruby-doc.org/core-2.7.0/Time.html#method-i-inspect"><code>Time#inspect</code></a>)
 * <span class="ruby-version">[3.1](3.1.md#strftime-supports--0000-offset)</span> `#strftime` supports `-00:00` offset (<a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.1/Time.html#method-i-strftime"><code>Time#strftime</code></a>)
-* <span class="ruby-version">[3.3](3.3.md#timenew-with-string-argument-became-stricter)</span> Core classes and modules: `Time.new` with string argument became stricter (<a class="ruby-doc" href="https://docs.ruby-lang.org/en/master/Time.html#method-c-new"><code>Time#new</code></a>)
+* <span class="ruby-version">[3.3](3.3.md#timenew-with-string-argument-became-stricter)</span> Core classes and modules: `Time.new` with string argument became stricter (<a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.3/Time.html#method-c-new"><code>Time#new</code></a>)
 -->
 
 ## Enumerables, collections, and iteration[](#enumerables-collections-and-iteration)
@@ -709,8 +709,8 @@ Included in many classes to implement comparison methods. Once class defines a m
   ```
 * <span class="ruby-version">[2.6](2.6.md#rangecover-accepts-range-argument)</span> <a class="ruby-doc" href="https://docs.ruby-lang.org/en/2.6.0/Range.html#method-i-cover-3F"><code>#cover?</code></a> accepts range argument
 * <span class="ruby-version">[2.7](2.7.md#beginless-range)</span> **Beginless range: `(...100)`**
-* <span class="ruby-version">[3.3](3.3.md#reverse_each)</span> <a class="ruby-doc" href="https://docs.ruby-lang.org/en/master/Range.html#method-i-reverse_each"><code>Range#reverse_each</code></a> (specialized form of `Enumerable#reverse_each`)
-* <span class="ruby-version">[3.3](3.3.md#overlap)</span> <a class="ruby-doc" href="https://docs.ruby-lang.org/en/master/Range.html#method-i-overlap-3F"><code>Range#overlap?</code></a>
+* <span class="ruby-version">[3.3](3.3.md#reverse_each)</span> <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.3/Range.html#method-i-reverse_each"><code>Range#reverse_each</code></a> (specialized form of `Enumerable#reverse_each`)
+* <span class="ruby-version">[3.3](3.3.md#overlap)</span> <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.3/Range.html#method-i-overlap-3F"><code>Range#overlap?</code></a>
 
 
 <!--
@@ -794,7 +794,7 @@ Included in many classes to implement comparison methods. Once class defines a m
 * <span class="ruby-version">**3.0**</span> <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.0/Set.html#method-i-join"><code>#join</code></a> is added as a shorthand for `.to_a.join`.
 * <span class="ruby-version">**3.0**</span> <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.0/Set.html#method-i-3C-3D-3E"><code>#<=></code></a> generic comparison operator (separate operators like `#<` or `#>` have been worked in previous versions, too)
 * <span class="ruby-version">[3.2](3.2.md#set-became-a-built-in-class)</span> **<a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.2/Set.html"><code>Set</code></a> became a built-in class**
-* <span class="ruby-version">[3.3](3.3.md#setmerge-accepts-multiple-arguments)</span> <a class="ruby-doc" href="https://docs.ruby-lang.org/en/master/Set.html#method-i-merge"><code>Set#merge</code></a> accepts multiple arguments.
+* <span class="ruby-version">[3.3](3.3.md#setmerge-accepts-multiple-arguments)</span> <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.3/Set.html#method-i-merge"><code>Set#merge</code></a> accepts multiple arguments.
 
 <!--
 * <span class="ruby-version">**2.5**</span> `#to_s` as alias to `#inspect`
@@ -807,9 +807,9 @@ Included in many classes to implement comparison methods. Once class defines a m
 * <span class="ruby-version">[2.7](2.7.md#objectspaceweakmap-now-accepts-non-gc-able-objects)</span> <a class="ruby-doc" href="https://ruby-doc.org/core-2.7.0/ObjectSpace/WeakMap.html#method-i-5B-5D-3D"><code>ObjectSpace::WeakMap#[]=</code></a> now accepts non-GC-able objects
 * <span class="ruby-version">[3.1](3.1.md#threadqueueinitialize-initial-values-can-be-passed-to-initializer)</span> <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.1/Thread/Queue.html#method-c-new"><code>Thread::Queue.new</code></a> allows initial queue content to be passed
 * <span class="ruby-version">[3.2](3.2.md#threadqueue-timeouts-for-pop-and-push)</span> <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.2/Thread/Queue.html#method-i-pop"><code>Thread::Queue#pop</code></a>, <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.2/Thread/SizedQueue.html#method-i-pop"><code>Thread::SizedQueue#pop</code></a>, and <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.2/Thread/SizedQueue.html#method-i-push"><code>Thread::SizedQueue#push</code></a> have `timeout:` argument.
-* <span class="ruby-version">[3.3](3.3.md#objectspaceweakkeymap)</span> <a class="ruby-doc" href="https://docs.ruby-lang.org/en/master/ObjectSpace/WeakKeyMap.html"><code>ObjectSpace::WeakKeyMap</code></a> introduced
-* <span class="ruby-version">[3.3](3.3.md#objectspaceweakmapdelete)</span> <a class="ruby-doc" href="https://docs.ruby-lang.org/en/master/ObjectSpace/WeakMap.html#method-i-delete"><code>ObjectSpace::WeakMap#delete</code></a>
-* <span class="ruby-version">[3.3](3.3.md#threadqueuefreeze-and-sizedqueuefreeze-raise-typeerror)</span> <a class="ruby-doc" href="https://docs.ruby-lang.org/en/master/Thread/Queue.html#method-i-freeze"><code>Thread::Queue#freeze</code></a> and <a class="ruby-doc" href="https://docs.ruby-lang.org/en/master/Thread/SizedQueue.html#method-i-freeze"><code>Thread::SizedQueue#freeze</code></a> raise `TypeError`.
+* <span class="ruby-version">[3.3](3.3.md#objectspaceweakkeymap)</span> <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.3/ObjectSpace/WeakKeyMap.html"><code>ObjectSpace::WeakKeyMap</code></a> introduced
+* <span class="ruby-version">[3.3](3.3.md#objectspaceweakmapdelete)</span> <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.3/ObjectSpace/WeakMap.html#method-i-delete"><code>ObjectSpace::WeakMap#delete</code></a>
+* <span class="ruby-version">[3.3](3.3.md#threadqueuefreeze-and-sizedqueuefreeze-raise-typeerror)</span> <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.3/Thread/Queue.html#method-i-freeze"><code>Thread::Queue#freeze</code></a> and <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.3/Thread/SizedQueue.html#method-i-freeze"><code>Thread::SizedQueue#freeze</code></a> raise `TypeError`.
 
 
 
@@ -841,8 +841,8 @@ Included in many classes to implement comparison methods. Once class defines a m
 * <span class="ruby-version">[3.1](3.1.md#iobuffer)</span> **<a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.1/IO/Buffer.html"><code>IO::Buffer</code></a> low-level class introduced**
 * <span class="ruby-version">[3.2](3.2.md#io-support-for-timeouts-for-blocking-io)</span> Support for timeouts for blocking IO via <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.2/IO.html#method-i-timeout-3D"><code>IO#timeout=</code></a>.
 * <span class="ruby-version">[3.2](3.2.md#iopath)</span> Generic <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.2/IO.html#method-i-path"><code>IO#path</code></a> that can be assigned on <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.2/IO.html#class-IO-label-Open+Options"><code>creation</code></a>.
-* <span class="ruby-version">[3.3](3.3.md#dirfor_fd-and-dirfchdir)</span> <a class="ruby-doc" href="https://docs.ruby-lang.org/en/master/Dir.html#method-c-for_fd"><code>Dir.for_fd</code></a> and <a class="ruby-doc" href="https://docs.ruby-lang.org/en/master/Dir.html#method-c-fchdir"><code>Dir.fchdir</code></a>.
-* <span class="ruby-version">[3.3](3.3.md#dirchdir)</span> <a class="ruby-doc" href="https://docs.ruby-lang.org/en/master/Dir.html#method-i-chdir"><code>Dir#chdir</code></a>.
+* <span class="ruby-version">[3.3](3.3.md#dirfor_fd-and-dirfchdir)</span> <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.3/Dir.html#method-c-for_fd"><code>Dir.for_fd</code></a> and <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.3/Dir.html#method-c-fchdir"><code>Dir.fchdir</code></a>.
+* <span class="ruby-version">[3.3](3.3.md#dirchdir)</span> <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.3/Dir.html#method-i-chdir"><code>Dir#chdir</code></a>.
 * <span class="ruby-version">[3.3](3.3.md#deprecate-subprocess-creation-with-method-dedicated-to-files)</span> Create subprocesses with `IO.read('| command')` and similar methods is deprecated.
 
 
@@ -906,7 +906,7 @@ This section covers exception raising/handling behavior changes, as well as chan
 * <span class="ruby-version">[2.5](2.5.md#backtrace-and-error-message-in-reverse-order)</span> Backtrace and error message are (experimentally) displayed in a reverse order.
 * <span class="ruby-version">[2.6](2.6.md#exception-output-tweaking)</span> Exception output tweaking (—)
 * <span class="ruby-version">[3.0](3.0.md#exception-output-order-is-changed----again)</span> Exception output order is changed -- again (—)
-* <span class="ruby-version">[3.3](3.3.md#nomethoderror-change-of-rendering-logic)</span> Core classes and modules: `NoMethodError`: change of rendering logic (<a class="ruby-doc" href="https://docs.ruby-lang.org/en/master/NoMethodError.html"><code>NoMethodError</code></a>)
+* <span class="ruby-version">[3.3](3.3.md#nomethoderror-change-of-rendering-logic)</span> Core classes and modules: `NoMethodError`: change of rendering logic (<a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.3/NoMethodError.html"><code>NoMethodError</code></a>)
 -->
 
 ### Warnings[](#warnings)
@@ -917,7 +917,7 @@ This section covers exception raising/handling behavior changes, as well as chan
 * <span class="ruby-version">[2.5](2.5.md#warn-uplevel-keyword-argument)</span> <a class="ruby-doc" href="https://ruby-doc.org/core-2.6/Kernel.html#method-i-warn"><code>Kernel#warn</code></a>: `uplevel:` keyword argument allows to tune which line to specify in warning message as a source of warning
 * <span class="ruby-version">[2.7](2.7.md#warning-and-)</span> <a class="ruby-doc" href="https://ruby-doc.org/core-2.7.0/Warning.html#method-c-5B-5D"><code>Warning::[]</code></a> and <a class="ruby-doc" href="https://ruby-doc.org/core-2.7.0/Warning.html#method-c-5B-5D-3D"><code>Warning::[]=</code></a> to choose which categories of warnings to show; the categories are predefined by Ruby and only can be `:deprecated` or `:experimental` (or none)
   * <span class="ruby-version">[3.0](3.0.md#warningwarn-category-keyword-argument)</span> User code allowed to specify category of its warnings with <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.0.0/Kernel.html#method-i-warn"><code>Kernel#warn</code></a> and intercept the warning category <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.0.0/Warning.html#method-i-warn"><code>Warning#warn</code></a> with `category:` keyword argument; the list of categories is still closed.
-* <span class="ruby-version">[3.3](3.3.md#new-warning-category-performance)</span> New `Warning` <a class="ruby-doc" href="https://docs.ruby-lang.org/en/master/Warning.html#method-c-5B-5D"><code>category</code></a>: `:performance`.
+* <span class="ruby-version">[3.3](3.3.md#new-warning-category-performance)</span> New `Warning` <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.3/Warning.html#method-c-5B-5D"><code>category</code></a>: `:performance`.
 
 
 ## Concurrency and parallelism[](#concurrency-and-parallelism)
@@ -942,12 +942,12 @@ This section covers exception raising/handling behavior changes, as well as chan
 * <span class="ruby-version">**2.1**</span> <a class="ruby-doc" href="https://docs.ruby-lang.org/en/2.1.0/Process.html#method-c-clock_gettime"><code>.clock_gettime</code></a> and <a class="ruby-doc" href="https://docs.ruby-lang.org/en/2.1.0/Process.html#method-c-clock_getres"><code>.clock_getres</code></a>
 * <span class="ruby-version">[2.5](2.5.md#processlast_status-as-an-alias-of-)</span> <a class="ruby-doc" href="https://ruby-doc.org/core-2.5.0/Process.html#method-c-last_status"><code>Process.last_status</code></a> as an alias of `$?`
 * <span class="ruby-version">[3.1](3.1.md#process_fork)</span> <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.1/Process.html#method-c-_fork"><code>Process._fork</code></a>
-* <span class="ruby-version">[3.3](3.3.md#processwarmup)</span> <a class="ruby-doc" href="https://docs.ruby-lang.org/en/master/Process.html#method-c-warmup"><code>Process.warmup</code></a>
+* <span class="ruby-version">[3.3](3.3.md#processwarmup)</span> <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.3/Process.html#method-c-warmup"><code>Process.warmup</code></a>
 
 
 <!--
 * <span class="ruby-version">**2.2**</span> Process execution methods such as <a class="ruby-doc" href="https://docs.ruby-lang.org/en/2.2.0/Process.html#method-c-spawn"><code>.spawn</code></a> opens the file in write  mode for redirect from `[:out, :err]`.
-* <span class="ruby-version">[3.3](3.3.md#processstatus--and--are-deprecated)</span> Core classes and modules: Internals: `Process::Status#&`  and `#>>` are deprecated (<a class="ruby-doc" href="https://docs.ruby-lang.org/en/master/Process/Status.html#method-i-26"><code>Process::Status#&</code></a>, <a class="ruby-doc" href="https://docs.ruby-lang.org/en/master/Process/Status.html#method-i-3E-3E"><code>#>></code></a>)
+* <span class="ruby-version">[3.3](3.3.md#processstatus--and--are-deprecated)</span> Core classes and modules: Internals: `Process::Status#&`  and `#>>` are deprecated (<a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.3/Process/Status.html#method-i-26"><code>Process::Status#&</code></a>, <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.3/Process/Status.html#method-i-3E-3E"><code>#>></code></a>)
 -->
 
 ### `Fiber`[](#fiber)
@@ -955,13 +955,13 @@ This section covers exception raising/handling behavior changes, as well as chan
 * <span class="ruby-version">**2.0**</span> <a class="ruby-doc" href="https://docs.ruby-lang.org/en/2.0.0/Fiber.html#method-i-resume"><code>#resume</code></a> cannot resume a fiber which invokes <a class="ruby-doc" href="https://docs.ruby-lang.org/en/2.0.0/Fiber.html#method-i-transfer"><code>#transfer</code></a>.
 * <span class="ruby-version">**2.2**</span> `callcc` is obsolete, and `Fiber` should be used
 * <span class="ruby-version">[2.7](2.7.md#fiberraise)</span> <a class="ruby-doc" href="https://ruby-doc.org/core-2.7.0/Fiber.html#method-i-raise"><code>#raise</code></a>
-* <span class="ruby-version">[3.0](3.0.md#non-blocking-fiber-and-scheduler)</span> **Non-blocking <a class="ruby-doc" href="https://docs.ruby-lang.org/en/master/Fiber.html#class-Fiber-label-Non-blocking+Fibers"><code>Fiber</code></a> and <a class="ruby-doc" href="https://docs.ruby-lang.org/en/master/Fiber/SchedulerInterface.html"><code>Fiber::SchedulerInterface</code></a>**. This is a big and important change, see [detailed explanation and code examples](3.0.md#non-blocking-fiber-and-scheduler) in 3.0's changelog. In brief, Ruby code now can perform non-blocking I/O concurrently from several fibers, with no code changes other than setting a _fiber scheduler_, which should be implemented by a third-party library.
+* <span class="ruby-version">[3.0](3.0.md#non-blocking-fiber-and-scheduler)</span> **Non-blocking <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.3/Fiber.html#class-Fiber-label-Non-blocking+Fibers"><code>Fiber</code></a> and <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.3/Fiber/SchedulerInterface.html"><code>Fiber::SchedulerInterface</code></a>**. This is a big and important change, see [detailed explanation and code examples](3.0.md#non-blocking-fiber-and-scheduler) in 3.0's changelog. In brief, Ruby code now can perform non-blocking I/O concurrently from several fibers, with no code changes other than setting a _fiber scheduler_, which should be implemented by a third-party library.
   * <span class="ruby-version">[3.1](3.1.md#fiber-scheduler-new-hooks)</span> New hooks for fiber scheduler: <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.1/Fiber/SchedulerInterface.html#method-i-address_resolve"><code>#address_resolve</code></a>, <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.1/Fiber/SchedulerInterface.html#method-i-timeout_after"><code>#timeout_after</code></a>, <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.1/Fiber/SchedulerInterface.html#method-i-io_read"><code>#io_read</code></a>, and <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.1/Fiber/SchedulerInterface.html#method-i-io_write"><code>#io_write</code></a>
   * <span class="ruby-version">**3.2**</span> `Fiber::SchedulerInterface` is renamed to <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.2/Fiber/Scheduler.html"><code>Fiber::Scheduler</code></a> for documetation purposes;
   * <span class="ruby-version">[3.2](3.2.md#fiberschedulerio_select)</span> <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.2/Fiber/Scheduler.html#method-i-io_select"><code>#io_select</code></a> hook added
 * <span class="ruby-version">[3.0](3.0.md#fiberbacktrace--backtrace_locations)</span> <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.0.0/Fiber.html#method-i-backtrace"><code>#backtrace</code></a> and <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.0.0/Fiber.html#method-i-backtrace_locations"><code>#backtrace_locations</code></a>
 * <span class="ruby-version">[3.2](3.2.md#fiber-storage)</span> **Storage concept**: <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.2/Fiber.html#method-c-5B-5D"><code>.[]</code></a>, <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.2/Fiber.html#method-c-5B-5D-3D"><code>.[]=</code></a>, <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.2/Fiber.html#method-i-storage"><code>#storage</code></a>, and <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.2/Fiber.html#method-i-storage-3D"><code>#storage=</code></a>
-* <span class="ruby-version">[3.3](3.3.md#fiberkill)</span> <a class="ruby-doc" href="https://docs.ruby-lang.org/en/master/Fiber.html#method-i-kill"><code>Fiber#kill</code></a>
+* <span class="ruby-version">[3.3](3.3.md#fiberkill)</span> <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.3/Fiber.html#method-i-kill"><code>Fiber#kill</code></a>
 
 
 <!--
@@ -1030,7 +1030,7 @@ _Note: in the spirit of the rest of this reference, this section only describes 
 * <span class="ruby-version">[3.1](3.1.md#tracepointallow_reentry)</span> <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.1/TracePoint.html#method-c-allow_reentry"><code>.allow_reentry</code></a>
 * <span class="ruby-version">[3.2](3.2.md#tracepointbinding-returns-nil-for-c_callc_return)</span> <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.2/TracePoint.html#method-i-binding"><code>TracePoint#binding</code></a> returns `nil` for `c_call`/`c_return`
 * <span class="ruby-version">[3.2](3.2.md#tracepoint-for-block-default-to-trace-the-current-thread)</span> <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.2/TracePoint.html#method-i-enable"><code>TracePoint#enable</code></a> with a block default to trace the current thread.
-* <span class="ruby-version">[3.3](3.3.md#tracepoint-supports-rescue-event)</span> <a class="ruby-doc" href="https://docs.ruby-lang.org/en/master/TracePoint.html#class-TracePoint-label-Events"><code>TracePoint</code></a> supports `:rescue` event.
+* <span class="ruby-version">[3.3](3.3.md#tracepoint-supports-rescue-event)</span> <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.3/TracePoint.html#class-TracePoint-label-Events"><code>TracePoint</code></a> supports `:rescue` event.
 
 
 ### `RubyVM::AbstractSyntaxTree`[](#rubyvmabstractsyntaxtree)
@@ -1088,7 +1088,7 @@ Refinements are hygienic replacement for reopening of classes and modules. They 
 * <span class="ruby-version">[3.2](3.2.md#modulerefinements)</span> <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.2/Module.html#method-i-refinements"><code>Module#refinements</code></a> to introspect which refinements some module defines;
   * <span class="ruby-version">[3.2](3.2.md#moduleused_refinements)</span> <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.2/Module.html#method-c-used_refinements"><code>Module.used_refinements</code></a> to check which refinements are active in the current context; and
   * <span class="ruby-version">[3.2](3.2.md#refinementrefined_class)</span> <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.2/Refinement.html#method-i-refined_class"><code>Refinement#refined_class</code></a> to see what class/module they refine.
-  * <span class="ruby-version">[3.3](3.3.md#refinementrefined_class-is-renamed-to-refinementtarget)</span> `Refinement#refined_class` is renamed to <a class="ruby-doc" href="https://docs.ruby-lang.org/en/master/Refinement.html#method-i-target"><code>Refinement#target</code></a>.
+  * <span class="ruby-version">[3.3](3.3.md#refinementrefined_class-is-renamed-to-refinementtarget)</span> `Refinement#refined_class` is renamed to <a class="ruby-doc" href="https://docs.ruby-lang.org/en/3.3/Refinement.html#method-i-target"><code>Refinement#target</code></a>.
 
 
 ### Freezing[](#freezing)
