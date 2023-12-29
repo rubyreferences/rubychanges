@@ -46,7 +46,7 @@ _The source of the site can be found at [GitHub](https://github.com/rubyreferenc
 
 Maintainer's posts on work on the changelogs:
 
-* Deceber 2023: _Advent of Changelog_ (coming in a couple of days after 3.3's changelog)
+* Deceber 2023: [The making of Ruby Changes: A boring advent](https://zverok.space/blog/2023-12-28-advent-of-changelog-fin.html)
 * February 2023: [Participating in programming language's evolution during interesting times](https://zverok.space/blog/2023-02-07-changelog2023.html)
 * June 2022: [Ruby language evolution on a large scale (as observed from Ukraine)](https://zverok.space/blog/2022-06-11-ruby-evolution.html)
 * January 2022's write up:
