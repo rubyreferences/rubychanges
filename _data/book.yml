@@ -94,6 +94,117 @@ chapters:
       path: "/evolution.html#freezing"
   - title: 'Appendix: Covered Ruby versions release dates'
     path: "/evolution.html#appendix-covered-ruby-versions-release-dates"
+- title: Ruby 3.4
+  path: "/3.4.html"
+  is_version: true
+  published_at: '2023-12-25'
+  description: |
+    <p><strong>Highlights:</strong></p>
+
+    <ul>
+      <li><code>it</code> anonymous block argument</li>
+      <li><code>**nil</code> unpacking</li>
+      <li>String literals would be frozen in Ruby 3.5</li>
+      <li><code>Range#step</code> iteration for any class via <code>+</code></li>
+      <li>Backtrace improvements</li>
+      <li>Ractor improvements</li>
+      <li>Serious implementation updates</li>
+    </ul>
+
+    <p><a href="https://rubyreferences.github.io/rubychanges/3.4.html">Read more »</a></p>
+  children:
+  - title: Highlights
+    path: "/3.4.html#highlights"
+  - title: Language changes
+    path: "/3.4.html#language-changes"
+    children:
+    - title: Standalone <code>it</code> in blocks became anonymous argument
+      path: "/3.4.html#standalone-it-in-blocks-became-anonymous-argument"
+    - title: "<code>**nil</code> unpacks into empty keyword arguments"
+      path: "/3.4.html#nil-unpacks-into-empty-keyword-arguments"
+    - title: Keyword and block arguments are prohibited in <code>#[]=</code>
+      path: "/3.4.html#keyword-and-block-arguments-are-prohibited-in-"
+    - title: Warnings about unused blocks
+      path: "/3.4.html#warnings-about-unused-blocks"
+    - title: Warning to prepare for freezing string literals in Ruby 3.5
+      path: "/3.4.html#warning-to-prepare-for-freezing-string-literals-in-ruby-35"
+    - title: Reserved module <code>::Ruby</code>
+      path: "/3.4.html#reserved-module-ruby"
+    - title: Removals
+      path: "/3.4.html#removals"
+  - title: Core classes and modules
+    path: "/3.4.html#core-classes-and-modules"
+    children:
+    - title: "<code>Object#singleton_method</code>: includes methods from prepended/included
+        modules"
+      path: "/3.4.html#objectsingleton_method-includes-methods-from-prependedincluded-modules"
+    - title: Float parsing changes
+      path: "/3.4.html#float-parsing-changes"
+    - title: "<code>String#append_as_bytes</code>"
+      path: "/3.4.html#stringappend_as_bytes"
+    - title: "<code>MatchData#bytebegin</code> and <code>#byteend</code> have been
+        added"
+      path: "/3.4.html#matchdatabytebegin-and-byteend-have-been-added"
+    - title: "<code>Time#xmlschema</code> ( <code>#iso8601</code>) in core"
+      path: "/3.4.html#timexmlschema--iso8601-in-core"
+    - title: "<code>Range</code>"
+      path: "/3.4.html#range"
+      children:
+      - title: "<code>#size</code> raises <code>TypeError</code> if the range is not
+          iterable"
+        path: "/3.4.html#size-raises-typeerror-if-the-range-is-not-iterable"
+      - title: "<code>#step</code>: iterating by using <code>+</code> operator for
+          all types"
+        path: "/3.4.html#step-iterating-by-using--operator-for-all-types"
+    - title: "<code>Array#fetch_values</code>"
+      path: "/3.4.html#arrayfetch_values"
+    - title: "<code>Hash</code>"
+      path: "/3.4.html#hash"
+      children:
+      - title: "<code>.new</code> accepts an optional <code>capacity:</code> argument"
+        path: "/3.4.html#new-accepts-an-optional-capacity-argument"
+      - title: "<code>#inspect</code> rendering have been changed"
+        path: "/3.4.html#inspect-rendering-have-been-changed"
+    - title: Backtrace-related changes
+      path: "/3.4.html#backtrace-related-changes"
+      children:
+      - title: Exception <code>#backtrace_locations</code> can be set programmatically
+        path: "/3.4.html#exception-backtrace_locations-can-be-set-programmatically"
+      - title: Backtrace formatting adjustments
+        path: "/3.4.html#backtrace-formatting-adjustments"
+      - title: Extra rescue/ensure frames are removed from the backtrace
+        path: "/3.4.html#extra-rescueensure-frames-are-removed-from-the-backtrace"
+    - title: "<code>Warning.categories</code>"
+      path: "/3.4.html#warningcategories"
+    - title: "<code>GC.config</code>"
+      path: "/3.4.html#gcconfig"
+    - title: "<code>Fiber::Scheduler#blocking_operation_wait</code>"
+      path: "/3.4.html#fiberschedulerblocking_operation_wait"
+    - title: "<code>Ractor</code>"
+      path: "/3.4.html#ractor"
+      children:
+      - title: "<code>require</code> works in Ractors"
+        path: "/3.4.html#require-works-in-ractors"
+      - title: "<code>.main?</code>"
+        path: "/3.4.html#main"
+      - title: "<code>.[]</code> and <code>.[]=</code>"
+        path: "/3.4.html#and-"
+      - title: "<code>.store_if_absent</code>"
+        path: "/3.4.html#store_if_absent"
+    - title: "<code>RubyVM::AbstractSyntaxTree::Node#locations</code>"
+      path: "/3.4.html#rubyvmabstractsyntaxtreenodelocations"
+  - title: Standard library
+    path: "/3.4.html#standard-library"
+    children:
+    - title: Version updates
+      path: "/3.4.html#version-updates"
+    - title: Standard library content changes
+      path: "/3.4.html#standard-library-content-changes"
+      children:
+      - title: Default gems that became bundled
+        path: "/3.4.html#default-gems-that-became-bundled"
+  - title: CRuby Implementation changes
+    path: "/3.4.html#cruby-implementation-changes"
 - title: Ruby 3.3
   path: "/3.3.html"
   is_version: true
@@ -349,8 +460,8 @@ chapters:
       children:
       - title: "<code>Thread.each_caller_location</code>"
         path: "/3.2.html#threadeach_caller_location"
-      - title: "<code>GC.latest_gc_info</code>: add <code>need_major_gc:</code> key"
-        path: "/3.2.html#gclatest_gc_info-add-need_major_gc-key"
+      - title: "<code>GC.latest_gc_info</code>: add <code>need_major_by:</code> key"
+        path: "/3.2.html#gclatest_gc_info-add-need_major_by-key"
       - title: "<code>ObjectSpace</code>: dumping object shapes"
         path: "/3.2.html#objectspace-dumping-object-shapes"
       - title: "<code>TracePoint#binding</code> returns <code>nil</code> for <code>c_call</code>/<code>c_return</code>"
