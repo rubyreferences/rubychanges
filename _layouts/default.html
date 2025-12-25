@@ -123,13 +123,23 @@
           <nav class="nav-wrapper">
             <!-- Mobile navigation buttons -->
             {% if page.prev %}
-              <a rel="prev" href="{{ site.baseurl }}{{page.prev}}" class="mobile-nav-chapters previous" title="Previous chapter">
+              {% if page.prev == '/' %}
+                {% assign prev = page.prev %}
+              {% else %}
+                {% assign prev = page.prev | append: ".html" | prepend: "/" %}
+              {% endif %}
+              <a rel="prev" href="{{ site.baseurl }}{{prev}}" class="mobile-nav-chapters previous" title="Previous chapter">
                 <i class="fa fa-angle-left"></i>
               </a>
             {% endif %}
 
             {% if page.next %}
-              <a rel="next" href="{{ site.baseurl }}{{page.next}}" class="mobile-nav-chapters next" title="Next chapter">
+              {% if page.next == '/' %}
+                {% assign nxt = page.next %}
+              {% else %}
+                {% assign nxt = page.next | append: ".html" | prepend: "/" %}
+              {% endif %}
+              <a rel="next" href="{{ site.baseurl }}{{nxt}}" class="mobile-nav-chapters next" title="Next chapter">
                 <i class="fa fa-angle-right"></i>
               </a>
             {% endif %}

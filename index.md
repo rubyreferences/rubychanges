@@ -1,7 +1,7 @@
 ---
 title: The Ruby Changes
 description: "Changelog of the Ruby programming language: full, comprehensive, concise, well-structured, and open."
-next: "/evolution.html"
+next: evolution
 permalink: "/index.html"
 image: images/intro.png
 ---
