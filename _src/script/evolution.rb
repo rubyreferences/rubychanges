@@ -5,7 +5,7 @@ $LOAD_PATH.unshift '_src/lib/'
 require 'kramdown'
 require 'util'
 
-files = [*('2.4'..'2.7'), *('3.0'..'3.4')].map(&'_src/%s.md'.method(:%))
+files = [*('2.4'..'2.7'), *('3.0'..'3.4'), '4.0'].map(&'_src/%s.md'.method(:%))
 
 list = []
 

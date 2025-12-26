@@ -2,6 +2,12 @@
 
 (Only outstanding content changes listed, the texts and code are constantly updated and fixed thanks to awesome contributors.)
 
+## 2025-12-26
+
+* **[4.0](4.0.html)** changelog added.
+* [Ruby Evolution](evolution.html) updated accordingly.
+
+
 ## 2024-12-25
 
 * **[3.4](3.4.html)** changelog added.

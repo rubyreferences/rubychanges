@@ -1,7 +1,7 @@
 ---
 title: The Ruby Changes
 description: "Changelog of the Ruby programming language: full, comprehensive, concise, well-structured, and open."
-next: "/evolution.html"
+next: evolution
 permalink: "/index.html"
 image: images/intro.png
 ---
@@ -10,7 +10,7 @@ image: images/intro.png
 
 This site is dedicated to history of [Ruby language](https://www.ruby-lang.org/) evolution. Basically, it is just the same information that each Ruby version's [NEWS](https://github.com/ruby/ruby/blob/master/NEWS.md) file contains, just in more readable and informative manner.
 
-> <big>Latest version: <b><a href="3.4.html">3.4</a></b></big> ([3.3](3.3.html) − [3.2](3.2.html) − [3.1](3.1.html) − [3.0](3.0.html) − [2.7](2.7.html) − [2.6](2.6.html) −[2.5](2.5.html) − [2.4](2.4.html))<br/><br/>**[Ruby Evolution](evolution.html)**: bird-eye view on all significant changes 2.0−3.4, grouped by topic.
+> <big>Latest version: <b><a href="4.0.html">4.0</a></b></big> ([3.4](3.4.html) − [3.3](3.3.html) − [3.2](3.2.html) − [3.1](3.1.html) − [3.0](3.0.html) − [2.7](2.7.html) − [2.6](2.6.html) −[2.5](2.5.html) − [2.4](2.4.html))<br/><br/>**[Ruby Evolution](evolution.html)**: bird-eye view on all significant changes 2.0−4.0, grouped by topic.
 
 ### Main goals
 
@@ -40,6 +40,7 @@ This site is dedicated to history of [Ruby language](https://www.ruby-lang.org/)
 * **UPD 2023-02-04:** Newly released **[Ruby 3.2](3.2.html)** changelog added.
 * **UPD 2023-12-25:** Newly released **[Ruby 3.3](3.3.html)** changelog added.
 * **UPD 2024-12-25:** Newly released **[Ruby 3.4](3.4.html)** changelog added.
+* **UPD 2024-12-26:** Newly released **[Ruby 4.0](4.0.html)** changelog added.
 
 _The source of the site can be found at [GitHub](https://github.com/rubyreferences/rubychanges). See also the [Contributing](Contributing.html) section._
 

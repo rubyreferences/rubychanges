@@ -27,6 +27,9 @@ chapters:
     path: "/evolution.html#comparable"
   - title: "<code>Numeric</code>"
     path: "/evolution.html#numeric"
+    children:
+    - title: "<code>Math</code>"
+      path: "/evolution.html#math"
   - title: Strings, symbols, regexps, encodings
     path: "/evolution.html#strings-symbols-regexps-encodings"
   - title: "<code>Struct</code>"
@@ -94,6 +97,135 @@ chapters:
       path: "/evolution.html#freezing"
   - title: 'Appendix: Covered Ruby versions release dates'
     path: "/evolution.html#appendix-covered-ruby-versions-release-dates"
+- title: Ruby 4.0
+  path: "/4.0.html"
+  is_version: true
+  published_at: '2025-12-26'
+  description: |
+    <p><strong>Highlights:</strong></p>
+
+    <p><em>Note: As Ruby doesn’t follow SemVer, the 4.0 version marks not some significant change/set of changes, but was chosen by Matz to celebrate Ruby’s 30s birthday.</em></p>
+
+    <ul>
+      <li>Support for line breaks before logical operators</li>
+      <li><code>Set</code> reimplemented efficiently</li>
+      <li><code>Pathname</code> became a core class</li>
+      <li><code>Ruby::Box</code></li>
+      <li><code>Ractor</code>: ports</li>
+    </ul>
+
+    <p><a href="https://rubyreferences.github.io/rubychanges/4.0.html">Read more »</a></p>
+  children:
+  - title: Highlights
+    path: "/4.0.html#highlights"
+  - title: Language changes
+    path: "/4.0.html#language-changes"
+    children:
+    - title: Logical operators can continue on the next line
+      path: "/4.0.html#logical-operators-can-continue-on-the-next-line"
+    - title: "<code>*nil</code> no longer calls <code>nil.to_a</code>"
+      path: "/4.0.html#nil-no-longer-calls-nilto_a"
+    - title: Removals
+      path: "/4.0.html#removals"
+  - title: Core classes and modules
+    path: "/4.0.html#core-classes-and-modules"
+    children:
+    - title: "<code>Ruby</code>: new top-level module"
+      path: "/4.0.html#ruby-new-top-level-module"
+    - title: "<code>Object#inspect</code> customization"
+      path: "/4.0.html#objectinspect-customization"
+    - title: "<code>String</code>: stripping methods now accept what characters to
+        strip"
+      path: "/4.0.html#string-stripping-methods-now-accept-what-characters-to-strip"
+    - title: "<code>Math.log1p</code> and <code>Math.expm1</code>"
+      path: "/4.0.html#mathlog1p-and-mathexpm1"
+    - title: "<code>Range</code>"
+      path: "/4.0.html#range"
+      children:
+      - title: "<code>#to_set</code> guards against infinite loop"
+        path: "/4.0.html#to_set-guards-against-infinite-loop"
+      - title: "<code>#overlap?</code> fixed for boundless range"
+        path: "/4.0.html#overlap-fixed-for-boundless-range"
+      - title: "<code>#max</code> works correctly on beginless integer ranges"
+        path: "/4.0.html#max-works-correctly-on-beginless-integer-ranges"
+    - title: "<code>Array#find</code> and <code>#rfind</code>"
+      path: "/4.0.html#arrayfind-and-rfind"
+    - title: "<code>Set</code>"
+      path: "/4.0.html#set"
+      children:
+      - title: The class reimplemented efficiently
+        path: "/4.0.html#the-class-reimplemented-efficiently"
+      - title: "<code>#inspect</code> output change"
+        path: "/4.0.html#inspect-output-change"
+      - title: "<code>#to_set</code> methods shouldn’t be used with arguments"
+        path: "/4.0.html#to_set-methods-shouldnt-be-used-with-arguments"
+    - title: "<code>Proc#parameters</code> output tweak"
+      path: "/4.0.html#procparameters-output-tweak"
+    - title: "<code>Enumerator.produce</code>: new <code>size:</code> argument"
+      path: "/4.0.html#enumeratorproduce-new-size-argument"
+    - title: "<code>Pathname</code> became a core class"
+      path: "/4.0.html#pathname-became-a-core-class"
+    - title: "<code>Ruby::Box</code>: a new concept for isolated code loading"
+      path: "/4.0.html#rubybox-a-new-concept-for-isolated-code-loading"
+    - title: "<code>Binding</code>: separate local variables from implicit parameters"
+      path: "/4.0.html#binding-separate-local-variables-from-implicit-parameters"
+    - title: Exceptions
+      path: "/4.0.html#exceptions"
+      children:
+      - title: "<code>&lt;internal:</code> frames are remove from backtraces"
+        path: "/4.0.html#internal-frames-are-remove-from-backtraces"
+      - title: "<code>ArgumentError</code>: backtrace includes receiver’s class/module
+          name"
+        path: "/4.0.html#argumenterror-backtrace-includes-receivers-classmodule-name"
+      - title: "<code>ArgumentError</code> output includes code of caller and callee"
+        path: "/4.0.html#argumenterror-output-includes-code-of-caller-and-callee"
+      - title: "<code>Thread#raise</code>/<code>Fiber#raise</code>: <code>cause:</code>
+          keyword argument"
+        path: "/4.0.html#threadraisefiberraise-cause-keyword-argument"
+    - title: "<code>IO.select</code> accepts <code>Float::INFINITY</code> as a timeout
+        argument"
+      path: "/4.0.html#ioselect-accepts-floatinfinity-as-a-timeout-argument"
+    - title: "<code>Socket.tcp</code> &amp; <code>TCPSocket.new</code>: accepts <code>open_timeout:</code>
+        argument"
+      path: "/4.0.html#sockettcp--tcpsocketnew-accepts-open_timeout-argument"
+    - title: "<code>Ractor</code> improvements"
+      path: "/4.0.html#ractor-improvements"
+      children:
+      - title: "<code>Ractor::Port</code>"
+        path: "/4.0.html#ractorport"
+      - title: "<code>.select</code> semantic changed"
+        path: "/4.0.html#select-semantic-changed"
+      - title: Methods for waiting for a ractor
+        path: "/4.0.html#methods-for-waiting-for-a-ractor"
+      - title: "<code>.shareable_proc</code> and <code>.shareable_lambda</code>"
+        path: "/4.0.html#shareable_proc-and-shareable_lambda"
+    - title: "<code>Fiber::Scheduler</code>"
+      path: "/4.0.html#fiberscheduler"
+      children:
+      - title: "<code>#fiber_interrupt</code>"
+        path: "/4.0.html#fiber_interrupt"
+      - title: "<code>#yield</code>"
+        path: "/4.0.html#yield"
+      - title: "<code>#io_close</code>"
+        path: "/4.0.html#io_close"
+      - title: "<code>#io_write</code> is invoked on buffer flush"
+        path: "/4.0.html#io_write-is-invoked-on-buffer-flush"
+  - title: Standard library
+    path: "/4.0.html#standard-library"
+    children:
+    - title: Version updates
+      path: "/4.0.html#version-updates"
+    - title: Standard library content changes
+      path: "/4.0.html#standard-library-content-changes"
+      children:
+      - title: Default gems that became bundled
+        path: "/4.0.html#default-gems-that-became-bundled"
+      - title: New default gems
+        path: "/4.0.html#new-default-gems"
+      - title: Removals
+        path: "/4.0.html#removals"
+  - title: Side effects of the changelog
+    path: "/4.0.html#side-effects-of-the-changelog"
 - title: Ruby 3.4
   path: "/3.4.html"
   is_version: true

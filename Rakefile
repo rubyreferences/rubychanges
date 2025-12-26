@@ -20,7 +20,7 @@ rule /^(\d+\.\d+|evolution)\.md$/ => ->(s) { "_src/#{s}" } do |t|
   File.write(to, Render.(from))
 end
 
-VERSIONS = [*('2.4'..'2.7'), *('3.0'..'3.4')]
+VERSIONS = [*('2.4'..'2.7'), *('3.0'..'3.4'), '4.0']
 
 desc 'Convert file contents from source to target (prettify)'
 task contents: ['evolution', *VERSIONS].map(&'%s.md'.method(:%))

@@ -1,7 +1,7 @@
 ---
 title: Ruby Evolution
 prev: /
-next: 3.2
+next: 4.0
 description: A very brief list of new significant features that emerged in Ruby programming language since version 2.0 (2013).
 image: images/evolution.png
 ---
@@ -63,6 +63,9 @@ As Ruby is highly object-oriented language, most of the changes can be associate
     def bark: (at: Person | Dog | nil) -> String
   end
   ```
+* [4.0](4.0.md#ruby-new-top-level-module) [Ruby](https://docs.ruby-lang.org/en/4.0/Ruby.html) top-level module
+* [4.0](4.0.md#rubybox-a-new-concept-for-isolated-code-loading) **[Ruby::Box](https://docs.ruby-lang.org/en/4.0/Ruby/Box.html): a new concept for isolated code loading**
+* [4.0](4.0.md#logical-operators-can-continue-on-the-next-line) Logical operators can continue on the next line
 
 <!--
 * **2.0** No warning for unused variables starting with `_`
@@ -73,6 +76,7 @@ As Ruby is highly object-oriented language, most of the changes can be associate
 * [3.4](3.4.md#reserved-module-ruby) Language changes: Reserved module `::Ruby` (—)
 * [3.4](3.4.md#removals) Language changes: Removals (—)
 * [3.4](3.4.md#cruby-implementation-changes) CRuby Implementation changes (—)
+* [4.0](4.0.md#removals) Language changes: Removals (—)
 -->
 
 ## Expressions
@@ -180,6 +184,7 @@ As Ruby is highly object-oriented language, most of the changes can be associate
     .dig(:data, :items)
     .then { |items| File.write('response.yml', items.to_yaml) }
   ```
+* [4.0](4.0.md#objectinspect-customization) [Object#inspect](https://docs.ruby-lang.org/en/4.0/Object.html#method-i-inspect) customization
 
 <!--
 * **2.0** `#inspect` does not call `#to_s` anymore (it could cause a weird effect if `#to_s` is redefined).
@@ -369,13 +374,14 @@ This section lists changes in how methods are defined and invoked, as well as ne
   def get(url, **) = send_request(:get, url, **)
   ```
   * [3.3](3.3.md#anonymous-parameters-forwarding-inside-blocks-are-disallowed) Anonymous parameters forwarding inside blocks are disallowed, when the block also has anonymous parameters.
-* [3.4](3.4.md#nil-unpacks-into-empty-keyword-arguments) `**nil` [unpacks](https://docs.ruby-lang.org/en/master/syntax/calling_methods_rdoc.html#label-Unpacking+Keyword+Arguments) into empty keyword arguments.
+* [3.4](3.4.md#nil-unpacks-into-empty-keyword-arguments) `**nil` [unpacks](https://docs.ruby-lang.org/en/4.0/syntax/calling_methods_rdoc.html#label-Unpacking+Keyword+Arguments) into empty keyword arguments.
 
 <!--
 * [3.1](3.1.md#inside-endless-method-definitions-method-calls-without-parenthesis-are-allowed) Inside "endless" method definitions, method calls without parenthesis are allowed (— ([doc/syntax/methods.rdoc](https://docs.ruby-lang.org/en/3.1/syntax/methods_rdoc.html) doesn't mention new or old behavior.))
 * [3.2](3.2.md#unboundmethod-more-consistent-reporting-on-what-module-it-belongs-to) Core classes and modules: Procs and methods: `UnboundMethod`: more consistent reporting on what module it belongs to (—)
 * [3.2](3.2.md#keyword-argument-separation-leftovers) Language changes: Keyword argument separation leftovers (—)
-* [3.4](3.4.md#objectsingleton_method-includes-methods-from-prependedincluded-modules) Core classes and modules: `Object#singleton_method`: includes methods from prepended/included modules ([Object#singleton_method](https://docs.ruby-lang.org/en/master/Object.html#method-i-singleton_method))
+* [3.4](3.4.md#objectsingleton_method-includes-methods-from-prependedincluded-modules) Core classes and modules: `Object#singleton_method`: includes methods from prepended/included modules ([Object#singleton_method](https://docs.ruby-lang.org/en/4.0/Object.html#method-i-singleton_method))
+* [4.0](4.0.md#nil-no-longer-calls-nilto_a) Language changes: `*nil` no longer calls `nil.to_a` ([Calling Methods: Unpacking Positional Arguments](https://docs.ruby-lang.org/en/4.0/syntax/calling_methods_rdoc.html#label-Unpacking+Positional+Arguments))
 -->
 
 ## Procs, blocks and `Proc` class
@@ -397,7 +403,7 @@ This section lists changes in how methods are defined and invoked, as well as ne
   ```
 * [3.2](3.2.md#procparameters-new-keyword-argument-lambda-truefalse) [Proc#parameters](https://docs.ruby-lang.org/en/3.2/Proc.html#method-i-parameters): new keyword argument `lambda: true/false`, improving introspection of whether arguments have default values or they are just optional because all `proc` arguments are.
 * [3.3](3.3.md#standalone-it-in-blocks-will-become-anonymous-argument-in-ruby-34) Added a warning that since 3.4, `it` would become a synonym for `_1`.
-* [3.4](3.4.md#standalone-it-in-blocks-became-anonymous-argument) **[`it`](https://docs.ruby-lang.org/en/master/Proc.html#class-Proc-label-it) anonymous argument:**
+* [3.4](3.4.md#standalone-it-in-blocks-became-anonymous-argument) **[`it`](https://docs.ruby-lang.org/en/4.0/Proc.html#class-Proc-label-it) anonymous argument:**
   ```ruby
   [1, 2, 3].map { it * 100 } #=> [100, 200, 300]
   ```
@@ -412,6 +418,7 @@ This section lists changes in how methods are defined and invoked, as well as ne
 * [3.2](3.2.md#procdup-returns-an-instance-of-subclass) Core classes and modules: Procs and methods: `Proc#dup` returns an instance of subclass (—)
 * [3.3](3.3.md#kernellambda-raises-when-passed-proc-instance) Core classes and modules: `Kernel#lambda` raises when passed `Proc` instance ([Kernel#lambda](https://docs.ruby-lang.org/en/3.3/Kernel.html#method-i-lambda) _(no specific details are provided, though)_)
 * [3.3](3.3.md#procdup-and-clone-call-initialize_dup-and-initialize_copy) Core classes and modules: `Proc#dup` and `#clone` call `#initialize_dup` and `#initialize_copy` (— (Adheres to the behavior described for [Object#dup](https://docs.ruby-lang.org/en/3.3/Object.html#method-i-dup) and [#clone](https://docs.ruby-lang.org/en/3.3/Kernel.html#method-i-clone)))
+* [4.0](4.0.md#procparameters-output-tweak) Core classes and modules: `Proc#parameters` output tweak ([Proc#parameters](https://docs.ruby-lang.org/en/4.0/Proc.html#method-i-parameters))
 -->
 
 ## `Comparable`
@@ -460,11 +467,14 @@ Included in many classes to implement comparison methods. Once class defines a m
 * [2.7](2.7.md#integer-with-range) [Integer#[]](https://ruby-doc.org/core-2.7.0/Integer.html#method-i-5B-5D) supports range of bits
 * [3.1](3.1.md#integertry_convert) [Integer.try_convert](https://docs.ruby-lang.org/en/3.1/Integer.html#method-c-try_convert)
 * [3.2](3.2.md#integerceildiv) [Integer#ceildiv](https://docs.ruby-lang.org/en/3.2/Integer.html#method-i-ceildiv)
-* [3.4](3.4.md#float-parsing-changes) [Kernel#Float](https://docs.ruby-lang.org/en/master/Kernel.html#method-i-Float) and [String#to_f](https://docs.ruby-lang.org/en/master/String.html#method-i-to_f) allow to omit digits after dot:
+* [3.4](3.4.md#float-parsing-changes) [Kernel#Float](https://docs.ruby-lang.org/en/4.0/Kernel.html#method-i-Float) and [String#to_f](https://docs.ruby-lang.org/en/4.0/String.html#method-i-to_f) allow to omit digits after dot:
   ```ruby
   '1.E2'.to_f #=> 100.0
   ```
 
+### `Math`
+
+* [4.0](4.0.md#mathlog1p-and-mathexpm1) [Math.log1p](https://docs.ruby-lang.org/en/4.0/Math.html#method-c-log1p) and [Math.expm1](https://docs.ruby-lang.org/en/4.0/Math.html#method-c-expm1)
 
 <!--
 * **2.2** `Math.log` now raises `Math::DomainError` instead of returning NaN if the  base is less than 0, and returns NaN instead of -infinity if both of two arguments are 0.
@@ -535,10 +545,9 @@ Included in many classes to implement comparison methods. Once class defines a m
 * [3.2](3.2.md#regexp-redos-vulnerability-prevention) ReDoS vulnerability prevention: [Regexp.timeout](https://docs.ruby-lang.org/en/3.2/Regexp.html#method-c-timeout), [Regexp.timeout=](https://docs.ruby-lang.org/en/3.2/Regexp.html#method-c-timeout-3D), [Regexp.new](https://docs.ruby-lang.org/en/3.2/Regexp.html#method-c-new) (`timeout:` keyword argument), [Regexp.linear_time?](https://docs.ruby-lang.org/en/3.2/Regexp.html#method-c-linear_time-3F).
 * [3.3](3.3.md#stringbytesplice-new-arguments-to-select-a-portion-of-the-replacement-string) [String#bytesplice](https://docs.ruby-lang.org/en/3.3/String.html#method-i-bytesplice): additional arguments to select a portion of the inserted string.
 * [3.3](3.3.md#matchdatanamed_captures-symbolize_names-argument) [MatchData#named_captures](https://docs.ruby-lang.org/en/3.3/MatchData.html#method-i-named_captures): `symbolize_names:` argument.
-* [3.4](3.4.md#stringappend_as_bytes) [String#append_as_bytes](https://docs.ruby-lang.org/en/master/String.html#method-i-append_as_bytes)
-* [3.4](3.4.md#matchdatabytebegin-and-byteend-have-been-added) [MatchData#bytebegin](https://docs.ruby-lang.org/en/master/MatchData.html#method-i-bytebegin) and [MatchData#byteend](https://docs.ruby-lang.org/en/master/MatchData.html#method-i-byteend)
-
-
+* [3.4](3.4.md#stringappend_as_bytes) [String#append_as_bytes](https://docs.ruby-lang.org/en/4.0/String.html#method-i-append_as_bytes)
+* [3.4](3.4.md#matchdatabytebegin-and-byteend-have-been-added) [MatchData#bytebegin](https://docs.ruby-lang.org/en/4.0/MatchData.html#method-i-bytebegin) and [MatchData#byteend](https://docs.ruby-lang.org/en/4.0/MatchData.html#method-i-byteend)
+* [4.0](4.0.md#string-stripping-methods-now-accept-what-characters-to-strip) [String#strip](https://docs.ruby-lang.org/en/4.0/String.html#method-i-strip) and related methods  now accept characters selectors to strip
 
 <!--
 * **2.0** Switch Regexp engine to [Onigmo](https://github.com/k-takata/Onigmo)
@@ -604,7 +613,7 @@ Included in many classes to implement comparison methods. Once class defines a m
   # => 2022-07-01 14:30:00 +0500
   ```
 * [3.2](3.2.md#timenew-can-parse-a-string) **[Time.new](https://docs.ruby-lang.org/en/3.2/Time.html#method-c-new) can parse a string** (stricter and more robust than `Time.parse` of the standard library)
-* [3.4](3.4.md#timexmlschema--iso8601-in-core) [#xmlschema](https://docs.ruby-lang.org/en/master/Time.html#method-i-xmlschema) and [#iso8601](https://docs.ruby-lang.org/en/master/Time.html#method-i-iso8601) became core methods
+* [3.4](3.4.md#timexmlschema--iso8601-in-core) [#xmlschema](https://docs.ruby-lang.org/en/4.0/Time.html#method-i-xmlschema) and [#iso8601](https://docs.ruby-lang.org/en/4.0/Time.html#method-i-iso8601) became core methods
 
 
 <!--
@@ -702,6 +711,7 @@ Included in many classes to implement comparison methods. Once class defines a m
   # With Enumerator.produce:
   Enumerator.produce(Date.today) { |date| date + 1 }.find(&:monday?)
   ```
+  * [4.0](4.0.md#enumeratorproduce-new-size-argument) added `size:` argument for [Enumerator.produce](https://docs.ruby-lang.org/en/4.0/Enumerator.html#method-c-produce)
 * [2.7](2.7.md#enumerablefilter_map) [Enumerable#filter_map](https://ruby-doc.org/core-2.7.0/Enumerable.html#method-i-filter_map)
 * [2.7](2.7.md#enumerabletally) [Enumerable#tally](https://ruby-doc.org/core-2.7.0/Enumerable.html#method-i-tally) method to count stats (hash of `{object => number of occurrences in the enumerable}`)
   * <span class="ruby-version">[3.1](3.1.md#enumerabletally-now-accepts-an-optional-hash-to-count)</span> [#tally](https://docs.ruby-lang.org/en/3.1/Enumerable.html#method-i-tally) accepts an optional hash to append results to
@@ -731,8 +741,8 @@ Included in many classes to implement comparison methods. Once class defines a m
 * [2.7](2.7.md#beginless-range) **Beginless range: `(...100)`**
 * [3.3](3.3.md#reverse_each) [Range#reverse_each](https://docs.ruby-lang.org/en/3.3/Range.html#method-i-reverse_each) (specialized form of `Enumerable#reverse_each`)
 * [3.3](3.3.md#overlap) [Range#overlap?](https://docs.ruby-lang.org/en/3.3/Range.html#method-i-overlap-3F)
-* [3.4](3.4.md#size-raises-typeerror-if-the-range-is-not-iterable) [#size](https://docs.ruby-lang.org/en/master/Range.html#method-i-size) raises `TypeError` if the range is not iterable.
-* [3.4](3.4.md#step-iterating-by-using--operator-for-all-types) **[#step](https://docs.ruby-lang.org/en/master/Range.html#method-i-step) allows iterating by using `+` operator for all types**:
+* [3.4](3.4.md#size-raises-typeerror-if-the-range-is-not-iterable) [#size](https://docs.ruby-lang.org/en/4.0/Range.html#method-i-size) raises `TypeError` if the range is not iterable.
+* [3.4](3.4.md#step-iterating-by-using--operator-for-all-types) **[#step](https://docs.ruby-lang.org/en/4.0/Range.html#method-i-step) allows iterating by using `+` operator for all types**:
   ```ruby
   (Time.new(2024, 12, 20)..Time.new(2024, 12, 24)).step(24*60*60).to_a
   #=> [2024-12-20 00:00:00 +0200, 2024-12-21 00:00:00 +0200, 2024-12-22 00:00:00 +0200, 2024-12-23 00:00:00 +0200, 2024-12-24 00:00:00 +0200]
@@ -741,6 +751,9 @@ Included in many classes to implement comparison methods. Once class defines a m
 <!--
 * [2.7](2.7.md#for-string) `#===` for `String` ([Range#===](https://ruby-doc.org/core-2.7.0/Range.html#method-i-3D-3D-3D))
 * [2.7](2.7.md#minmax-implementation-change) `#minmax` implementation change ([Range#minmax](https://ruby-doc.org/core-2.7.0/Range.html#method-i-minmax))
+* [4.0](4.0.md#to_set-guards-against-infinite-loop) Core classes and modules: `Range`: `#to_set` guards against infinite loop ([Range#to_set](https://docs.ruby-lang.org/en/4.0/Range.html#method-i-to_set))
+* [4.0](4.0.md#overlap-fixed-for-boundless-range) Core classes and modules: `Range`: `#overlap?` fixed for boundless range ([Range#overlap?](https://docs.ruby-lang.org/en/4.0/Range.html#method-i-overlap-3F) (no special mention of fully-infinite ranges though))
+* [4.0](4.0.md#max-works-correctly-on-beginless-integer-ranges) Core classes and modules: `Range`: `#max` works correctly on beginless integer ranges ([Range#max](https://docs.ruby-lang.org/en/4.0/Range.html#method-i-max))
 -->
 
 ### `Array`
@@ -753,7 +766,8 @@ Included in many classes to implement comparison methods. Once class defines a m
 * [2.6](2.6.md#arrayunion-and-arraydifference) [#union](https://ruby-doc.org/core-2.6/Array.html#method-i-union) and [#difference](https://ruby-doc.org/core-2.6/Array.html#method-i-difference)
 * [2.7](2.7.md#arrayintersection) [#intersection](https://ruby-doc.org/core-2.7.0/Array.html#method-i-intersection)
 * [3.1](3.1.md#arrayintersect) [#intersect?](https://docs.ruby-lang.org/en/3.1/Array.html#method-i-intersect-3F)
-* [3.4](3.4.md#arrayfetch_values) [#fetch_values](https://docs.ruby-lang.org/en/master/Array.html#method-i-fetch_values)
+* [3.4](3.4.md#arrayfetch_values) [#fetch_values](https://docs.ruby-lang.org/en/4.0/Array.html#method-i-fetch_values)
+* [4.0](4.0.md#arrayfind-and-rfind) [#rfind](https://docs.ruby-lang.org/en/4.0/Array.html#method-i-rfind)
 
 
 <!--
@@ -800,8 +814,8 @@ Included in many classes to implement comparison methods. Once class defines a m
   {x:, y:}
   # => {x: 100, y: 200}, same as {x: x, y: y}
   ```
-* [3.4](3.4.md#new-accepts-an-optional-capacity-argument) [.new](https://docs.ruby-lang.org/en/master/Hash.html#method-c-new) accepts an optional `capacity:` argument
-* [3.4](3.4.md#inspect-rendering-have-been-changed) [#inspect](https://docs.ruby-lang.org/en/master/Hash.html#method-i-inspect) rendering have been changed:
+* [3.4](3.4.md#new-accepts-an-optional-capacity-argument) [.new](https://docs.ruby-lang.org/en/4.0/Hash.html#method-c-new) accepts an optional `capacity:` argument
+* [3.4](3.4.md#inspect-rendering-have-been-changed) [#inspect](https://docs.ruby-lang.org/en/4.0/Hash.html#method-i-inspect) rendering have been changed:
   ```ruby
   p({x: 1, 'foo-bar': 2, "baz" => 3})
   # Ruby 3.3: {:x=>1, :"foo-bar"=>2, "baz"=>3}
@@ -830,9 +844,12 @@ Included in many classes to implement comparison methods. Once class defines a m
 * **3.0** [#<=>](https://docs.ruby-lang.org/en/3.0/Set.html#method-i-3C-3D-3E) generic comparison operator (separate operators like `#<` or `#>` have been worked in previous versions, too)
 * [3.2](3.2.md#set-became-a-built-in-class) **[Set](https://docs.ruby-lang.org/en/3.2/Set.html) became a built-in class**
 * [3.3](3.3.md#setmerge-accepts-multiple-arguments) [Set#merge](https://docs.ruby-lang.org/en/3.3/Set.html#method-i-merge) accepts multiple arguments.
+* [4.0](4.0.md#the-class-reimplemented-efficiently) **The class reimplemented efficiently in C**
+  * [4.0](4.0.md#inspect-output-change) [#inspect](https://docs.ruby-lang.org/en/4.0/Set.html#method-i-inspect) output changed
 
 <!--
 * **2.5** `#to_s` as alias to `#inspect`
+* [4.0](4.0.md#to_set-methods-shouldnt-be-used-with-arguments) Core classes and modules: `Set`: `#to_set` methods shouldn't be used with arguments ([Set#to_set](https://docs.ruby-lang.org/en/4.0/Set.html#method-i-to_set), [Enumerable#to_set](https://docs.ruby-lang.org/en/4.0/Enumerable.html#method-i-to_set).)
 -->
 
 ### Other collections
@@ -879,7 +896,9 @@ Included in many classes to implement comparison methods. Once class defines a m
 * [3.3](3.3.md#dirfor_fd-and-dirfchdir) [Dir.for_fd](https://docs.ruby-lang.org/en/3.3/Dir.html#method-c-for_fd) and [Dir.fchdir](https://docs.ruby-lang.org/en/3.3/Dir.html#method-c-fchdir).
 * [3.3](3.3.md#dirchdir) [Dir#chdir](https://docs.ruby-lang.org/en/3.3/Dir.html#method-i-chdir).
 * [3.3](3.3.md#deprecate-subprocess-creation-with-method-dedicated-to-files) Create subprocesses with `IO.read('| command')` and similar methods is deprecated.
-
+* [4.0](4.0.md#pathname-became-a-core-class) **[Pathname](https://docs.ruby-lang.org/en/4.0/Pathname.html) became a core class**
+* [4.0](4.0.md#ioselect-accepts-floatinfinity-as-a-timeout-argument) [IO.select](https://docs.ruby-lang.org/en/4.0/IO.html#method-c-select) accepts `Float::INFINITY` as a timeout argument.
+* [4.0](4.0.md#sockettcp--tcpsocketnew-accepts-open_timeout-argument) [Socket.tcp](https://docs.ruby-lang.org/en/4.0/Socket.html#method-c-tcp) and [TCPSocket.new](https://docs.ruby-lang.org/en/4.0/TCPSocket.html#method-c-new): accept `open_timeout:` argument
 
 <!--
 * **2.0** `File.fnmatch?` now expands braces in the pattern if File::FNM_EXTGLOB option is given.
@@ -937,8 +956,9 @@ This section covers exception raising/handling behavior changes, as well as chan
 * [3.1](3.1.md#threadbacktracelimit) [Thread::Backtrace.limit](https://docs.ruby-lang.org/en/3.1/Thread/Backtrace.html#method-c-limit) reader to get the maximum backtrace size set with `--backtrace-limit` command-line option
 * [3.2](3.2.md#exceptiondetailed_message) [Exception#detailed_message](https://docs.ruby-lang.org/en/3.2/Exception.html#method-i-detailed_message) to separate the original error message and possible contextual additions.
 * [3.2](3.2.md#syntaxerrorpath) [SyntaxError#path](https://docs.ruby-lang.org/en/3.2/SyntaxError.html)
-* [3.4](3.4.md#exception-backtrace_locations-can-be-set-programmatically) **[#backtrace_locations](https://docs.ruby-lang.org/en/master/Exception.html#method-i-backtrace_locations) can be set programmatically** on [Exception#set_backtrace](https://docs.ruby-lang.org/en/master/Exception.html#method-i-set_backtrace) and [Kernel#raise](https://docs.ruby-lang.org/en/master/Kernel.html#method-i-raise)
+* [3.4](3.4.md#exception-backtrace_locations-can-be-set-programmatically) **[#backtrace_locations](https://docs.ruby-lang.org/en/4.0/Exception.html#method-i-backtrace_locations) can be set programmatically** on [Exception#set_backtrace](https://docs.ruby-lang.org/en/4.0/Exception.html#method-i-set_backtrace) and [Kernel#raise](https://docs.ruby-lang.org/en/4.0/Kernel.html#method-i-raise)
 * [3.4](3.4.md#backtrace-formatting-adjustments) Backtrace formatting adjustments: backtick is replaced with singular quote, and module name added to labels in the call stack.
+* [4.0](4.0.md#threadraisefiberraise-cause-keyword-argument) [Thread#raise](https://docs.ruby-lang.org/en/4.0/Thread.html#method-i-raise) and [Fiber#raise](https://docs.ruby-lang.org/en/4.0/Fiber.html#method-i-raise): `cause:` keyword argument
 
 <!--
 * [2.5](2.5.md#backtrace-and-error-message-in-reverse-order) Backtrace and error message are (experimentally) displayed in a reverse order.
@@ -946,6 +966,9 @@ This section covers exception raising/handling behavior changes, as well as chan
 * [3.0](3.0.md#exception-output-order-is-changed----again) Exception output order is changed -- again (—)
 * [3.3](3.3.md#nomethoderror-change-of-rendering-logic) Core classes and modules: `NoMethodError`: change of rendering logic ([NoMethodError](https://docs.ruby-lang.org/en/3.3/NoMethodError.html))
 * [3.4](3.4.md#extra-rescueensure-frames-are-removed-from-the-backtrace) Core classes and modules: Backtrace-related changes: Extra rescue/ensure frames are removed from the backtrace (—)
+* [4.0](4.0.md#internal-frames-are-remove-from-backtraces) Core classes and modules: Exceptions: `<internal:` frames are remove from backtraces (—)
+* [4.0](4.0.md#argumenterror-backtrace-includes-receivers-classmodule-name) Core classes and modules: Exceptions: `ArgumentError`: backtrace includes receiver's class/module name ([ArgumentError](https://docs.ruby-lang.org/en/4.0/ArgumentError.html) (doesn't show the backtrace anyway))
+* [4.0](4.0.md#argumenterror-output-includes-code-of-caller-and-callee) Core classes and modules: Exceptions: `ArgumentError` output includes code of caller and callee (—)
 -->
 
 ### Warnings
@@ -957,7 +980,7 @@ This section covers exception raising/handling behavior changes, as well as chan
 * [2.7](2.7.md#warning-and-) [Warning::[]](https://ruby-doc.org/core-2.7.0/Warning.html#method-c-5B-5D) and [Warning::[]=](https://ruby-doc.org/core-2.7.0/Warning.html#method-c-5B-5D-3D) to choose which categories of warnings to show; the categories are predefined by Ruby and only can be `:deprecated` or `:experimental` (or none)
   * <span class="ruby-version">[3.0](3.0.md#warningwarn-category-keyword-argument)</span> User code allowed to specify category of its warnings with [Kernel#warn](https://docs.ruby-lang.org/en/3.0.0/Kernel.html#method-i-warn) and intercept the warning category [Warning#warn](https://docs.ruby-lang.org/en/3.0.0/Warning.html#method-i-warn) with `category:` keyword argument; the list of categories is still closed.
 * [3.3](3.3.md#new-warning-category-performance) New `Warning` [category](https://docs.ruby-lang.org/en/3.3/Warning.html#method-c-5B-5D): `:performance`.
-* [3.4](3.4.md#warningcategories) [.categories](https://docs.ruby-lang.org/en/master/Warning.html#method-c-categories)
+* [3.4](3.4.md#warningcategories) [.categories](https://docs.ruby-lang.org/en/4.0/Warning.html#method-c-categories)
 
 
 ## Concurrency and parallelism
@@ -1002,11 +1025,16 @@ This section covers exception raising/handling behavior changes, as well as chan
 * [3.0](3.0.md#fiberbacktrace--backtrace_locations) [#backtrace](https://docs.ruby-lang.org/en/3.0.0/Fiber.html#method-i-backtrace) and [#backtrace_locations](https://docs.ruby-lang.org/en/3.0.0/Fiber.html#method-i-backtrace_locations)
 * [3.2](3.2.md#fiber-storage) **Storage concept**: [.[]](https://docs.ruby-lang.org/en/3.2/Fiber.html#method-c-5B-5D), [.[]=](https://docs.ruby-lang.org/en/3.2/Fiber.html#method-c-5B-5D-3D), [#storage](https://docs.ruby-lang.org/en/3.2/Fiber.html#method-i-storage), and [#storage=](https://docs.ruby-lang.org/en/3.2/Fiber.html#method-i-storage-3D)
 * [3.3](3.3.md#fiberkill) [Fiber#kill](https://docs.ruby-lang.org/en/3.3/Fiber.html#method-i-kill)
-* [3.4](3.4.md#fiberschedulerblocking_operation_wait) [Fiber::Scheduler#blocking_operation_wait](https://docs.ruby-lang.org/en/master/Fiber/Scheduler.html#method-i-blocking_operation_wait)
+* [3.4](3.4.md#fiberschedulerblocking_operation_wait) [Fiber::Scheduler#blocking_operation_wait](https://docs.ruby-lang.org/en/4.0/Fiber/Scheduler.html#method-i-blocking_operation_wait)
+* [4.0](4.0.html#fiberscheduler): [#fiber_interrupt](https://docs.ruby-lang.org/en/4.0/Fiber/Scheduler.html#method-i-fiber_interrupt), [#yield](https://docs.ruby-lang.org/en/4.0/Fiber/Scheduler.html#method-i-yield), and [#io_close](https://docs.ruby-lang.org/en/4.0/Fiber/Scheduler.html#method-i-io_close) hooks added
+* [4.0](4.0.md#io_write-is-invoked-on-buffer-flush) [Fiber::Scheduler#io_write](https://docs.ruby-lang.org/en/4.0/Fiber/Scheduler.html#method-i-io_write) is invoked on buffer flush
 
 
 <!--
   * [3.0](3.0.md#fibertransfer-limitations-changed) `#transfer` limitations changed ([Fiber#transfer](https://docs.ruby-lang.org/en/3.0.0/Fiber.html#method-i-transfer))
+* [4.0](4.0.md#fiber_interrupt) Core classes and modules: `Fiber::Scheduler`: `#fiber_interrupt` ([Fiber::Scheduler#fiber_interrupt](https://docs.ruby-lang.org/en/4.0/Fiber/Scheduler.html#method-i-fiber_interrupt))
+* [4.0](4.0.md#yield) Core classes and modules: `Fiber::Scheduler`: `#yield` ([Fiber::Scheduler#yield](https://docs.ruby-lang.org/en/4.0/Fiber/Scheduler.html#method-i-yield))
+* [4.0](4.0.md#io_close) Core classes and modules: `Fiber::Scheduler`: `#io_close` ([Fiber::Scheduler#io_close](https://docs.ruby-lang.org/en/4.0/Fiber/Scheduler.html#method-i-io_close))
 -->
 
 ### `Ractor`
@@ -1014,11 +1042,20 @@ This section covers exception raising/handling behavior changes, as well as chan
 * [3.0](3.0.md#ractors) **[Ractors](https://docs.ruby-lang.org/en/3.0.0/Ractor.html) introduced.** A long-anticipated concurrency improvement landed in Ruby 3.0. Ractors (at some point known as Guilds) are fully-isolated (without sharing GVL on CRuby) alternative to threads. To achieve thread-safety without global locking, ractors, in general, can't access each other's (or main program/main ractor) data.
 * [3.1](3.1.md#ractors-can-access-module-instance-variables) Ractors can access module instance variables
 * [3.4](3.4.md#require-works-in-ractors) `require` works in Ractors
-* [3.4](3.4.md#main) [.main?](https://docs.ruby-lang.org/en/master/Ractor.html#method-c-main-3F)
-* [3.4](3.4.md#and-) [.[]](https://docs.ruby-lang.org/en/master/Ractor.html#method-c-5B-5D), [.[]=](https://docs.ruby-lang.org/en/master/Ractor.html#method-c-5B-5D-3D), and [.store_if_absent](https://docs.ruby-lang.org/en/master/Ractor.html#method-c-store_if_absent)
+* [3.4](3.4.md#main) [.main?](https://docs.ruby-lang.org/en/4.0/Ractor.html#method-c-main-3F)
+* [3.4](3.4.md#and-) [.[]](https://docs.ruby-lang.org/en/4.0/Ractor.html#method-c-5B-5D), [.[]=](https://docs.ruby-lang.org/en/4.0/Ractor.html#method-c-5B-5D-3D), and [.store_if_absent](https://docs.ruby-lang.org/en/4.0/Ractor.html#method-c-store_if_absent)
+* [4.0](4.0.md#ractorport) **[Ractor::Port](https://docs.ruby-lang.org/en/4.0/Ractor/Port.html) as a mechanism of data exchange between ractors.**
+  ```ruby
+  port = Ractor::Port.new
+  server = Ractor.new(port) { |p| p << 'ping' }
+  port.recieve #=> "ping"
+  ```
+  * [4.0](4.0.md#select-semantic-changed) [.select](https://docs.ruby-lang.org/en/4.0/Ractor.html#method-c-select) semantic changed
+* [4.0](4.0.md#methods-for-waiting-for-a-ractor) `#take` is replaced by [#join](https://docs.ruby-lang.org/en/4.0/Ractor.html#method-i-join) and [#value](https://docs.ruby-lang.org/en/4.0/Ractor.html#method-i-value).
+* [4.0](4.0.md#shareable_proc-and-shareable_lambda) [.shareable_proc](https://docs.ruby-lang.org/en/4.0/Ractor.html#method-c-shareable_proc) and [.shareable_lambda](https://docs.ruby-lang.org/en/4.0/Ractor.html#method-c-shareable_lambda))
 
 <!--
-* [3.4](3.4.md#store_if_absent) Core classes and modules: `Ractor`: `.store_if_absent` ([Ractor.store_if_absent](https://docs.ruby-lang.org/en/master/Ractor.html#method-c-store_if_absent))
+* [3.4](3.4.md#store_if_absent) Core classes and modules: `Ractor`: `.store_if_absent` ([Ractor.store_if_absent](https://docs.ruby-lang.org/en/4.0/Ractor.html#method-c-store_if_absent))
 -->
 
 ## Debugging and internals
@@ -1049,6 +1086,7 @@ This section covers exception raising/handling behavior changes, as well as chan
 * **2.2** [#receiver](https://docs.ruby-lang.org/en/2.2.0/Binding.html#method-i-receiver)
 * [2.6](2.6.md#bindingsource_location) [#source_location](https://ruby-doc.org/core-2.6/Binding.html#method-i-source_location)
 * [3.2](3.2.md#kernelbinding-raises-if-accessed-not-from-ruby) [Kernel#binding](https://docs.ruby-lang.org/en/3.2/Kernel.html#method-i-binding) raises if accessed not from Ruby
+* [4.0](4.0.md#binding-separate-local-variables-from-implicit-parameters) **[Binding#implicit_parameters](https://docs.ruby-lang.org/en/4.0/Binding.html#method-i-implicit_parameters)**
 
 ### `GC`
 
@@ -1061,7 +1099,7 @@ _Note: in the spirit of the rest of this reference, this section only describes 
 * [3.0](3.0.md#gcauto_compact-accessor) [.auto_compact](https://docs.ruby-lang.org/en/3.0.0/GC.html#method-c-auto_compact) and [.auto_compact=](https://docs.ruby-lang.org/en/3.0.0/GC.html#method-c-auto_compact-3D)
 * [3.1](3.1.md#gc-measuring-total-time) Measuring total time spent in GC: [.measure_total_time](https://docs.ruby-lang.org/en/3.1/GC.html#method-c-measure_total_time), [.measure_total_time=](https://docs.ruby-lang.org/en/3.1/GC.html#method-c-measure_total_time-3D), [.stat](https://docs.ruby-lang.org/en/3.1/GC.html#method-c-stat) output updated, [.total_time](https://docs.ruby-lang.org/en/3.1/GC.html#method-c-total_time) added
 * [3.2](3.2.md#gclatest_gc_info-add-need_major_by-key) [GC.latest_gc_info](https://docs.ruby-lang.org/en/3.2/GC.html#method-c-latest_gc_info): add `need_major_gc:` key
-* [3.4](3.4.md#gcconfig) [GC.config](https://docs.ruby-lang.org/en/master/GC.html#method-c-config) and ability to disable major GC.
+* [3.4](3.4.md#gcconfig) [GC.config](https://docs.ruby-lang.org/en/4.0/GC.html#method-c-config) and ability to disable major GC.
 
 
 <!--
@@ -1087,7 +1125,7 @@ _Note: in the spirit of the rest of this reference, this section only describes 
 * [2.6](2.6.md#rubyvmabstractsyntaxtree) **[RubyVM::AbstractSyntaxTree](https://ruby-doc.org/core-2.6/RubyVM/AbstractSyntaxTree.html) introduced**
 * [3.2](3.2.md#error_tolerant-true-option-for-parsing) [.parse](https://docs.ruby-lang.org/en/3.2/RubyVM/AbstractSyntaxTree.html#method-c-parse): `error_tolerant: true` option for parsing
 * [3.2](3.2.md#keep_tokens-true-option-for-parsing) [.parse](https://docs.ruby-lang.org/en/3.2/RubyVM/AbstractSyntaxTree.html#method-c-parse): `keep_tokens: true` option for parsing, allowing access to [Node#tokens](https://docs.ruby-lang.org/en/3.2/RubyVM/AbstractSyntaxTree/Node.html#method-i-tokens) and [Node#all_tokens](https://docs.ruby-lang.org/en/3.2/RubyVM/AbstractSyntaxTree/Node.html#method-i-all_tokens).
-* [3.4](3.4.md#rubyvmabstractsyntaxtreenodelocations) [Node#locations](https://docs.ruby-lang.org/en/master/RubyVM/AbstractSyntaxTree/Node.html#method-i-locations) and [Location](https://docs.ruby-lang.org/en/master/RubyVM/AbstractSyntaxTree/Location.html)
+* [3.4](3.4.md#rubyvmabstractsyntaxtreenodelocations) [Node#locations](https://docs.ruby-lang.org/en/4.0/RubyVM/AbstractSyntaxTree/Node.html#method-i-locations) and [Location](https://docs.ruby-lang.org/en/4.0/RubyVM/AbstractSyntaxTree/Location.html)
 
 
 ### `RubyVM::InstructionSequence`
@@ -1182,3 +1220,9 @@ Freezing of object makes its state immutable. The important thing about freezing
 * [3.2](3.2.md) — 2022
 * [3.3](3.3.md) — 2023
 * [3.4](3.4.md) — 2024
+* [4.0](4.0.md) — 2025
+
+<!--
+* [4.0](4.0.md#side-effects-of-the-changelog) Side effects of the changelog (—)
+
+-->
