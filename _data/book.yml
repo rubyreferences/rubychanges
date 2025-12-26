@@ -27,6 +27,9 @@ chapters:
     path: "/evolution.html#comparable"
   - title: "<code>Numeric</code>"
     path: "/evolution.html#numeric"
+    children:
+    - title: "<code>Math</code>"
+      path: "/evolution.html#math"
   - title: Strings, symbols, regexps, encodings
     path: "/evolution.html#strings-symbols-regexps-encodings"
   - title: "<code>Struct</code>"
@@ -97,7 +100,7 @@ chapters:
 - title: Ruby 4.0
   path: "/4.0.html"
   is_version: true
-  published_at: '2025-12-25'
+  published_at: '2025-12-26'
   description: |
     <p><strong>Highlights:</strong></p>
 
@@ -180,7 +183,7 @@ chapters:
           keyword argument"
         path: "/4.0.html#threadraisefiberraise-cause-keyword-argument"
     - title: "<code>IO.select</code> accepts <code>Float::INFINITY</code> as a timeout
-        argument."
+        argument"
       path: "/4.0.html#ioselect-accepts-floatinfinity-as-a-timeout-argument"
     - title: "<code>Socket.tcp</code> &amp; <code>TCPSocket.new</code>: accepts <code>open_timeout:</code>
         argument"
