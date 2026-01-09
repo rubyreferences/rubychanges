@@ -32,7 +32,7 @@ This site is dedicated to history of [Ruby language](https://www.ruby-lang.org/)
 * ...and also some minor _behavior_ changes are excluded.
 * I want to _eventually_ cover Ruby versions down to 1.8, or maybe even earlier, but it is currently work-in-progress. I started doing it at the wake of **[Ruby 2.6](2.6.html)**, and maintaining the changelog since.
 * **UPD 2019-06-06:** **[Ruby 2.5](2.5.html)** is now covered too. Despite being 1.5 years old news, I believe it is still important to cover it in the same manner as the recent version was.
-* **UPD 2019-10-14:** **[Ruby 2.4](2.4.html)** changelog added, and some other content changed. See [History](/History.html) for detail.
+* **UPD 2019-10-14:** **[Ruby 2.4](2.4.html)** changelog added, and some other content changed. See [History](History.html) for detail.
 * **UPD 2019-12-27:** Newly released **[Ruby 2.7](2.7.html)** changelog added.
 * **UPD 2020-12-25:** Newly released **[Ruby 3.0](3.0.html)** changelog added.
 * **UPD 2022-01-05:** Newly released **[Ruby 3.1](3.1.html)** changelog added.
